@@ -1,0 +1,4 @@
+{
+    "documentResults": "You currently have [totalResults] documents available to view or download.",
+    "documentSummary": "[DocumentType] sent [DateSent]"
+}

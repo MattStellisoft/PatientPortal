@@ -1,0 +1,130 @@
+[
+    {
+        "question": "How likely are you to recommend this service to friends and family if they need similar care or treatment?",
+        "subQuestionInfo": null,
+        "answerType": "RadioWithFollowUpTextFieldQuestion",
+        "options": [
+            {
+                "radioLabel": "Extremely likely",
+                "value": "Extremely likely"
+            },
+            {
+                "radioLabel": "Likely",
+                "value": "Likely"
+            },
+            {
+                "radioLabel": "Neither likely or unlikely",
+                "value": "Neither likely or unlikely"
+            },
+            {
+                "radioLabel": "Unlikely",
+                "value": "Unlikely"
+            },
+            {
+                "radioLabel": "Extremely unlikely",
+                "value": "Extremely unlikely"
+            },
+            {
+                "radioLabel": "Don't know",
+                "value": "Don't know"
+            }
+        ],
+        "name": "recommendService",
+        "followUpQuestion": "Thinking about your response to this question, what is the main reason why you feel this way?",
+        "subFollowUpQuestionInfo": null,
+        "followUpOption": "*",
+        "value": null
+    },
+    {
+        "heading": "Thinking about the appointments you have had with Connect Health:",
+        "answerType": "header",
+        "name": "fttHeader"
+    },
+    {
+        "question": "How much effort was made to help you understand your health issues?",
+        "subQuestionInfo": null,
+        "answerType": "RadioButtons",
+        "options": [
+            {
+                "radioLabel": "Not effort was made",
+                "value": "Not effort was made[$£.;.£$]0"
+            },
+            {
+                "radioLabel": "A little effort was made",
+                "value": "A little effort was made[$£.;.£$]1"
+            },
+            {
+                "radioLabel": "Some effort was made",
+                "value": "Some effort was made[$£.;.£$]2"
+            },
+            {
+                "radioLabel": "A lot of effort was made",
+                "value": "A lot of effort was made[$£.;.£$]3"
+            },
+            {
+                "radioLabel": "Every effort was made",
+                "value": "Every effort was made[$£.;.£$]4"
+            }
+        ],
+        "name": "effortToUnderstand",
+        "value": null
+    },
+    {
+        "question": "How much effort was made to listen to the things that matter most to you about your health issues?",
+        "subQuestionInfo": null,
+        "answerType": "RadioButtons",
+        "options": [
+            {
+                "radioLabel": "Not effort was made",
+                "value": "Not effort was made[$£.;.£$]0"
+            },
+            {
+                "radioLabel": "A little effort was made",
+                "value": "A little effort was made[$£.;.£$]1"
+            },
+            {
+                "radioLabel": "Some effort was made",
+                "value": "Some effort was made[$£.;.£$]2"
+            },
+            {
+                "radioLabel": "A lot of effort was made",
+                "value": "A lot of effort was made[$£.;.£$]3"
+            },
+            {
+                "radioLabel": "Every effort was made",
+                "value": "Every effort was made[$£.;.£$]4"
+            }
+        ],
+        "name": "effortMadeToListen",
+        "value": null
+    },
+    {
+        "question": "How much effort was made to include what matters most to you in choosing what to do next?",
+        "subQuestionInfo": null,
+        "answerType": "RadioButtons",
+        "options": [
+            {
+                "radioLabel": "Not effort was made",
+                "value": "Not effort was made[$£.;.£$]0"
+            },
+            {
+                "radioLabel": "A little effort was made",
+                "value": "A little effort was made[$£.;.£$]1"
+            },
+            {
+                "radioLabel": "Some effort was made",
+                "value": "Some effort was made[$£.;.£$]2"
+            },
+            {
+                "radioLabel": "A lot of effort was made",
+                "value": "A lot of effort was made[$£.;.£$]3"
+            },
+            {
+                "radioLabel": "Every effort was made",
+                "value": "Every effort was made[$£.;.£$]4"
+            }
+        ],
+        "name": "effortToInclude",
+        "value": null
+    }
+]

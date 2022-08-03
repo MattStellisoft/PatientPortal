@@ -1,0 +1,65 @@
+#Here I'm attempting to keep the Cypress code in its own repo. Unfortunately this creates some hurdles with the pipeline script
+#the main reason being that the script needs to firstly pull the code from both repos and then there needs to be a dependency
+#for the portal build to finish prior to running cypress. The sticking point which is making me abandon this script is
+#that I'm having difficulties running the code on the same target agent. I've followed the instructions in this SO post:
+#yaml - Azure Pipeline: Make Jobs run on the same Agent from the same pool - Stack Overflow
+#however, I'm finding that Cypress is not finding the portal is running on localhost:3000, which may be because the SO instructions don't work, it's hard to
+#determine what the issue is which is partly why I'm abandoning the approach and pulling the Cypress tests into the project itself.
+trigger:
+    - main
+
+resources:
+    repositories:
+        - repository: AutomationTesting
+          type: git
+          name: AutomationTesting
+stages:
+    - stage: InstallBuildTest
+      displayName: Install, build and test
+      jobs:
+          - job: BuildServePortal
+            displayName: Build and serve the Patient Portal
+            pool:
+                vmImage: "ubuntu-latest"
+            steps:
+                - bash: echo "$(Agent.Name)"
+                - bash: |
+                      echo "##vso[task.setvariable variable=someName;isOutput=true;]$(Agent.Name)"
+                  name: setVariable
+                - checkout: self
+                - task: NodeTool@0
+                  inputs:
+                      versionSpec: "16.x"
+                  displayName: "Install Node.js"
+                - script: |
+                      npm install
+                  displayName: "npm install"
+                - script: |
+                      npm run build
+                  displayName: "npm build"
+                - script: |
+                      npm run start &
+                  displayName: "npm start as background process"
+          - job: BuildServeRunCypress
+            displayName: Build, serve and run Cypress
+            dependsOn: BuildServePortal
+            variables:
+                TestsomeName: $[ dependencies.BuildServePortal.outputs['setVariable.someName'] ]
+            pool:
+                demands:
+                    - Agent.Name -equals $(TestsomeName)
+            steps:
+                - bash: sudo apt install telnetd -y
+                - bash: telnet 127.0.0.1 3000
+                - bash: echo "$(TestsomeName)"
+                - checkout: AutomationTesting
+                - task: NodeTool@0
+                  inputs:
+                      versionSpec: "16.x"
+                  displayName: "Install Node.js"
+                - script: |
+                      npm install
+                  displayName: "npm install"
+                - script: |
+                      npx cypress run --record --key fc6cbbf4-9c32-4a6f-903d-fc4bf317bbf3
+                  displayName: "npx cypress run --record --key fc6cbbf4-9c32-4a6f-903d-fc4bf317bbf3"

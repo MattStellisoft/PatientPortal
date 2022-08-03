@@ -1,0 +1,13 @@
+{
+    "noAppointmentsBooked": "You have no pending appointments booked.",
+    "appointmentSummary": "[ServiceType] appointment [AppointmentDateTime] with [Clinician]",
+    "DNA": "Did not attend",
+    "Confirmed": "Confirmed",
+    "DocumentAvailable": "Document available",
+    "Booked": "Booked",
+    "Unconfirmed": "Unconfirmed",
+    "Booking": "Requested",
+    "NoResponse": "No response",
+    "Rejected": "Rejected",
+    "CancelledByPcc": "Cancelled by Connect Health"
+}

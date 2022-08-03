@@ -1,0 +1,236 @@
+[
+    {
+        "question": "Please give your Date of Birth",
+        "subQuestionInfo": null,
+        "answerType": "DatePicker",
+        "name": "dob",
+        "value": null
+    },
+    {
+        "question": "Which of the following options best describes how you think of yourself?",
+        "subQuestionInfo": "Why are we capturing this information? You can read more about the NHS information standard here: https://www.england.nhs.uk/about/equality/equality-hub/sexual-orientation-monitoring-information-standard/",
+        "answerType": "RadioButtons",
+        "options": [
+            {
+                "radioLabel": "Heterosexual or Straight",
+                "value": "Heterosexual or Straight"
+            },
+            {
+                "radioLabel": "Gay or Lesbian",
+                "value": "Gay or Lesbian"
+            },
+            {
+                "radioLabel": "Bisexual",
+                "value": "Bisexual"
+            },
+            {
+                "radioLabel": "Do not know or not sure",
+                "value": "Do not know or not sure"
+            },
+            {
+                "radioLabel": "Undecided",
+                "value": "Undecided"
+            },
+            {
+                "radioLabel": "Prefer not to say",
+                "value": "Prefer not to say"
+            },
+            {
+                "radioLabel": "Other",
+                "value": "Other"
+            }
+        ],
+        "name": "sexualOrientation",
+        "value": null
+    },
+    {
+        "question": "What is your ethnic group?",
+        "subQuestionInfo": "",
+        "answerType": "RadioButtons",
+        "options": [
+            {
+                "radioLabel": "White",
+                "value": "White"
+            },
+            {
+                "radioLabel": "Mixed/multiple ethnic groups",
+                "value": "Mixed/multiple ethnic groups"
+            },
+            {
+                "radioLabel": "Asian/Asian British",
+                "value": "Asian/Asian British"
+            },
+            {
+                "radioLabel": "Black/African/Caribbean/Black British",
+                "value": "Black/African/Caribbean/Black British"
+            },
+            {
+                "radioLabel": "Other ethnic group",
+                "value": "Other ethnic group"
+            }
+        ],
+        "name": "ethnicity",
+        "value": null
+    },
+    {
+        "question": "Would you class yourself as disabled?",
+        "subQuestionInfo": "",
+        "answerType": "RadioButtons",
+        "options": [
+            {
+                "radioLabel": "Yes",
+                "value": "Yes[$£.;.£$]1"
+            },
+            {
+                "radioLabel": "No",
+                "value": "No[$£.;.£$]0"
+            }
+        ],
+        "name": "selfReportedAsDisabled",
+        "value": null
+    },
+    {
+        "question": "Are you currently receiving any of the following benefits or tax credits?",
+        "subQuestionInfo": "(Tick all that apply)",
+        "answerType": "CheckBoxes",
+        "checkBoxes": [
+            {
+                "checkBoxLabel": "I prefer not to say",
+                "value": "I prefer not to say"
+            },
+            {
+                "checkBoxLabel": "Not claiming benefits",
+                "value": "Not claiming benefits"
+            },
+            {
+                "checkBoxLabel": "Employment and Support allowance (support group)",
+                "value": "Employment and Support allowance (support group)"
+            },
+            {
+                "checkBoxLabel": "Employment and Support Allowance (Work Related Activity Group)",
+                "value": "Employment and Support Allowance (Work Related Activity Group)"
+            },
+            {
+                "checkBoxLabel": "Employment and Support Allowance (Unsure which group)",
+                "value": "Employment and Support Allowance (Unsure which group)"
+            },
+            {
+                "checkBoxLabel": "Disability Living Allowance (DLA)",
+                "value": "Disability Living Allowance (DLA)"
+            },
+            {
+                "checkBoxLabel": "Personal Independence Payment (PIP)",
+                "value": "Personal Independence Payment (PIP)"
+            },
+            {
+                "checkBoxLabel": "Income Support",
+                "value": "Income Support"
+            },
+            {
+                "checkBoxLabel": "Jobseekers’ Allowance (JSA)",
+                "value": "Jobseekers’ Allowance (JSA)"
+            },
+            {
+                "checkBoxLabel": "Universal Credit (UC)",
+                "value": "Universal Credit (UC)"
+            },
+            {
+                "checkBoxLabel": "Working Tax Credit (WTC)",
+                "value": "Working Tax Credit (WTC)"
+            },
+            {
+                "checkBoxLabel": "Claiming benefits but not sure which",
+                "value": "Claiming benefits but not sure which"
+            }
+        ],
+        "name": "benefitStatus",
+        "value": null
+    },
+    {
+        "question": "What is your highest level of schooling completed?",
+        "subQuestionInfo": "",
+        "answerType": "RadioButtons",
+        "options": [
+            {
+                "radioLabel": "None",
+                "value": "None"
+            },
+            {
+                "radioLabel": "Primary/Junior School",
+                "value": "Primary/Junior School"
+            },
+            {
+                "radioLabel": "Secondary/Senior School",
+                "value": "Secondary/Senior School"
+            },
+            {
+                "radioLabel": "Higher education or above",
+                "value": "Higher education or above"
+            }
+        ],
+        "name": "education",
+        "value": null
+    },
+    {
+        "question": "Are you in paid employment?",
+        "subQuestionInfo": "",
+        "questions": [
+            "Are you in paid employment?",
+            "Have you taken time off work during the last 3 months because of your pain?",
+            "Please tell us the number of days, weeks or months you were off work due to your pain in the last 3 months."
+        ],
+        "answerType": "RadioWithFollowUpRadioButtons",
+        "optionsArray": [
+            {
+                "options": [
+                    {
+                        "radioLabel": "Yes",
+                        "value": "Yes"
+                    },
+                    {
+                        "radioLabel": "No",
+                        "value": "No paid employment"
+                    }
+                ]
+            },
+            {
+                "options": [
+                    {
+                        "radioLabel": "Yes",
+                        "value": "Yes"
+                    },
+                    {
+                        "radioLabel": "No",
+                        "value": "No time off"
+                    }
+                ]
+            },
+            {
+                "options": [
+                    {
+                        "radioLabel": "1 - 7 days",
+                        "value": "1 - 7 days"
+                    },
+                    {
+                        "radioLabel": "1 - 4 weeks",
+                        "value": "1 - 4 weeks"
+                    },
+                    {
+                        "radioLabel": "5 - 8 weeks",
+                        "value": "5 - 8 weeks"
+                    },
+                    {
+                        "radioLabel": "More than 2 months",
+                        "value": "More than 2 months"
+                    }
+                ]
+            }
+        ],
+        "followUpOptions": {
+            "followUpOptionId0": "Yes",
+            "followUpOptionId1": "Yes"
+        },
+        "name": "workStatus",
+        "value": null
+    }
+]

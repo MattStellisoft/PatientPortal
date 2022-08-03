@@ -1,0 +1,163 @@
+[
+    {
+        "heading": "Under each heading, please select the ONE box that best describes your health TODAY.",
+        "answerType": "header",
+        "name": "eq5dHeader"
+    },
+    {
+        "question": "MOBILITY",
+        "subQuestionInfo": null,
+        "answerType": "RadioButtons",
+        "options": [
+            {
+                "radioLabel": "I have no problems in walking about",
+                "value": "I have no problems in walking about[$£.;.£$]1"
+            },
+            {
+                "radioLabel": "I have slight problems in walking about",
+                "value": "I have slight problems in walking about[$£.;.£$]2"
+            },
+            {
+                "radioLabel": "I have moderate problems in walking about",
+                "value": "I have moderate problems in walking about[$£.;.£$]3"
+            },
+            {
+                "radioLabel": "I have severe problems in walking about",
+                "value": "I have severe problems in walking about[$£.;.£$]4"
+            },
+            {
+                "radioLabel": "I am unable to walk about",
+                "value": "I am unable to walk about[$£.;.£$]5"
+            }
+        ],
+        "name": "mobility",
+        "value": null
+    },
+    {
+        "question": "SELF-CARE",
+        "subQuestionInfo": null,
+        "answerType": "RadioButtons",
+        "options": [
+            {
+                "radioLabel": "I have no problems washing or dressing myself",
+                "value": "I have no problems washing or dressing myself[$£.;.£$]1"
+            },
+            {
+                "radioLabel": "I have slight problems washing or dressing myself",
+                "value": "I have slight problems washing or dressing myself[$£.;.£$]2"
+            },
+            {
+                "radioLabel": "I have moderate problems washing or dressing myself",
+                "value": "I have moderate problems washing or dressing myself[$£.;.£$]3"
+            },
+            {
+                "radioLabel": "I have severe problems washing or dressing myself",
+                "value": "I have severe problems washing or dressing myself[$£.;.£$]4"
+            },
+            {
+                "radioLabel": "I am unable to wash or dress myself",
+                "value": "I am unable to wash or dress myself[$£.;.£$]5"
+            }
+        ],
+        "name": "selfCare",
+        "value": null
+    },
+    {
+        "question": "USUAL ACTIVITIES",
+        "subQuestionInfo": "(e.g. work, study, housework, family or leisure activities)",
+        "answerType": "RadioButtons",
+        "options": [
+            {
+                "radioLabel": "I have no problems doing my usual activities",
+                "value": "I have no problems doing my usual activities[$£.;.£$]1"
+            },
+            {
+                "radioLabel": "I have slight problems doing my usual activities",
+                "value": "I have slight problems doing my usual activities[$£.;.£$]2"
+            },
+            {
+                "radioLabel": "I have moderate problems doing my usual activities",
+                "value": "I have moderate problems doing my usual activities[$£.;.£$]3"
+            },
+            {
+                "radioLabel": "I have severe problems doing my usual activities",
+                "value": "I have severe problems doing my usual activities[$£.;.£$]4"
+            },
+            {
+                "radioLabel": "I am unable to do my usual activities",
+                "value": "I am unable to do my usual activities[$£.;.£$]5"
+            }
+        ],
+        "name": "usualActivities",
+        "value": null
+    },
+    {
+        "question": "PAIN/ DISCOMFORT",
+        "subQuestionInfo": null,
+        "answerType": "RadioButtons",
+        "options": [
+            {
+                "radioLabel": "I have no pain or discomfort",
+                "value": "I have no pain or discomfort[$£.;.£$]1"
+            },
+            {
+                "radioLabel": "I have slight pain or discomfort",
+                "value": "I have slight pain or discomfort[$£.;.£$]2"
+            },
+            {
+                "radioLabel": "I have moderate pain or discomfort",
+                "value": "I have moderate pain or discomfort[$£.;.£$]3"
+            },
+            {
+                "radioLabel": "I have severe pain or discomfort",
+                "value": "I have severe pain or discomfort[$£.;.£$]4"
+            },
+            {
+                "radioLabel": "I have extreme pain or discomfort",
+                "value": "I have extreme pain or discomfort[$£.;.£$]5"
+            }
+        ],
+        "name": "painOrDiscomfort",
+        "value": null
+    },
+    {
+        "question": "ANXIETY OR DEPRESSION",
+        "subQuestionInfo": null,
+        "answerType": "RadioButtons",
+        "options": [
+            {
+                "radioLabel": "I am not anxious or depressed",
+                "value": "I am not anxious or depressed[$£.;.£$]1"
+            },
+            {
+                "radioLabel": "I am slightly anxious or depressed",
+                "value": "I am slightly anxious or depressed[$£.;.£$]2"
+            },
+            {
+                "radioLabel": "I am moderately anxious or depressed",
+                "value": "I am moderately anxious or depressed[$£.;.£$]3"
+            },
+            {
+                "radioLabel": "I am severely anxious or depressed",
+                "value": "I am severely anxious or depressed[$£.;.£$]4"
+            },
+            {
+                "radioLabel": "I am extremely anxious or depressed",
+                "value": "I am extremely anxious or depressed[$£.;.£$]5"
+            }
+        ],
+        "name": "anxietyOrDepression",
+        "value": null
+    },
+    {
+        "question": "We would like to know how good or bad your health is TODAY ",
+        "subQuestionInfo": "Please use the slider below, 0 indicates Very Bad and 100 indicates Very Good",
+        "answerType": "Slider",
+        "sliderRange": [
+            "0",
+            "100"
+        ],
+        "name": "healthToday",
+        "value": null
+    }
+]

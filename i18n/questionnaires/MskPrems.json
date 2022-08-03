@@ -1,0 +1,266 @@
+[
+    {
+        "question": "How likely are you to recommend this service to friends and family if they need similar care or treatment?",
+        "subQuestionInfo": "",
+        "answerType": "RadioButtons",
+        "options": [
+            {
+                "radioLabel": "Extremely likely",
+                "value": "Extremely likely"
+            },
+            {
+                "radioLabel": "Likely",
+                "value": "Likely"
+            },
+            {
+                "radioLabel": "Neither likely or unlikely",
+                "value": "Neither likely or unlikely"
+            },
+            {
+                "radioLabel": "Unlikely",
+                "value": "Unlikely"
+            },
+            {
+                "radioLabel": "Extremely unlikely",
+                "value": "Extremely unlikely"
+            },
+            {
+                "radioLabel": "Don't know",
+                "value": "Don't know"
+            }
+        ],
+        "name": "fft",
+        "value": null
+    },
+    {
+        "question": "Thinking about your response to the question above, what is the main reason why you feel this way?",
+        "subQuestionInfo": null,
+        "answerType": "MultilineTextField",
+        "name": "fftFollowUp",
+        "value": null
+    },
+    {
+        "question": "Thinking about the appointments you have just had: How much effort was made to help you understand your health issues?",
+        "subQuestionInfo": null,
+        "answerType": "RadioButtons",
+        "options": [
+            {
+                "radioLabel": "No effort was made",
+                "value": "No effort was made"
+            },
+            {
+                "radioLabel": "A little effort was made",
+                "value": "A little effort was made"
+            },
+            {
+                "radioLabel": "Some effort was made",
+                "value": "Some effort was made"
+            },
+            {
+                "radioLabel": "A lot of effort was made",
+                "value": "A lot of effort was made"
+            },
+            {
+                "radioLabel": "Every effort was made",
+                "value": "Every effort was made"
+            }
+        ],
+        "name": "collaborate1",
+        "value": null
+    },
+    {
+        "question": "Thinking about the appointments you have just had: How much effort was made to listen to the things that matter most to you about your health issues?",
+        "subQuestionInfo": null,
+        "answerType": "RadioButtons",
+        "options": [
+            {
+                "radioLabel": "No effort was made",
+                "value": "No effort was made"
+            },
+            {
+                "radioLabel": "A little effort was made",
+                "value": "A little effort was made"
+            },
+            {
+                "radioLabel": "Some effort was made",
+                "value": "Some effort was made"
+            },
+            {
+                "radioLabel": "A lot of effort was made",
+                "value": "A lot of effort was made"
+            },
+            {
+                "radioLabel": "Every effort was made",
+                "value": "Every effort was made"
+            }
+        ],
+        "name": "collaborate2",
+        "value": null
+    },
+    {
+        "question": "Thinking about the appointments you have just had: How much effort was made to include what matters most to you in choosing what to do next?",
+        "subQuestionInfo": null,
+        "answerType": "RadioButtons",
+        "options": [
+            {
+                "radioLabel": "No effort was made",
+                "value": "No effort was made"
+            },
+            {
+                "radioLabel": "A little effort was made",
+                "value": "A little effort was made"
+            },
+            {
+                "radioLabel": "Some effort was made",
+                "value": "Some effort was made"
+            },
+            {
+                "radioLabel": "A lot of effort was made",
+                "value": "A lot of effort was made"
+            },
+            {
+                "radioLabel": "Every effort was made",
+                "value": "Every effort was made"
+            }
+        ],
+        "name": "collaborate3",
+        "value": null
+    },
+    {
+        "question": "How confident were you in the clinician's competency to assess and treat your problem?",
+        "subQuestionInfo": null,
+        "answerType": "RadioButtons",
+        "options": [
+            {
+                "radioLabel": "Not at all",
+                "value": "Not at all"
+            },
+            {
+                "radioLabel": "Slightly",
+                "value": "Slightly"
+            },
+            {
+                "radioLabel": "Moderately",
+                "value": "Moderately"
+            },
+            {
+                "radioLabel": "Very",
+                "value": "Very"
+            },
+            {
+                "radioLabel": "Extremely",
+                "value": "Extremely"
+            }
+        ],
+        "name": "confidenceInClinicalCompetence",
+        "value": null
+    },
+    {
+        "question": "Did you receive sufficient information about your condition for self-care?",
+        "subQuestionInfo": null,
+        "answerType": "RadioButtons",
+        "options": [
+            {
+                "radioLabel": "Yes",
+                "value": "Yes[$£.;.£$]1"
+            },
+            {
+                "radioLabel": "No",
+                "value": "No[$£.;.£$]0"
+            }
+        ],
+        "name": "givenSufficientInformation",
+        "value": null
+    },
+    {
+        "question": "With respect to your joint and muscle symptoms, how would you describe yourself now compared to when you first saw your clinician? ",
+        "subQuestionInfo": null,
+        "answerType": "RadioButtons",
+        "options": [
+            {
+                "radioLabel": "Prefer not to say",
+                "value": "Prefer not to say"
+            },
+            {
+                "radioLabel": "Much worse",
+                "value": "Much worse"
+            },
+            {
+                "radioLabel": "Worse",
+                "value": "Worse"
+            },
+            {
+                "radioLabel": "Same",
+                "value": "Same"
+            },
+            {
+                "radioLabel": "Better",
+                "value": "Better"
+            },
+            {
+                "radioLabel": "Much Better",
+                "value": "Much Better"
+            }
+        ],
+        "name": "globalImprovement",
+        "value": null
+    },
+    {
+        "question": "How suitable was (were) the timing(s) of you (video/clinic/telephone) consultation(s)?",
+        "subQuestionInfo": "",
+        "answerType": "RadioButtons",
+        "options": [
+            {
+                "radioLabel": "Not at all",
+                "value": "Not at all"
+            },
+            {
+                "radioLabel": "Slightly",
+                "value": "Slightly"
+            },
+            {
+                "radioLabel": "Moderately",
+                "value": "Moderately"
+            },
+            {
+                "radioLabel": "Very",
+                "value": "Very"
+            },
+            {
+                "radioLabel": "Extremely",
+                "value": "Extremely"
+            }
+        ],
+        "name": "timeliness",
+        "value": null
+    },
+    {
+        "question": "How convenient was (were) the (video/clinic/telephone) consultation(s)?",
+        "subQuestionInfo": "",
+        "answerType": "RadioButtons",
+        "options": [
+            {
+                "radioLabel": "Not at all",
+                "value": "Not at all"
+            },
+            {
+                "radioLabel": "Slightly",
+                "value": "Slightly"
+            },
+            {
+                "radioLabel": "Moderately",
+                "value": "Moderately"
+            },
+            {
+                "radioLabel": "Very",
+                "value": "Very"
+            },
+            {
+                "radioLabel": "Extremely",
+                "value": "Extremely"
+            }
+        ],
+        "name": "convenience",
+        "value": null
+    }
+]

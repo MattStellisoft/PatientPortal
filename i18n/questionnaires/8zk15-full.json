@@ -1,0 +1,217 @@
+{
+    "meta": {
+        "name": "Pain Baseline Health",
+        "description": "Mattis amet hendrerit dolor, quisque lorem pharetra. Pellentesque lacus nisi urna, arcu sociis eu. Orcivel lectus nisl eget eget ut consectetur. Sit justo viverra non adipisicing elit distinctio.",
+        "UUID": "",
+        "initialDisclaimer": "",
+        "finalDisclaimer": ""
+    },
+    "questions": [
+        {
+            "question": "How many times have you seen your GP in the past three months for your pain problem? ",
+            "subQuestionInfo": "",
+            "answerType": "ShortTextField",
+            "name": "timesSeenGp",
+            "inputMode": "numeric",
+            "pattern": "[0-9]*",
+            "hint": "For example, if you have visited your GP 3 times then type 3",
+            "value": null,
+            "validation": [
+                ["yup.object"],
+                ["yup.required"],
+                [
+                    "yup.shape",
+                    {
+                        "timesSeenGp": [
+                            ["yup.string"],
+                            ["yup.required", "is_required"]
+                        ]
+                    }
+                ]
+            ]
+        },
+        {
+            "question": "How many times have you seen other doctors, such as specialists, in the past three months for your pain problem?",
+            "subQuestionInfo": "",
+            "answerType": "ShortTextField",
+            "name": "timesSeenDoctor",
+            "inputMode": "numeric",
+            "pattern": "[0-9]*",
+            "value": null,
+            "validation": [
+                ["yup.object"],
+                ["yup.required"],
+                [
+                    "yup.shape",
+                    {
+                        "timesSeenDoctor": [
+                            ["yup.string"],
+                            ["yup.required", "is_required"]
+                        ]
+                    }
+                ]
+            ]
+        },
+        {
+            "question": "How many times have you gone to the Accident and Emergency Department in the past three months because of your pain?",
+            "subQuestionInfo": "",
+            "answerType": "ShortTextField",
+            "name": "timesSeenEmergency",
+            "inputMode": "numeric",
+            "pattern": "[0-9]*",
+            "value": null,
+            "validation": [
+                ["yup.object"],
+                ["yup.required"],
+                [
+                    "yup.shape",
+                    {
+                        "timesSeenEmergency": [
+                            ["yup.string"],
+                            ["yup.required", "is_required"]
+                        ]
+                    }
+                ]
+            ]
+        },
+        {
+            "question": "How many days have you been admitted to hospital in the past three months because of your pain?",
+            "subQuestionInfo": "",
+            "answerType": "ShortTextField",
+            "inputMode": "numeric",
+            "pattern": "[0-9]*",
+            "name": "daysAdmittedHospital",
+            "value": null,
+            "validation": [
+                ["yup.object"],
+                ["yup.required"],
+                [
+                    "yup.shape",
+                    {
+                        "timesSeenEmergency": [
+                            ["yup.string"],
+                            ["yup.required", "is_required"]
+                        ]
+                    }
+                ]
+            ]
+        },
+        {
+            "question": "Please list all your prescribed medications and all over-the-counter or non-prescribed medications you take in the space below.",
+            "subQuestionInfo": "",
+            "questions": [
+                {
+                    "label": "Medication Name *",
+                    "id": "medicationName",
+                    "type": "text"
+                },
+                {
+                    "label": "Dose (mg) *",
+                    "id": "dose",
+                    "type": "text"
+                },
+                {
+                    "label": "How Often? *",
+                    "id": "howOften",
+                    "type": "text"
+                },
+                {
+                    "label": "How do you take the medication?",
+                    "id": "howTakeMedication",
+                    "type": "radioButton",
+                    "options": [
+                        {
+                            "value": "Regularly",
+                            "label": "Regularly"
+                        },
+                        {
+                            "value": "As required/ needed",
+                            "label": "As required"
+                        }
+                    ]
+                }
+            ],
+            "requiredQuestions": ["medicationName", "dose", "howOften"],
+            "listHeaderId": "medicationName",
+            "rowManagerButtons": {
+                "remove": "Remove Medication",
+                "add": "Add Medication"
+            },
+            "answerType": "CollapsibleTable",
+            "name": "prescribedMedications",
+            "value": null
+        },
+        {
+            "question": "Do you use any medication for pain?",
+            "subQuestionInfo": "",
+            "questions": [
+                "Do you use any medication for pain?",
+                "How effective are your pain medications for reducing pain?"
+            ],
+            "answerType": "RadioWithFollowUpRadioButtons",
+            "optionsArray": [
+                {
+                    "options": [
+                        {
+                            "radioLabel": "Yes",
+                            "value": "Yes"
+                        },
+                        {
+                            "radioLabel": "No",
+                            "value": "No"
+                        }
+                    ]
+                },
+                {
+                    "options": [
+                        {
+                            "radioLabel": "Not at all",
+                            "value": "Not at all"
+                        },
+                        {
+                            "radioLabel": "A little bit",
+                            "value": "A little bit"
+                        },
+                        {
+                            "radioLabel": "Somewhat",
+                            "value": "Somewhat"
+                        },
+                        {
+                            "radioLabel": "Extremely helpful",
+                            "value": "Extremely helpful"
+                        }
+                    ]
+                }
+            ],
+            "followUpOptions": {
+                "followUpOptionId0": "Yes"
+            },
+            "name": "medicationForPain",
+            "value": null
+        },
+        {
+            "question": "Are you able to do more after taking your medications?",
+            "subQuestionInfo": null,
+            "answerType": "RadioButtons",
+            "options": [
+                {
+                    "radioLabel": "Yes",
+                    "value": "Yes[$£.;.£$]1"
+                },
+                {
+                    "radioLabel": "No",
+                    "value": "No[$£.;.£$]0"
+                }
+            ],
+            "name": "ableToDoMore",
+            "value": null
+        },
+        {
+            "question": "What are your expectations of an appointment with the Pain Service? What kind of care are you hoping to receive?",
+            "subQuestionInfo": null,
+            "answerType": "MultilineTextField",
+            "name": "expectations",
+            "value": null
+        }
+    ]
+}

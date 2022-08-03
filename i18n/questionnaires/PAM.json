@@ -1,0 +1,392 @@
+[
+    {
+        "question": "I am the person who is responsible for taking care of my health.",
+        "subQuestionInfo": "",
+        "answerType": "RadioButtons",
+        "name": "PAM1",
+        "options": [
+            {
+                "radioLabel": "Disagree Strongly",
+                "value": "Disagree Strongly[$£.;.£$]1"
+            },
+            {
+                "radioLabel": "Disagree",
+                "value": "Disagree[$£.;.£$]2"
+            },
+            {
+                "radioLabel": "Agree",
+                "value": "Agree[$£.;.£$]3"
+            },
+            {
+                "radioLabel": "Agree Strongly",
+                "value": "Agree Strongly[$£.;.£$]4"
+            },
+            {
+                "radioLabel": "N/A",
+                "value": "N/A[$£.;.£$]0"
+            }
+        ],
+        "value": null,
+        "row": true
+    },
+    {
+        "question": "Taking an active role in my own health care is the most important thing that affects my health.",
+        "subQuestionInfo": "",
+        "answerType": "RadioButtons",
+        "name": "PAM2",
+        "options": [
+            {
+                "radioLabel": "Disagree Strongly",
+                "value": "Disagree Strongly[$£.;.£$]1"
+            },
+            {
+                "radioLabel": "Disagree",
+                "value": "Disagree[$£.;.£$]2"
+            },
+            {
+                "radioLabel": "Agree",
+                "value": "Agree[$£.;.£$]3"
+            },
+            {
+                "radioLabel": "Agree Strongly",
+                "value": "Agree Strongly[$£.;.£$]4"
+            },
+            {
+                "radioLabel": "N/A",
+                "value": "N/A[$£.;.£$]0"
+            }
+        ],
+        "value": null,
+        "row": true
+    },
+    {
+        "question": "I am confident I can help prevent or reduce problems associated with my health.",
+        "subQuestionInfo": "",
+        "answerType": "RadioButtons",
+        "name": "PAM3",
+        "options": [
+            {
+                "radioLabel": "Disagree Strongly",
+                "value": "Disagree Strongly[$£.;.£$]1"
+            },
+            {
+                "radioLabel": "Disagree",
+                "value": "Disagree[$£.;.£$]2"
+            },
+            {
+                "radioLabel": "Agree",
+                "value": "Agree[$£.;.£$]3"
+            },
+            {
+                "radioLabel": "Agree Strongly",
+                "value": "Agree Strongly[$£.;.£$]4"
+            },
+            {
+                "radioLabel": "N/A",
+                "value": "N/A[$£.;.£$]0"
+            }
+        ],
+        "value": null,
+        "row": true
+    },
+    {
+        "question": "I know what each of my prescribed medications do.",
+        "subQuestionInfo": "",
+        "answerType": "RadioButtons",
+        "name": "PAM4",
+        "options": [
+            {
+                "radioLabel": "Disagree Strongly",
+                "value": "Disagree Strongly[$£.;.£$]1"
+            },
+            {
+                "radioLabel": "Disagree",
+                "value": "Disagree[$£.;.£$]2"
+            },
+            {
+                "radioLabel": "Agree",
+                "value": "Agree[$£.;.£$]3"
+            },
+            {
+                "radioLabel": "Agree Strongly",
+                "value": "Agree Strongly[$£.;.£$]4"
+            },
+            {
+                "radioLabel": "N/A",
+                "value": "N/A[$£.;.£$]0"
+            }
+        ],
+        "value": null,
+        "row": true
+    },
+    {
+        "question": "I am confident that I can tell whether I need to go to the doctor or whether I can take care of a health problem myself.",
+        "subQuestionInfo": "",
+        "answerType": "RadioButtons",
+        "name": "PAM5",
+        "options": [
+            {
+                "radioLabel": "Disagree Strongly",
+                "value": "Disagree Strongly[$£.;.£$]1"
+            },
+            {
+                "radioLabel": "Disagree",
+                "value": "Disagree[$£.;.£$]2"
+            },
+            {
+                "radioLabel": "Agree",
+                "value": "Agree[$£.;.£$]3"
+            },
+            {
+                "radioLabel": "Agree Strongly",
+                "value": "Agree Strongly[$£.;.£$]4"
+            },
+            {
+                "radioLabel": "N/A",
+                "value": "N/A[$£.;.£$]0"
+            }
+        ],
+        "value": null,
+        "row": true
+    },
+    {
+        "question": "I am confident that I can tell a doctor or nurse concerns I have even when he or she does not ask.",
+        "subQuestionInfo": "",
+        "answerType": "RadioButtons",
+        "name": "PAM6",
+        "options": [
+            {
+                "radioLabel": "Disagree Strongly",
+                "value": "Disagree Strongly[$£.;.£$]1"
+            },
+            {
+                "radioLabel": "Disagree",
+                "value": "Disagree[$£.;.£$]2"
+            },
+            {
+                "radioLabel": "Agree",
+                "value": "Agree[$£.;.£$]3"
+            },
+            {
+                "radioLabel": "Agree Strongly",
+                "value": "Agree Strongly[$£.;.£$]4"
+            },
+            {
+                "radioLabel": "N/A",
+                "value": "N/A[$£.;.£$]0"
+            }
+        ],
+        "value": null,
+        "row": true
+    },
+    {
+        "question": "I am confident that I can carry out medical treatments I may need to do at home.",
+        "subQuestionInfo": "",
+        "answerType": "RadioButtons",
+        "name": "PAM7",
+        "options": [
+            {
+                "radioLabel": "Disagree Strongly",
+                "value": "Disagree Strongly[$£.;.£$]1"
+            },
+            {
+                "radioLabel": "Disagree",
+                "value": "Disagree[$£.;.£$]2"
+            },
+            {
+                "radioLabel": "Agree",
+                "value": "Agree[$£.;.£$]3"
+            },
+            {
+                "radioLabel": "Agree Strongly",
+                "value": "Agree Strongly[$£.;.£$]4"
+            },
+            {
+                "radioLabel": "N/A",
+                "value": "N/A[$£.;.£$]0"
+            }
+        ],
+        "value": null,
+        "row": true
+    },
+    {
+        "question": "I understand my health problems and what causes them.",
+        "subQuestionInfo": "",
+        "answerType": "RadioButtons",
+        "name": "PAM8",
+        "options": [
+            {
+                "radioLabel": "Disagree Strongly",
+                "value": "Disagree Strongly[$£.;.£$]1"
+            },
+            {
+                "radioLabel": "Disagree",
+                "value": "Disagree[$£.;.£$]2"
+            },
+            {
+                "radioLabel": "Agree",
+                "value": "Agree[$£.;.£$]3"
+            },
+            {
+                "radioLabel": "Agree Strongly",
+                "value": "Agree Strongly[$£.;.£$]4"
+            },
+            {
+                "radioLabel": "N/A",
+                "value": "N/A[$£.;.£$]0"
+            }
+        ],
+        "value": null,
+        "row": true
+    },
+    {
+        "question": "I know what treatments are available for my health problems.",
+        "subQuestionInfo": "",
+        "answerType": "RadioButtons",
+        "name": "PAM9",
+        "options": [
+            {
+                "radioLabel": "Disagree Strongly",
+                "value": "Disagree Strongly[$£.;.£$]1"
+            },
+            {
+                "radioLabel": "Disagree",
+                "value": "Disagree[$£.;.£$]2"
+            },
+            {
+                "radioLabel": "Agree",
+                "value": "Agree[$£.;.£$]3"
+            },
+            {
+                "radioLabel": "Agree Strongly",
+                "value": "Agree Strongly[$£.;.£$]4"
+            },
+            {
+                "radioLabel": "N/A",
+                "value": "N/A[$£.;.£$]0"
+            }
+        ],
+        "value": null,
+        "row": true
+    },
+    {
+        "question": "I have been able to maintain lifestyle changes, like healthy eating or exercising.",
+        "subQuestionInfo": "",
+        "answerType": "RadioButtons",
+        "name": "PAM10",
+        "options": [
+            {
+                "radioLabel": "Disagree Strongly",
+                "value": "Disagree Strongly[$£.;.£$]1"
+            },
+            {
+                "radioLabel": "Disagree",
+                "value": "Disagree[$£.;.£$]2"
+            },
+            {
+                "radioLabel": "Agree",
+                "value": "Agree[$£.;.£$]3"
+            },
+            {
+                "radioLabel": "Agree Strongly",
+                "value": "Agree Strongly[$£.;.£$]4"
+            },
+            {
+                "radioLabel": "N/A",
+                "value": "N/A[$£.;.£$]0"
+            }
+        ],
+        "value": null,
+        "row": true
+    },
+    {
+        "question": "I know how to prevent problems with my health.",
+        "subQuestionInfo": "",
+        "answerType": "RadioButtons",
+        "name": "PAM11",
+        "options": [
+            {
+                "radioLabel": "Disagree Strongly",
+                "value": "Disagree Strongly[$£.;.£$]1"
+            },
+            {
+                "radioLabel": "Disagree",
+                "value": "Disagree[$£.;.£$]2"
+            },
+            {
+                "radioLabel": "Agree",
+                "value": "Agree[$£.;.£$]3"
+            },
+            {
+                "radioLabel": "Agree Strongly",
+                "value": "Agree Strongly[$£.;.£$]4"
+            },
+            {
+                "radioLabel": "N/A",
+                "value": "N/A[$£.;.£$]0"
+            }
+        ],
+        "value": null,
+        "row": true
+    },
+    {
+        "question": "I am confident I can work out solutions when new problems arise with my health.",
+        "subQuestionInfo": "",
+        "answerType": "RadioButtons",
+        "name": "PAM12",
+        "options": [
+            {
+                "radioLabel": "Disagree Strongly",
+                "value": "Disagree Strongly[$£.;.£$]1"
+            },
+            {
+                "radioLabel": "Disagree",
+                "value": "Disagree[$£.;.£$]2"
+            },
+            {
+                "radioLabel": "Agree",
+                "value": "Agree[$£.;.£$]3"
+            },
+            {
+                "radioLabel": "Agree Strongly",
+                "value": "Agree Strongly[$£.;.£$]4"
+            },
+            {
+                "radioLabel": "N/A",
+                "value": "N/A[$£.;.£$]0"
+            }
+        ],
+        "value": null,
+        "row": true
+    },
+    {
+        "question": "I am confident that I can maintain lifestyle changes, life healthy eating and exercising, even during times of stress.",
+        "subQuestionInfo": "",
+        "answerType": "RadioButtons",
+        "name": "PAM13",
+        "options": [
+            {
+                "radioLabel": "Disagree Strongly",
+                "value": "Disagree Strongly[$£.;.£$]1"
+            },
+            {
+                "radioLabel": "Disagree",
+                "value": "Disagree[$£.;.£$]2"
+            },
+            {
+                "radioLabel": "Agree",
+                "value": "Agree[$£.;.£$]3"
+            },
+            {
+                "radioLabel": "Agree Strongly",
+                "value": "Agree Strongly[$£.;.£$]4"
+            },
+            {
+                "radioLabel": "N/A",
+                "value": "N/A[$£.;.£$]0"
+            }
+        ],
+        "value": null,
+        "row": true
+    }
+]

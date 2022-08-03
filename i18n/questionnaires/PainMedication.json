@@ -1,0 +1,134 @@
+[
+    {
+        "question": "Please list all your prescribed medications and all over-the-counter or non-prescribed medications you take in the space below.",
+        "subQuestionInfo": "",
+        "questions": [
+            {
+                "label": "Medication Name *",
+                "id": "medicationName",
+                "type": "text"
+            },
+            {
+                "label": "Dose (mg) *",
+                "id": "dose",
+                "type": "text"
+            },
+            {
+                "label": "How Often? *",
+                "id": "howOften",
+                "type": "text"
+            },
+            {
+                "label": "How do you take the medication?",
+                "id": "howTakeMedication",
+                "type": "radioButton",
+                "options": [
+                    {
+                        "value": "Regularly",
+                        "label": "Regularly"
+                    },
+                    {
+                        "value": "As required/ needed",
+                        "label": "As required"
+                    }
+                ]
+            }
+        ],
+        "requiredQuestions": ["medicationName", "dose", "howOften"],
+        "listHeaderId": "medicationName",
+        "rowManagerButtons": { "remove": "Remove Medication", "add": "Add Medication" },
+        "answerType": "CollapsibleTable",
+        "name": "prescribedMedications",
+        "value": null
+    },
+    {
+        "question": "Do you use any medication for pain?",
+        "subQuestionInfo": "",
+        "questions": [
+            "Do you use any medication for pain?",
+            "How effective are your pain medications for reducing pain?"
+        ],
+        "answerType": "RadioWithFollowUpRadioButtons",
+        "optionsArray": [
+            {
+                "options": [
+                    {
+                        "radioLabel": "Yes",
+                        "value": "Yes"
+                    },
+                    {
+                        "radioLabel": "No",
+                        "value": "No"
+                    }
+                ]
+            },
+            {
+                "options": [
+                    {
+                        "radioLabel": "Not at all",
+                        "value": "Not at all"
+                    },
+                    {
+                        "radioLabel": "A little bit",
+                        "value": "A little bit"
+                    },
+                    {
+                        "radioLabel": "Somewhat",
+                        "value": "Somewhat"
+                    },
+                    {
+                        "radioLabel": "Extremely helpful",
+                        "value": "Extremely helpful"
+                    }
+                ]
+            }
+        ],
+        "followUpOptions": {
+            "followUpOptionId0": "Yes"
+        },
+        "name": "medicationForPain",
+        "value": null
+    },
+    {
+        "question": "Are you able to do more after taking your medications?",
+        "subQuestionInfo": null,
+        "answerType": "RadioButtons",
+        "options": [
+            {
+                "radioLabel": "Yes",
+                "value": "Yes[$£.;.£$]1"
+            },
+            {
+                "radioLabel": "No",
+                "value": "No[$£.;.£$]0"
+            }
+        ],
+        "name": "ableToDoMore",
+        "value": null
+    },
+    {
+        "question": "Since the beginning of the programme, has your pain medication use changed?",
+        "subQuestionInfo": "(This includes any medicines that you use for pain, including medication prescribed by a medical doctor and those bought over the counter, such as paracetamol or ibuprofen)",
+        "answerType": "RadioButtons",
+        "options": [
+            {
+                "radioLabel": "I wasn't taking any pain medications at the beginning of treatment.",
+                "value": "I wasn't taking any pain medications at the beginning of treatment."
+            },
+            {
+                "radioLabel": "No, my medication use has stayed the same.",
+                "value": "No, my medication use has stayed the same."
+            },
+            {
+                "radioLabel": "Yes, I am taking medications more often or in higher doses.",
+                "value": "Yes, I am taking medications more often or in higher doses."
+            },
+            {
+                "radioLabel": "Yes, I am taking medications less often or in lower doses. ",
+                "value": "Yes, I am taking medications less often or in lower doses. "
+            }
+        ],
+        "name": "medicationChanged",
+        "value": null
+    }
+]

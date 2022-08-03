@@ -1,0 +1,269 @@
+[
+    {
+        "heading": "Questionnaire to see if question type's components work.",
+        "answerType": "header",
+        "name": "Header1"
+    },
+    {
+        "question": "Please describe the condition/symptoms you are coming to see the clinician about. ",
+        "subQuestionInfo": "E.g describe any pain you are experiencing, location of pain, how and when things started, and the impact these symptoms are having on you.",
+        "answerType": "MultilineTextField",
+        "name": "test1",
+        "value": null
+    },
+    {
+        "question": "Are there any activities; hobbies, work, home life, that you cannot do because of your symptoms?",
+        "subQuestionInfo": "",
+        "answerType": "RadioWithFollowUpTextFieldQuestion",
+        "options": [
+            {
+                "radioLabel": "Yes",
+                "value": "yes[$£.;.£$]1"
+            },
+            {
+                "radioLabel": "No",
+                "value": "no[$£.;.£$]0"
+            }
+        ],
+        "name": "test2",
+        "followUpQuestion": "How does this make you feel, and what can't you do?",
+        "subFollowUpQuestionInfo": null,
+        "followUpOption": "yes[$£.;.£$]1",
+        "value": null
+    },
+    {
+        "question": "MOBILITY",
+        "subQuestionInfo": null,
+        "answerType": "RadioButtons",
+        "options": [
+            {
+                "radioLabel": "I have no problems in walking about",
+                "value": "I have no problems in walking about[$£.;.£$]1"
+            },
+            {
+                "radioLabel": "I have slight problems in walking about",
+                "value": "I have slight problems in walking about[$£.;.£$]2"
+            },
+            {
+                "radioLabel": "I have moderate problems in walking about",
+                "value": "I have moderate problems in walking about[$£.;.£$]3"
+            },
+            {
+                "radioLabel": "I have severe problems in walking about",
+                "value": "I have severe problems in walking about[$£.;.£$]4"
+            },
+            {
+                "radioLabel": "I am unable to walk about",
+                "value": "I am unable to walk about[$£.;.£$]5"
+            }
+        ],
+        "name": "test3",
+        "value": null
+    },
+    {
+        "question": "Please give your name?",
+        "subQuestionInfo": null,
+        "answerType": "ShortTextField",
+        "name": "test4",
+        "value": null
+    },
+    {
+        "question": "Please give your Date of Birth",
+        "subQuestionInfo": null,
+        "answerType": "DatePicker",
+        "name": "test5",
+        "value": null
+    },
+    {
+        "question": "Time of your injection",
+        "subQuestionInfo": null,
+        "answerType": "TimePicker",
+        "name": "test6",
+        "value": null
+    },
+    {
+        "question": "Pain rating before the injection: 10/10 indicates WORST IMAGINABLE PAIN 0/10 indicates NO PAIN",
+        "subQuestionInfo": null,
+        "answerType": "Slider",
+        "sliderRange": ["0", "10"],
+        "name": "test7",
+        "value": null
+    },
+    {
+        "question": "Please indicate which of the following areas of the body you have sought treatment for from this service",
+        "subQuestionInfo": "(you may select more than one)",
+        "answerType": "CheckBoxes",
+        "checkBoxes": [
+            {
+                "checkBoxLabel": "Headache, dizziness or poor balance",
+                "value": "Headache, dizziness or poor balance"
+            },
+            {
+                "checkBoxLabel": "Neck",
+                "value": "Neck"
+            },
+            {
+                "checkBoxLabel": "Shoulder/upper arm",
+                "value": "Shoulder/upper arm"
+            },
+            {
+                "checkBoxLabel": "Lower arm/wrist",
+                "value": "Lower arm/wrist"
+            },
+            {
+                "checkBoxLabel": "Hand",
+                "value": "Hand"
+            },
+            {
+                "checkBoxLabel": "Upper back/chest/abdomen",
+                "value": "Upper back/chest/abdomen"
+            },
+            {
+                "checkBoxLabel": "Lower back/pelvis",
+                "value": "Lower back/pelvis"
+            },
+            {
+                "checkBoxLabel": "Hip/groin/thigh",
+                "value": "Hip/groin/thigh"
+            },
+            {
+                "checkBoxLabel": "Knee/lower leg",
+                "value": "Knee/lower leg"
+            },
+            {
+                "checkBoxLabel": "Ankle/foot",
+                "value": "Ankle/foot"
+            },
+            {
+                "checkBoxLabel": "Other",
+                "value": "Other"
+            }
+        ],
+        "name": "test8",
+        "value": null
+    },
+    {
+        "question": "Are you in paid employment?",
+        "subQuestionInfo": "",
+        "questions": [
+            "Are you in paid employment?",
+            "Have you taken time off work during the last 3 months because of your pain?",
+            "Please tell us the number of days, weeks or months you were off work due to your pain in the last 3 months."
+        ],
+        "answerType": "RadioWithFollowUpRadioButtons",
+        "optionsArray": [
+            {
+                "options": [
+                    {
+                        "radioLabel": "Yes",
+                        "value": "Yes"
+                    },
+                    {
+                        "radioLabel": "No",
+                        "value": "No"
+                    }
+                ]
+            },
+            {
+                "options": [
+                    {
+                        "radioLabel": "Yes",
+                        "value": "Yes"
+                    },
+                    {
+                        "radioLabel": "No",
+                        "value": "No"
+                    }
+                ]
+            },
+            {
+                "options": [
+                    {
+                        "radioLabel": "1 - 7 days",
+                        "value": "1 - 7 days"
+                    },
+                    {
+                        "radioLabel": "1 - 4 weeks",
+                        "value": "1 - 4 weeks"
+                    },
+                    {
+                        "radioLabel": "5 - 8 weeks",
+                        "value": "5 - 8 weeks"
+                    },
+                    {
+                        "radioLabel": "More than 2 months",
+                        "value": "More than 2 months"
+                    }
+                ]
+            }
+        ],
+        "followUpOptions": {
+            "followUpOptionId0": "Yes",
+            "followUpOptionId1": "Yes"
+        },
+        "name": "test9",
+        "value": null
+    },
+    {
+        "question": "During the last 3 months have you been to see any health professionals for your condition, either at your GP practice, in other NHS services or private care? Visits for specific investigations or treatments (e.g. xrays, surgery) are covered in the next question.",
+        "subQuestionInfo": "",
+        "answerType": "CheckBoxesWithAssociatedTextField",
+        "name": "test10",
+        "options": [
+            {
+                "radioLabel": "Yes",
+                "value": "Yes"
+            },
+            {
+                "radioLabel": "No",
+                "value": "No"
+            }
+        ],
+        "followUpQuestion": "Please tell us which health professional you have seen, and the number of times you have seen each healthcare professional in the last 3 months for your pain condition",
+        "subFollowUpQuestionInfo": "",
+        "followUpOption": "Yes",
+        "followUpCheckBoxes": [
+            {
+                "checkBoxLabel": "GP",
+                "value": "GP"
+            },
+            {
+                "checkBoxLabel": "Nurse",
+                "value": "Nurse"
+            },
+            {
+                "checkBoxLabel": "Consultant, specialist, hospital doctor",
+                "value": "Consultant or specialist or hospital doctor"
+            },
+            {
+                "checkBoxLabel": "Physiotherapist",
+                "value": "Physiotherapist"
+            },
+            {
+                "checkBoxLabel": "Acupuncturist",
+                "value": "Acupuncturist"
+            },
+            {
+                "checkBoxLabel": "Osteopath/Chiropractor",
+                "value": "Osteopath/Chiropractor"
+            },
+            {
+                "checkBoxLabel": "Other",
+                "value": "Other"
+            }
+        ],
+        "checkBoxesTitle": "Health professional",
+        "textFieldTitle": "Number of times you have seen the health professional",
+        "value": null
+    },
+    {
+        "question": "Activity 1",
+        "subQuestionInfo": "Please use the slider below, 0 represents \"unable to perform\" and 10 represents \"able to perform at prior level\"",
+        "answerType": "TextfieldWithFollowUpSlider",
+        "sliderRange": ["0", "10"],
+        "name": "test11",
+        "value": null,
+        "marks": ["0", "10"],
+        "label": "Activity 1"
+    }
+]

@@ -1,0 +1,80 @@
+[
+    {
+        "question": "How satisfied are you that treatment met your needs? In other words, how happy are you with the outcomes that were achieved and the treatment that was delivered?",
+        "subQuestionInfo": null,
+        "answerType": "RadioWithFollowUpTextFieldQuestion",
+        "options": [
+            {
+                "radioLabel": "Very Unsatisfied",
+                "value": "Very Unsatisfied[$£.;.£$]1"
+            },
+            {
+                "radioLabel": "Unsatisfied",
+                "value": "Unsatisfied[$£.;.£$]2"
+            },
+            {
+                "radioLabel": "Neither Satisfied nor Unsatisfied",
+                "value": "Neither Satisfied nor Unsatisfied[$£.;.£$]3"
+            },
+            {
+                "radioLabel": "Satisfied",
+                "value": "Satisfied[$£.;.£$]4"
+            },
+            {
+                "radioLabel": "Very Satisfied",
+                "value": "Very Satisfied[$£.;.£$]5"
+            }
+        ],
+        "name": "satisfiedWithTreatment",
+        "followUpQuestion": "Tell us why/tell us more",
+        "subFollowUpQuestionInfo": "(e.g., how did it meet/not meet your needs?)",
+        "followUpOption": "*",
+        "value": null
+    },
+    {
+        "question": "How satisfied are you with the programme staff? In other words, how happy are you with how you were treated??",
+        "subQuestionInfo": null,
+        "answerType": "RadioWithFollowUpTextFieldQuestion",
+        "options": [
+            {
+                "radioLabel": "Very Unsatisfied",
+                "value": "Very Unsatisfied[$£.;.£$]1"
+            },
+            {
+                "radioLabel": "Unsatisfied",
+                "value": "Unsatisfied[$£.;.£$]2"
+            },
+            {
+                "radioLabel": "Neither Satisfied nor Unsatisfied",
+                "value": "Neither Satisfied nor Unsatisfied[$£.;.£$]3"
+            },
+            {
+                "radioLabel": "Satisfied",
+                "value": "Satisfied[$£.;.£$]4"
+            },
+            {
+                "radioLabel": "Very Satisfied",
+                "value": "Very Satisfied[$£.;.£$]5"
+            }
+        ],
+        "name": "satisfiedWithStaff",
+        "followUpQuestion": "Tell us why/tell us more",
+        "subFollowUpQuestionInfo": "(e.g., how did it meet/not meet your needs?)",
+        "followUpOption": "*",
+        "value": null
+    },
+    {
+        "question": "Please give us some general comments below on what you thought about the programme?",
+        "subQuestionInfo": null,
+        "answerType": "MultilineTextField",
+        "name": "generalComments",
+        "value": null
+    },
+    {
+        "question": "Is there anything you would say to someone who was thinking about coming on the programme, but who was anxious or unsure whether it was appropriate for them?",
+        "subQuestionInfo": null,
+        "answerType": "MultilineTextField",
+        "name": "sayToSomeone",
+        "value": null
+    }
+]

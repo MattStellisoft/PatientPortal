@@ -1,0 +1,83 @@
+[
+    {
+        "question": "Please describe the condition/symptoms you are coming to see the clinician about. ",
+        "subQuestionInfo": "E.g describe any pain you are experiencing, location of pain, how and when things started, and the impact these symptoms are having on you.",
+        "answerType": "MultilineTextField",
+        "name": "describeSymptoms",
+        "value": null
+    },
+    {
+        "question": "Are there any activities; hobbies, work, home life, that you cannot do because of your symptoms?",
+        "subQuestionInfo": "",
+        "answerType": "RadioWithFollowUpTextFieldQuestion",
+        "options": [
+            {
+                "radioLabel": "Yes",
+                "value": "yes[$£.;.£$]1"
+            },
+            {
+                "radioLabel": "No",
+                "value": "no[$£.;.£$]0"
+            }
+        ],
+        "name": "activitiesStopped",
+        "followUpQuestion": "How does this make you feel, and what can't you do?",
+        "subFollowUpQuestionInfo": null,
+        "followUpOption": "yes[$£.;.£$]1",
+        "value": null
+    },
+    {
+        "question": "Are you taking any regular medication, prescribed or over the counter?",
+        "subQuestionInfo": "",
+        "answerType": "RadioWithFollowUpTextFieldQuestion",
+        "options": [
+            {
+                "radioLabel": "Yes",
+                "value": "yes[$£.;.£$]1"
+            },
+            {
+                "radioLabel": "No",
+                "value": "no[$£.;.£$]0"
+            }
+        ],
+        "name": "medication",
+        "followUpQuestion": "Please outline below what medication, dosage (if known) and frequency",
+        "subFollowUpQuestionInfo": null,
+        "followUpOption": "yes[$£.;.£$]1",
+        "value": null
+    },
+    {
+        "question": "Have you had any previous treatment or investigations that relate to your symptoms?",
+        "subQuestionInfo": "(e.g., X-ray, MRI, blood tests)",
+        "answerType": "RadioWithFollowUpTextFieldQuestion",
+        "options": [
+            {
+                "radioLabel": "Yes",
+                "value": "yes[$£.;.£$]1"
+            },
+            {
+                "radioLabel": "No",
+                "value": "no[$£.;.£$]0"
+            }
+        ],
+        "name": "previousTreatment",
+        "followUpQuestion": "Please outline below.",
+        "subFollowUpQuestionInfo": null,
+        "followUpOption": "yes[$£.;.£$]1",
+        "value": null
+    },
+    {
+        "question": "If you have any specific concerns, questions or expectations that you would like answered at your appointment please outline these below.",
+        "subQuestionInfo": "",
+        "answerType": "MultilineTextField",
+        "name": "questions",
+        "value": null
+    },
+    {
+        "question": "Is there anything else you wish to tell the clinician about your condition/symptoms?",
+        "subQuestionInfo": "",
+        "answerType": "MultilineTextField",
+        "name": "extraInfo",
+        "value": null
+    }
+]

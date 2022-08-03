@@ -1,0 +1,153 @@
+{
+    "meta": {
+        "name": "Medial Branch Block",
+        "UUID": "",
+        "initialDisclaimer": "",
+        "finalDisclaimer": ""
+    },
+    "questions": [
+        {
+            "question": "Please give your name?",
+            "subQuestionInfo": null,
+            "answerType": "ShortTextField",
+            "name": "name",
+            "value": null
+        },
+        {
+            "question": "Please give your Date of Birth",
+            "subQuestionInfo": null,
+            "answerType": "DateFields",
+            "name": "dob",
+            "value": null
+        },
+        {
+            "question": "What was the date of your injection? ",
+            "subQuestionInfo": null,
+            "answerType": "DateFields",
+            "name": "injectionDate",
+            "value": null
+        },
+        {
+            "question": "Time of your injection",
+            "subQuestionInfo": null,
+            "answerType": "TimeFields",
+            "name": "injectionTime",
+            "value": null
+        },
+        {
+            "question": "Please copy the \"Procedure\" written on your paper form: ",
+            "subQuestionInfo": null,
+            "answerType": "ShortTextField",
+            "name": "Procedure",
+            "value": null
+        },
+        {
+            "question": "Pain rating before the injection",
+            "hint": "10/10 indicates WORST IMAGINABLE PAIN 0/10 indicates NO PAIN",
+            "subQuestionInfo": null,
+            "answerType": "Lickert",
+            "LickertRange": ["0", "10"],
+            "name": "painRating",
+            "value": null
+        },
+        {
+            "question": "Pain rating 30min after the injection",
+            "hint": "10/10 indicates WORST IMAGINABLE PAIN 0/10 indicates NO PAIN",
+            "subQuestionInfo": null,
+            "answerType": "Lickert",
+            "LickertRange": ["0", "10"],
+            "name": "painRating30AfterInjection",
+            "value": null
+        },
+        {
+            "question": "Pain rating 1 hour after the injection",
+            "hint": "10/10 indicates WORST IMAGINABLE PAIN 0/10 indicates NO PAIN",
+            "subQuestionInfo": null,
+            "answerType": "Lickert",
+            "LickertRange": ["0", "10"],
+            "name": "painRating60AfterInjection",
+            "value": null
+        },
+        {
+            "question": " Pain rating 2 hours after the injection",
+            "hint": "10/10 indicates WORST IMAGINABLE PAIN 0/10 indicates NO PAIN",
+            "subQuestionInfo": null,
+            "answerType": "Lickert",
+            "LickertRange": ["0", "10"],
+            "validation": ["required", "number"],
+            "name": "painRating120AfterInjection",
+            "value": null
+        },
+        {
+            "question": "Pain rating 3 hours after the injection",
+            "hint": "10/10 indicates WORST IMAGINABLE PAIN 0/10 indicates NO PAIN",
+            "subQuestionInfo": null,
+            "answerType": "Lickert",
+            "LickertRange": ["0", "10"],
+            "name": "painRating180AfterInjection",
+            "value": null
+        },
+        {
+            "question": "Pain rating 4 hours after the injection",
+            "hint": "10/10 indicates WORST IMAGINABLE PAIN 0/10 indicates NO PAIN",
+            "subQuestionInfo": null,
+            "answerType": "Lickert",
+            "LickertRange": ["0", "10"],
+            "validation": ["required", "number"],
+            "name": "painRating240AfterInjection",
+            "value": null
+        },
+        {
+            "question": "Pain rating 6 hours after the injection",
+            "hint": "10/10 indicates WORST IMAGINABLE PAIN 0/10 indicates NO PAIN",
+            "subQuestionInfo": null,
+            "answerType": "Lickert",
+            "LickertRange": ["0", "10"],
+            "name": "painRating360AfterInjection",
+            "value": null
+        },
+        {
+            "question": "Pain rating 8 hours after the injection",
+            "hint": "10/10 indicates WORST IMAGINABLE PAIN 0/10 indicates NO PAIN",
+            "subQuestionInfo": null,
+            "answerType": "Lickert",
+            "LickertRange": ["0", "10"],
+            "name": "painRating480AfterInjection",
+            "value": null
+        },
+        {
+            "question": "Pain rating the day after the injection",
+            "hint": "10/10 indicates WORST IMAGINABLE PAIN 0/10 indicates NO PAIN",
+            "subQuestionInfo": null,
+            "answerType": "Lickert",
+            "LickertRange": ["0", "10"],
+            "name": "painRating1DayAfterInjection",
+            "value": null
+        },
+        {
+            "question": "Any Comments you would like to add on your experience?",
+            "subQuestionInfo": "(It is not uncommon to have side-effects following an injection, for instance some soreness. You will have been provided an information sheet on what to expect. Please contact us if you have concerns about any of the effects of the injection outside of the side-effects you were told to expect. You can contact us on 0800 0340406 between 8am and 5pm Monday to Friday. Outside of these hours please call 111 if you have any concerns). ",
+            "answerType": "MultilineTextField",
+            "name": "comments",
+            "value": null,
+            "validation": ["string"]
+        }
+    ],
+    "initialValues": {
+        "name": "",
+        "dob": "",
+        "injectionDate": "",
+        "injectionTime": "",
+        "Procedure": "",
+        "painRating": "",
+        "painRating30AfterInjection": "",
+        "painRating60AfterInjection": "",
+        "painRating120AfterInjection": "",
+        "painRating180AfterInjection": "",
+        "painRating240AfterInjection": "",
+        "painRating360AfterInjection": "",
+        "painRating480AfterInjection": "",
+        "painRating1DayAfterInjection": "",
+        "comments": ""
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "main_intro": " Use our Patient Portal to track your progress, keep up-to-date with our latest news, view your documents and exercises, complete your online health assessment questionnaires, manage your appointments and more.",
+    "Accepted": "Welcome to Connect Health!",
+    "kci2_heading": "Complete pre-appointment questionnaire",
+    "kci21_heading": "Triage",
+    "kci3_heading": "Request appointment",
+    "kci31_heading": "Confirm appointment",
+    "kci4_heading": "Appointment reminder",
+    "kci41_heading": "Appointment cancellation",
+    "kci5_heading": "Diagnosis",
+    "kci51_heading": "Referral",
+    "kci52_heading": "Post referral",
+    "kci6_heading": "Discharge",
+    "kci61_heading": "Post discharge (3 Month)",
+    "kci62_heading": "Post discharge (12 Month)",
+    "discharged_heading": "You have been discharged",
+    "questionnaires_outstanding_1": "You have",
+    "questionnaires_outstanding_2": "questionnaire",
+    "questionnaires_outstanding_3": "to complete",
+    "requestAppointmentTitle": "Request an appointment",
+    "requestAppointmentMessage": "You can request your next appointment with us by clicking on this banner."
+}

@@ -1,0 +1,449 @@
+[
+    {
+        "question": "Pain/stiffness during the day",
+        "subQuestionInfo": "How severe was your usual joint or muscle pain and/or stiffness overall during the day in the last 2 weeks?",
+        "answerType": "RadioButtons",
+        "options": [
+            {
+                "radioLabel": "Not at all",
+                "value": "Not at all[$£.;.£$]4"
+            },
+            {
+                "radioLabel": "Slightly",
+                "value": "Slightly[$£.;.£$]3"
+            },
+            {
+                "radioLabel": "Moderately",
+                "value": "Moderately[$£.;.£$]2"
+            },
+            {
+                "radioLabel": "Fairly severe",
+                "value": "Fairly severe[$£.;.£$]1"
+            },
+            {
+                "radioLabel": "Very severe",
+                "value": "Very severe[$£.;.£$]0"
+            }
+        ],
+        "name": "stiffnessDuringTheDay",
+        "value": null
+    },
+    {
+        "question": "Pain/stiffness during the night",
+        "subQuestionInfo": "How severe was your usual joint or muscle pain and/or stiffness overall during the night in the last 2 weeks?",
+        "answerType": "RadioButtons",
+        "options": [
+            {
+                "radioLabel": "Not at all",
+                "value": "Not at all[$£.;.£$]4"
+            },
+            {
+                "radioLabel": "Slightly",
+                "value": "Slightly[$£.;.£$]3"
+            },
+            {
+                "radioLabel": "Moderately",
+                "value": "Moderately[$£.;.£$]2"
+            },
+            {
+                "radioLabel": "Fairly severe",
+                "value": "Fairly severe[$£.;.£$]1"
+            },
+            {
+                "radioLabel": "Very severe",
+                "value": "Very severe[$£.;.£$]0"
+            }
+        ],
+        "name": "StiffnessDuringTheNight",
+        "value": null
+    },
+    {
+        "question": "Walking",
+        "subQuestionInfo": "How much have your symptoms interfered with your ability to walk in the last 2 weeks?",
+        "answerType": "RadioButtons",
+        "options": [
+            {
+                "radioLabel": "Not at all",
+                "value": "Not at all[$£.;.£$]4"
+            },
+            {
+                "radioLabel": "Slightly",
+                "value": "Slightly[$£.;.£$]3"
+            },
+            {
+                "radioLabel": "Moderately",
+                "value": "Moderately[$£.;.£$]2"
+            },
+            {
+                "radioLabel": "Severely",
+                "value": "Severely[$£.;.£$]1"
+            },
+            {
+                "radioLabel": "Unable to walk",
+                "value": "Unable to walk[$£.;.£$]0"
+            }
+        ],
+        "name": "AbilityToWalk",
+        "value": null
+    },
+    {
+        "question": "Washing/ Dressing",
+        "subQuestionInfo": "How much have your symptoms interfered with your ability to wash or dress yourself in the last 2 weeks?",
+        "answerType": "RadioButtons",
+        "options": [
+            {
+                "radioLabel": "Not at all",
+                "value": "Not at all[$£.;.£$]4"
+            },
+            {
+                "radioLabel": "Slightly",
+                "value": "Slightly[$£.;.£$]3"
+            },
+            {
+                "radioLabel": "Moderately",
+                "value": "Moderately[$£.;.£$]2"
+            },
+            {
+                "radioLabel": "Severely",
+                "value": "Severely[$£.;.£$]1"
+            },
+            {
+                "radioLabel": "Unable to wash or dress myself",
+                "value": "Unable to wash or dress myself[$£.;.£$]0"
+            }
+        ],
+        "name": "WashingDressing",
+        "value": null
+    },
+    {
+        "question": "Physical activity levels",
+        "subQuestionInfo": "How much has it been a problem for you to do physical activities (e.g. going for a walk or jogging) to the level you want because of your joint or muscle symptoms in the last 2 weeks?",
+        "answerType": "RadioButtons",
+        "options": [
+            {
+                "radioLabel": "Not at all",
+                "value": "Not at all[$£.;.£$]4"
+            },
+            {
+                "radioLabel": "Slightly",
+                "value": "Slightly[$£.;.£$]3"
+            },
+            {
+                "radioLabel": "Moderately",
+                "value": "Moderately[$£.;.£$]2"
+            },
+            {
+                "radioLabel": "Very much",
+                "value": "Very much[$£.;.£$]1"
+            },
+            {
+                "radioLabel": "Unable to do physical activities",
+                "value": "Unable to do physical activities[$£.;.£$]0"
+            }
+        ],
+        "name": "PhysicalActivityLevels",
+        "value": null
+    },
+    {
+        "question": "Work/ daily routine",
+        "subQuestionInfo": "How much have your joint or muscle symptoms interfered with your work or daily routine in the last 2 weeks (including work & jobs around the house)?",
+        "answerType": "RadioButtons",
+        "options": [
+            {
+                "radioLabel": "Not at all",
+                "value": "Not at all[$£.;.£$]4"
+            },
+            {
+                "radioLabel": "Slightly",
+                "value": "Slightly[$£.;.£$]3"
+            },
+            {
+                "radioLabel": "Moderately",
+                "value": "Moderately[$£.;.£$]2"
+            },
+            {
+                "radioLabel": "Severely",
+                "value": "Severely[$£.;.£$]1"
+            },
+            {
+                "radioLabel": "Extremely",
+                "value": "Extremely[$£.;.£$]0"
+            }
+        ],
+        "name": "DailyRoutine",
+        "value": null
+    },
+    {
+        "question": "Social activities and hobbies",
+        "subQuestionInfo": "How much have your joint or muscle symptoms interfered with your social activities and hobbies in the last 2 weeks?",
+        "answerType": "RadioButtons",
+        "options": [
+            {
+                "radioLabel": "Not at all",
+                "value": "Not at all[$£.;.£$]4"
+            },
+            {
+                "radioLabel": "Slightly",
+                "value": "Slightly[$£.;.£$]3"
+            },
+            {
+                "radioLabel": "Moderately",
+                "value": "Moderately[$£.;.£$]2"
+            },
+            {
+                "radioLabel": "Severely",
+                "value": "Severely[$£.;.£$]1"
+            },
+            {
+                "radioLabel": "Extremely",
+                "value": "Extremely[$£.;.£$]0"
+            }
+        ],
+        "name": "SocialActivitiesAndHobbies",
+        "value": null
+    },
+    {
+        "question": "Needing help",
+        "subQuestionInfo": "How often have you needed help from others (including family, friends or carers) because of your joint or muscle symptoms in the last 2 weeks?",
+        "answerType": "RadioButtons",
+        "options": [
+            {
+                "radioLabel": "Not at all",
+                "value": "Not at all[$£.;.£$]4"
+            },
+            {
+                "radioLabel": "Rarely",
+                "value": "Rarely[$£.;.£$]3"
+            },
+            {
+                "radioLabel": "Sometimes",
+                "value": "Sometimes[$£.;.£$]2"
+            },
+            {
+                "radioLabel": "Frequently",
+                "value": "Frequently[$£.;.£$]1"
+            },
+            {
+                "radioLabel": "All the time",
+                "value": "All the time[$£.;.£$]0"
+            }
+        ],
+        "name": "NeedingHelp",
+        "value": null
+    },
+    {
+        "question": "Sleep",
+        "subQuestionInfo": "How often have you had trouble with either falling asleep or staying asleep because of your joint or muscle symptoms in the last 2 weeks?",
+        "answerType": "RadioButtons",
+        "options": [
+            {
+                "radioLabel": "Not at all",
+                "value": "Not at all[$£.;.£$]4"
+            },
+            {
+                "radioLabel": "Rarely",
+                "value": "Rarely[$£.;.£$]3"
+            },
+            {
+                "radioLabel": "Sometimes",
+                "value": "Sometimes[$£.;.£$]2"
+            },
+            {
+                "radioLabel": "Frequently",
+                "value": "Frequently[$£.;.£$]1"
+            },
+            {
+                "radioLabel": "Every night",
+                "value": "Every night[$£.;.£$]0"
+            }
+        ],
+        "name": "TroubleSleeping",
+        "value": null
+    },
+    {
+        "question": "Fatigue or low energy",
+        "subQuestionInfo": "How much fatigue or low energy have you felt in the last 2 weeks?",
+        "answerType": "RadioButtons",
+        "options": [
+            {
+                "radioLabel": "Not at all",
+                "value": "Not at all[$£.;.£$]4"
+            },
+            {
+                "radioLabel": "Slightly",
+                "value": "Slightly[$£.;.£$]3"
+            },
+            {
+                "radioLabel": "Moderate",
+                "value": "Moderate[$£.;.£$]2"
+            },
+            {
+                "radioLabel": "Severe",
+                "value": "Severe[$£.;.£$]1"
+            },
+            {
+                "radioLabel": "Extreme",
+                "value": "Extreme[$£.;.£$]0"
+            }
+        ],
+        "name": "FatigueOrLowEnergy",
+        "value": null
+    },
+    {
+        "question": "Emotional well-being",
+        "subQuestionInfo": "How much have you felt anxious or low in your mood because of your joint or muscle symptoms in the last 2 weeks?",
+        "answerType": "RadioButtons",
+        "options": [
+            {
+                "radioLabel": "Not at all",
+                "value": "Not at all[$£.;.£$]4"
+            },
+            {
+                "radioLabel": "Slightly",
+                "value": "Slightly[$£.;.£$]3"
+            },
+            {
+                "radioLabel": "Moderately",
+                "value": "Moderately[$£.;.£$]2"
+            },
+            {
+                "radioLabel": "Severely",
+                "value": "Severely[$£.;.£$]1"
+            },
+            {
+                "radioLabel": "Extremely",
+                "value": "Extremely[$£.;.£$]0"
+            }
+        ],
+        "name": "EmotionalWellBeing",
+        "value": null
+    },
+    {
+        "question": "Understanding of your condition and any current treatment",
+        "subQuestionInfo": "Thinking about your joint or muscle symptoms, how well do you feel you understand your condition and any current treatment (including your diagnosis and medication)?",
+        "answerType": "RadioButtons",
+        "options": [
+            {
+                "radioLabel": "Completely",
+                "value": "Completely[$£.;.£$]4"
+            },
+            {
+                "radioLabel": "Very well",
+                "value": "Very well[$£.;.£$]3"
+            },
+            {
+                "radioLabel": "Moderately",
+                "value": "Moderately[$£.;.£$]2"
+            },
+            {
+                "radioLabel": "Slightly",
+                "value": "Slightly[$£.;.£$]1"
+            },
+            {
+                "radioLabel": "Not at all",
+                "value": "Not at all[$£.;.£$]0"
+            }
+        ],
+        "name": "CurrentTreatment",
+        "value": null
+    },
+    {
+        "question": "Confidence in being able to manage your symptoms",
+        "subQuestionInfo": "How confident have you felt in being able to manage your joint or muscle symptoms by yourself in the last 2 weeks (e.g. medication, changing, lifestyle)?",
+        "answerType": "RadioButtons",
+        "options": [
+            {
+                "radioLabel": "Extremely",
+                "value": "Extremely[$£.;.£$]4"
+            },
+            {
+                "radioLabel": "Very",
+                "value": "Very[$£.;.£$]3"
+            },
+            {
+                "radioLabel": "Moderately",
+                "value": "Moderately[$£.;.£$]2"
+            },
+            {
+                "radioLabel": "Slightly",
+                "value": "Slightly[$£.;.£$]1"
+            },
+            {
+                "radioLabel": "Not at all",
+                "value": "Not at all[$£.;.£$]0"
+            }
+        ],
+        "name": "ManageSymptoms",
+        "value": null
+    },
+    {
+        "question": "Overall impact",
+        "subQuestionInfo": "How much have your joint or muscle symptoms bothered you overall in the last 2 weeks?",
+        "answerType": "RadioButtons",
+        "options": [
+            {
+                "radioLabel": "Not at all",
+                "value": "Not at all[$£.;.£$]4"
+            },
+            {
+                "radioLabel": "Slightly",
+                "value": "Slightly[$£.;.£$]3"
+            },
+            {
+                "radioLabel": "Moderately",
+                "value": "Moderately[$£.;.£$]2"
+            },
+            {
+                "radioLabel": "Very much",
+                "value": "Very much[$£.;.£$]1"
+            },
+            {
+                "radioLabel": "Extremely",
+                "value": "Extremely[$£.;.£$]0"
+            }
+        ],
+        "name": "OverallImpact",
+        "value": null
+    },
+    {
+        "question": "Physical activity",
+        "subQuestionInfo": "In the past week, on how many days have you done a total of 30 minutes or more of physical activity, which was enough to raise your heart rate? This may include sport, exercise and brisk walking or cycling for recreation or to get to and from places, but should not include homework or physical activity that is part of your job.",
+        "answerType": "RadioButtons",
+        "options": [
+            {
+                "radioLabel": "None",
+                "value": "None[$£.;.£$]0"
+            },
+            {
+                "radioLabel": "1 Day",
+                "value": "Day[$£.;.£$]1"
+            },
+            {
+                "radioLabel": "2 Days",
+                "value": "2 Days[$£.;.£$]2"
+            },
+            {
+                "radioLabel": "3 Days",
+                "value": "3 Days[$£.;.£$]3"
+            },
+            {
+                "radioLabel": "4 Days",
+                "value": "4 Days[$£.;.£$]4"
+            },
+            {
+                "radioLabel": "5 Days",
+                "value": "5 Days[$£.;.£$]5"
+            },
+            {
+                "radioLabel": "6 Days",
+                "value": "6 Days[$£.;.£$]6"
+            },
+            {
+                "radioLabel": "7 Days",
+                "value": "7 Days[$£.;.£$]7"
+            }
+        ],
+        "name": "PhysicalActivity",
+        "value": null
+    }
+]

@@ -1,0 +1,467 @@
+[
+    {
+        "question": "What was your year of birth?",
+        "subQuestionInfo": null,
+        "answerType": "ShortTextField",
+        "name": "yearOfBirth",
+        "support": false,
+        "value": null
+    },
+    {
+        "question": "On the diagram below please select the white areas where you feel pain?",
+        "subQuestionInfo": "Selecting an area once turns the area blue, showing that you feel pain. Pressing twice turns the area red, showing that the area hurts the most. Pressing three times will reset the area to white, showing the area does not hurt. Using the controls below you can select front, back, top or bottom of the diagram.",
+        "answerType": "painDiagram",
+        "name": "painSite",
+        "selectColours": {
+            "defaultColour": "#fff",
+            "mediumColour": "#0081C9",
+            "highColour": "#c0392b"
+        },
+        "changePositionText": { "Front": "Front", "Back": "Back", "Top": "Top", "Bottom": "Bottom" },
+        "labels": {
+            "backLeftFoot": "Back left foot",
+            "backLeftElbow": "Back left elbow",
+            "backLeftButtock": "Back left buttock",
+            "backLeftHand": "Back left hand",
+            "backLeftHead": "Back left head",
+            "backLeftLowerArm": "Back left lower arm",
+            "backLeftLowerBack": "Back left lower back",
+            "backLeftLowerLeg": "Back left lower leg",
+            "backLeftMiddleBack": "Back left middle back",
+            "backLeftNeck": "Back left neck",
+            "backLeftUpperArm": "Back left upper arm",
+            "backLeftUpperBack": "Back left upper back",
+            "backLeftUpperLeg": "Back left upper leg",
+            "backRightButtock": "Back right buttock",
+            "backRightElbow": "Back right elbow",
+            "backRightFoot": "Back right foot",
+            "backRightHand": "Back right hand",
+            "backRightHead": "Back right head",
+            "backRightLowerArm": "Back right lower arm",
+            "backRightLowerBack": "Back right lower back",
+            "backRightLowerLeg": "Back right lower leg",
+            "backRightMiddleBack": "Back right middle back",
+            "backRightNeck": "Back right neck",
+            "backRightUpperArm": "Back right upper arm",
+            "backRightUpperBack": "Back right upper back",
+            "backRightUpperLeg": "Back right upper leg",
+            "frontCrotch": "Front crotch",
+            "frontLeftAb": "Front left abdomen",
+            "frontLeftCheek": "Front left cheek",
+            "frontLeftChest": "Front left chest",
+            "frontLeftFoot": "Front left foot",
+            "frontLeftHand": "Front left hand",
+            "frontLeftHead": "Front left head",
+            "frontLeftHip": "Front left hip",
+            "frontLeftKnee": "Front left knee",
+            "frontLeftLowerArm": "Front left lower arm",
+            "frontLeftLowerLeg": "Front left lower leg",
+            "frontLeftNeck": "Front left neck",
+            "frontLeftShoulder": "Front left shoulder",
+            "frontLeftUpperArm": "Front left upper arm",
+            "frontLeftUpperLeg": "Front left upper leg",
+            "frontRightAb": "Front right abdomen",
+            "frontRightCheek": "Front right cheek",
+            "frontRightChest": "Front right chest",
+            "frontRightFoot": "Front right foot",
+            "frontRightHand": "Front right hand",
+            "frontRightHead": "Front right head",
+            "frontRightHip": "Front right hip",
+            "frontRightKnee": "Front right knee",
+            "frontRightLowerArm": "Front right lower arm",
+            "frontRightLowerLeg": "Front right lower leg",
+            "frontRightNeck": "Front right neck",
+            "frontRightShoulder": "Front right shoulder",
+            "frontRightUpperArm": "Front right upper arm",
+            "frontRightUpperLeg": "Front right upper leg"
+        },
+        "value": null
+    },
+    {
+        "question": "Please select any underlying health conditions that you may have from the list below.",
+        "subQuestionInfo": "",
+        "answerType": "CheckBoxes",
+        "checkBoxes": [
+            {
+                "checkBoxLabel": "Chronic pain",
+                "value": "Chronic pain"
+            },
+            {
+                "checkBoxLabel": "Cancer",
+                "value": "Cancer"
+            },
+            {
+                "checkBoxLabel": "Circulatory Conditions",
+                "value": "Circulatory Conditions"
+            },
+            {
+                "checkBoxLabel": "Diabetes",
+                "value": "Diabetes"
+            },
+            {
+                "checkBoxLabel": "Digestive system conditions",
+                "value": "Digestive system conditions"
+            },
+            {
+                "checkBoxLabel": "Learning disability",
+                "value": "Learning disability"
+            },
+            {
+                "checkBoxLabel": "Mental health condition e.g. depression, anxiety",
+                "value": "Mental health condition"
+            },
+            {
+                "checkBoxLabel": "Arthritis",
+                "value": "Arthritis"
+            },
+            {
+                "checkBoxLabel": "Neurological condition",
+                "value": "Neurological condition"
+            },
+            {
+                "checkBoxLabel": "Chronic kidney disease",
+                "value": "Chronic kidney disease"
+            },
+            {
+                "checkBoxLabel": "Respiratory condition",
+                "value": "Respiratory condition"
+            },
+            {
+                "checkBoxLabel": "None of the above",
+                "value": "None of the above"
+            }
+        ],
+        "name": "coMorbidities",
+        "value": null
+    },
+    {
+        "question": "Please indicate how long you have had pain for.",
+        "subQuestionInfo": "",
+        "answerType": "RadioButtons",
+        "options": [
+            {
+                "radioLabel": "Less than 3 months",
+                "value": "Less than 3 months"
+            },
+            {
+                "radioLabel": "4 - 6 months",
+                "value": "4 - 6 months"
+            },
+            {
+                "radioLabel": "7 - 12 months",
+                "value": "7 - 12 months"
+            },
+            {
+                "radioLabel": "13 months to 3 years",
+                "value": "13 months to 3 years"
+            },
+            {
+                "radioLabel": "3 - 5 years",
+                "value": "3 - 5 years"
+            },
+            {
+                "radioLabel": "More than 5 years",
+                "value": "More than 5 years"
+            }
+        ],
+        "name": "symptomDuration",
+        "value": null
+    },
+    {
+        "question": "What is your highest level of schooling completed?",
+        "subQuestionInfo": "",
+        "answerType": "RadioButtons",
+        "options": [
+            {
+                "radioLabel": "None",
+                "value": "None"
+            },
+            {
+                "radioLabel": "Primary/Junior School",
+                "value": "Primary/Junior School"
+            },
+            {
+                "radioLabel": "Secondary/Senior School",
+                "value": "Secondary/Senior School"
+            },
+            {
+                "radioLabel": "Higher education or above",
+                "value": "Higher education or above"
+            }
+        ],
+        "name": "highestLevelOfEducation",
+        "value": null
+    },
+    {
+        "question": "What was your sex at birth?",
+        "subQuestionInfo": "",
+        "answerType": "RadioButtons",
+        "options": [
+            {
+                "radioLabel": "Female",
+                "value": "Female"
+            },
+            {
+                "radioLabel": "Male",
+                "value": "Male"
+            },
+            {
+                "radioLabel": "Prefer not to say",
+                "value": "Prefer not to say"
+            }
+        ],
+        "name": "sexAtBirth",
+        "value": null
+    },
+    {
+        "question": "Which of the following options best describes how you think of yourself?",
+        "subQuestionInfo": "Why are we capturing this information? You can read more about the NHS information standard here: https://www.england.nhs.uk/about/equality/equality-hub/sexual-orientation-monitoring-information-standard/",
+        "answerType": "RadioButtons",
+        "options": [
+            {
+                "radioLabel": "Heterosexual or Straight",
+                "value": "Heterosexual or Straight"
+            },
+            {
+                "radioLabel": "Gay or Lesbian",
+                "value": "Gay or Lesbian"
+            },
+            {
+                "radioLabel": "Bisexual",
+                "value": "Bisexual"
+            },
+            {
+                "radioLabel": "Other (please say)",
+                "value": "Other"
+            },
+            {
+                "radioLabel": "Do not know or not sure",
+                "value": "Do not know or not sure"
+            },
+            {
+                "radioLabel": "Undecided",
+                "value": "Undecided"
+            },
+            {
+                "radioLabel": "Prefer not to say",
+                "value": "Prefer not to say"
+            },
+            {
+                "radioLabel": "Prefer to self-describe (please say)",
+                "value": "Other"
+            }
+        ],
+        "customChoiceOption": "Other",
+        "name": "sexualOrientation",
+        "value": null
+    },
+    {
+        "question": "What is your ethnic group?",
+        "subQuestionInfo": "",
+        "answerType": "RadioButtons",
+        "options": [
+            {
+                "radioLabel": "English / Welsh / Scottish / Northern Irish / British",
+                "value": "English / Welsh / Scottish / Northern Irish / British"
+            },
+            {
+                "radioLabel": "Irish",
+                "value": "Irish"
+            },
+            {
+                "radioLabel": "Gypsy or Irish Traveller",
+                "value": "Gypsy or Irish Traveller"
+            },
+            {
+                "radioLabel": "Roma",
+                "value": "Roma"
+            },
+            {
+                "radioLabel": "Any other White background",
+                "value": "Any other White background"
+            },
+            {
+                "radioLabel": "White and Black Caribbean",
+                "value": "White and Black Caribbean"
+            },
+            {
+                "radioLabel": "White and Black African",
+                "value": "White and Black African"
+            },
+            {
+                "radioLabel": "White and Asian",
+                "value": "White and Asian"
+            },
+            {
+                "radioLabel": "Any other Mixed / Multiple ethnic background",
+                "value": "Any other Mixed / Multiple ethnic background"
+            },
+            {
+                "radioLabel": "Indian",
+                "value": "Indian"
+            },
+            {
+                "radioLabel": "Pakistani",
+                "value": "Pakistani"
+            },
+            {
+                "radioLabel": "Bangladeshi",
+                "value": "Bangladeshi"
+            },
+            {
+                "radioLabel": "Chinese",
+                "value": "Chinese"
+            },
+            {
+                "radioLabel": "Any other Asian background",
+                "value": "Any other Asian background"
+            },
+            {
+                "radioLabel": "African",
+                "value": "African"
+            },
+            {
+                "radioLabel": "Caribbean",
+                "value": "Caribbean"
+            },
+            {
+                "radioLabel": "Any other Black / African / Caribbean background",
+                "value": "Any other Black / African / Caribbean background"
+            },
+            {
+                "radioLabel": "Arab",
+                "value": "Arab"
+            },
+            {
+                "radioLabel": "Any other ethnic group",
+                "value": "Any other ethnic group"
+            },
+            {
+                "radioLabel": "Prefer not to say",
+                "value": "Prefer not to say"
+            }
+        ],
+        "name": "ethnicity",
+        "value": null
+    },
+    {
+        "question": "What is your relationship status?",
+        "subQuestionInfo": "",
+        "answerType": "RadioButtons",
+        "options": [
+            {
+                "radioLabel": "Single",
+                "value": "Single"
+            },
+            {
+                "radioLabel": "Married /civil partnership/ living with partner",
+                "value": "Married /civil partnership/ living with partner"
+            },
+            {
+                "radioLabel": "Divorced",
+                "value": "Divorced"
+            },
+            {
+                "radioLabel": "Widowed",
+                "value": "Widowed"
+            },
+            {
+                "radioLabel": "Prefer not to say",
+                "value": "Prefer not to say"
+            }
+        ],
+        "name": "relationshipStatus",
+        "value": null
+    },
+    {
+        "question": "Are you currently receiving any of the following benefits or tax credits?",
+        "subQuestionInfo": "(Tick all that apply)",
+        "answerType": "CheckBoxes",
+        "checkBoxes": [
+            {
+                "checkBoxLabel": "I prefer not to say",
+                "value": "I prefer not to say"
+            },
+            {
+                "checkBoxLabel": "Not claiming benefits",
+                "value": "Not claiming benefits"
+            },
+            {
+                "checkBoxLabel": "Employment and Support allowance (support group)",
+                "value": "Employment and Support allowance (support group)"
+            },
+            {
+                "checkBoxLabel": "Employment and Support Allowance (Work Related Activity Group)",
+                "value": "Employment and Support Allowance (Work Related Activity Group)"
+            },
+            {
+                "checkBoxLabel": "Employment and Support Allowance (Unsure which group)",
+                "value": "Employment and Support Allowance (Unsure which group)"
+            },
+            {
+                "checkBoxLabel": "Disability Living Allowance (DLA)",
+                "value": "Disability Living Allowance (DLA)"
+            },
+            {
+                "checkBoxLabel": "Personal Independence Payment (PIP)",
+                "value": "Personal Independence Payment (PIP)"
+            },
+            {
+                "checkBoxLabel": "Income Support",
+                "value": "Income Support"
+            },
+            {
+                "checkBoxLabel": "Jobseekers' Allowance (JSA)",
+                "value": "Jobseekers' Allowance (JSA)"
+            },
+            {
+                "checkBoxLabel": "Universal Credit (UC)",
+                "value": "Universal Credit (UC)"
+            },
+            {
+                "checkBoxLabel": "Working Tax Credit (WTC)",
+                "value": "Working Tax Credit (WTC)"
+            },
+            {
+                "checkBoxLabel": "Claiming benefits but not sure which",
+                "value": "Claiming benefits but not sure which"
+            }
+        ],
+        "name": "benefitStatus",
+        "value": null
+    },
+    {
+        "subQuestionInfo": null,
+        "answerType": "painWorkStatus",
+        "name": "workStatus",
+        "questions": {
+            "zero": "Are you in paid employment?",
+            "a": "Which are you currently doing?",
+            "b": "Are you not doing your usual job because of your pain?",
+            "c": "How long have you been off work for?",
+            "d": "Which of the following best describes your current situation?"
+        },
+        "options": {
+            "zero": { "options": ["Yes", "No"] },
+            "a": {
+                "options": ["Doing my usual job", "Working few hours", "On paid sick leave", "On unpaid sick leave"]
+            },
+            "b": { "options": ["Yes, mainly due to my pain", "No, not due to my pain"] },
+            "c": { "options": ["Years", "Months"] },
+            "d": {
+                "options": [
+                    "Retired",
+                    "Looking after children/home",
+                    "Unemployed due to pain",
+                    "Student",
+                    "Voluntary worker",
+                    "Unemployed due to other health reasons",
+                    "Unemployed (not health-related)",
+                    "Other"
+                ]
+            }
+        },
+        "questionCText": { "Years": "Years", "Months": "Months" },
+        "value": null
+    }
+]

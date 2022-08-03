@@ -1,0 +1,18 @@
+{
+    "start": "Start",
+    "continue": "Continue",
+    "back": "Back",
+    "change": "Change",
+    "submit": "Sumbit your answers",
+    "questionsRemaining": "Question [questionNumber] of [totalQuestions]",
+    "is_required": "This field is required",
+    "string": "This field must be a string",
+    "array": "This field must be an array",
+    "minimumOfOne": "This field has a minimum of 1",
+    "date": "This field must be a valid date",
+    "number": "This field must be a number",
+    "generalError": "An error occurred",
+    "checkAnswersHeading": "Check your answers before sending your questionnaire",
+    "sendQuestionnaireHeading": "Now send your questionnaire",
+    "sendQuestionnaireDeclaration": "By submitting this questionnaire you are confirming that, to the best of your knowledge, the details you are providing are correct."
+}

@@ -1,0 +1,106 @@
+[
+    {
+        "question": "What is the intensity of your pain (how bad is your pain) right NOW?",
+        "subQuestionInfo": null,
+        "marks": ["No pain", "Worst Pain Possible"],
+        "answerType": "Slider",
+        "sliderRange": ["0", "10"],
+        "name": "currentPainIntensity",
+        "value": null
+    },
+    {
+        "question": "What was the LOWEST intensity of your pain during the PAST 24 Hours?",
+        "subQuestionInfo": null,
+        "marks": ["No pain", "Worst Pain Possible"],
+        "answerType": "Slider",
+        "sliderRange": ["0", "10"],
+        "name": "painIntensityPast24Hours",
+        "value": null
+    },
+    {
+        "question": "What was the USUAL intensity of your pain in the PAST WEEK?",
+        "subQuestionInfo": null,
+        "marks": ["No pain/ days without pain", "Worst Pain Possible"],
+        "answerType": "Slider",
+        "sliderRange": ["0", "10"],
+        "name": "usualPainIntensity",
+        "value": null
+    },
+    {
+        "question": "What was the HIGHEST intensity of your pain during the PAST 24 Hours?",
+        "subQuestionInfo": null,
+        "marks": ["No pain", "Worst Pain Possible"],
+        "answerType": "Slider",
+        "sliderRange": ["0", "10"],
+        "name": "highestPainIntensity",
+        "value": null
+    },
+    {
+        "heading": "Select the one number that best describes how, during the past 24 hours, PAIN HAS INTERFERED with:",
+        "answerType": "header",
+        "name": "painInterferenceHeader"
+    },
+    {
+        "question": "GENERAL ACTIVITY",
+        "subQuestionInfo": null,
+        "marks": ["Does not interfere", "Completely interferes"],
+        "answerType": "Slider",
+        "sliderRange": ["0", "10"],
+        "name": "generalActivity",
+        "value": null
+    },
+    {
+        "question": "MOOD",
+        "subQuestionInfo": null,
+        "marks": ["Does not interfere", "Completely interferes"],
+        "answerType": "Slider",
+        "sliderRange": ["0", "10"],
+        "name": "mood",
+        "value": null
+    },
+    {
+        "question": "WALKING ABILITY",
+        "subQuestionInfo": null,
+        "marks": ["Does not interfere", "Completely interferes"],
+        "answerType": "Slider",
+        "sliderRange": ["0", "10"],
+        "name": "walkingAbility",
+        "value": null
+    },
+    {
+        "question": "NORMAL WORK (Includes both work outside the home and housework)",
+        "subQuestionInfo": null,
+        "marks": ["Does not interfere", "Completely interferes"],
+        "answerType": "Slider",
+        "sliderRange": ["0", "10"],
+        "name": "normalWork",
+        "value": null
+    },
+    {
+        "question": "RELATIONS WITH OTHER PEOPLE",
+        "subQuestionInfo": null,
+        "marks": ["Does not interfere", "Completely interferes"],
+        "answerType": "Slider",
+        "sliderRange": ["0", "10"],
+        "name": "relationsWithOtherPeople",
+        "value": null
+    },
+    {
+        "question": "SLEEP",
+        "subQuestionInfo": null,
+        "marks": ["Does not interfere", "Completely interferes"],
+        "answerType": "Slider",
+        "sliderRange": ["0", "10"],
+        "name": "sleep",
+        "value": null
+    },
+    {
+        "question": "ENJOYMENT OF LIFE",
+        "subQuestionInfo": null,
+        "marks": ["Does not interfere", "Completely interferes"],
+        "answerType": "Slider",
+        "sliderRange": ["0", "10"],
+        "name": "enjoymentOfLife",
+        "value": null
+    }
+]

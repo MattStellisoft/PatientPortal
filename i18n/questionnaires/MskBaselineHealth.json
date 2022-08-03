@@ -1,0 +1,251 @@
+[
+    {
+        "question": "Please indicate which of the following areas of the body you have sought treatment for from this service",
+        "subQuestionInfo": "(you may select more than one)",
+        "answerType": "CheckBoxes",
+        "checkBoxes": [
+            {
+                "checkBoxLabel": "Headache, dizziness or poor balance",
+                "value": "Headache, dizziness or poor balance"
+            },
+            {
+                "checkBoxLabel": "Neck",
+                "value": "Neck"
+            },
+            {
+                "checkBoxLabel": "Shoulder/upper arm",
+                "value": "Shoulder/upper arm"
+            },
+            {
+                "checkBoxLabel": "Lower arm/wrist",
+                "value": "Lower arm/wrist"
+            },
+            {
+                "checkBoxLabel": "Hand",
+                "value": "Hand"
+            },
+            {
+                "checkBoxLabel": "Upper back/chest/abdomen",
+                "value": "Upper back/chest/abdomen"
+            },
+            {
+                "checkBoxLabel": "Lower back/pelvis",
+                "value": "Lower back/pelvis"
+            },
+            {
+                "checkBoxLabel": "Hip/groin/thigh",
+                "value": "Hip/groin/thigh"
+            },
+            {
+                "checkBoxLabel": "Knee/lower leg",
+                "value": "Knee/lower leg"
+            },
+            {
+                "checkBoxLabel": "Ankle/foot",
+                "value": "Ankle/foot"
+            },
+            {
+                "checkBoxLabel": "Other",
+                "value": "Other"
+            }
+        ],
+        "name": "painSite",
+        "value": null
+    },
+    {
+        "question": "How long have you had your current joint, or muscle pain problem?",
+        "subQuestionInfo": "",
+        "answerType": "RadioButtons",
+        "options": [
+            {
+                "radioLabel": "Less than 2-weeks",
+                "value": "Less than 2-weeks"
+            },
+            {
+                "radioLabel": "2 - 4 weeks",
+                "value": "2 - 4 weeks"
+            },
+            {
+                "radioLabel": "5 weeks - 3 months",
+                "value": "5 weeks - 3 months"
+            },
+            {
+                "radioLabel": "4 - 6 months",
+                "value": "4 - 6 months"
+            },
+            {
+                "radioLabel": "7 - 12 months",
+                "value": "7 - 12 months"
+            },
+            {
+                "radioLabel": "13 months - 3 years",
+                "value": "13 months - 3 years"
+            },
+            {
+                "radioLabel": "Over 3 years",
+                "value": "Over 3 years"
+            }
+        ],
+        "name": "syDuration",
+        "value": null
+    },
+    {
+        "question": "Please select any underlying health conditions that you may have from the list below.",
+        "subQuestionInfo": "",
+        "answerType": "CheckBoxes",
+        "checkBoxes": [
+            {
+                "checkBoxLabel": "Cancer",
+                "value": "Cancer"
+            },
+            {
+                "checkBoxLabel": "Chronic pain",
+                "value": "Chronic pain"
+            },
+            {
+                "checkBoxLabel": "Circulatory Conditions",
+                "value": "Circulatory Conditions"
+            },
+            {
+                "checkBoxLabel": "Diabetes",
+                "value": "Diabetes"
+            },
+            {
+                "checkBoxLabel": "Digestive system conditions",
+                "value": "Digestive system conditions"
+            },
+            {
+                "checkBoxLabel": "Learning disability",
+                "value": "Learning disability"
+            },
+            {
+                "checkBoxLabel": "Mental health condition e.g. depression, anxiety",
+                "value": "Mental health condition"
+            },
+            {
+                "checkBoxLabel": "Arthritis",
+                "value": "Arthritis"
+            },
+            {
+                "checkBoxLabel": "Neurological condition",
+                "value": "Neurological condition"
+            },
+            {
+                "checkBoxLabel": "Chronic kidney disease",
+                "value": "Chronic kidney disease"
+            },
+            {
+                "checkBoxLabel": "Respiratory condition",
+                "value": "Respiratory condition"
+            }
+        ],
+        "name": "coMorbidities",
+        "value": null
+    },
+    {
+        "question": "Do you currently perform the recommended amount of physical activity in a typical week? ",
+        "subQuestionInfo": "The recommended amount is at least two strength-building activities and at least 150 minutes of moderate intensity activity (increased breathing noted but you are able to talk) or at least 75 minutes of vigorous intensity per week (breathing fast and you have difficulty talking). ",
+        "answerType": "RadioButtons",
+        "options": [
+            {
+                "radioLabel": "Yes",
+                "value": "Yes[$£.;.£$]1"
+            },
+            {
+                "radioLabel": "No",
+                "value": "No[$£.;.£$]0"
+            }
+        ],
+        "name": "recommendedAmountOfphysicalActivityLevels",
+        "value": null
+    },
+    {
+        "question": "During the last 3 months have you been to see any health professionals for your condition, either at your GP practice, in other NHS services or private care? Visits for specific investigations or treatments (e.g. xrays, surgery) are covered in the next question.",
+        "subQuestionInfo": "",
+        "answerType": "CheckBoxesWithAssociatedTextField",
+        "name": "healthUtilisation",
+        "options": [
+            {
+                "radioLabel": "Yes",
+                "value": "Yes"
+            },
+            {
+                "radioLabel": "No",
+                "value": "No"
+            }
+        ],
+        "followUpQuestion": "Please tell us which health professional you have seen, and the number of times you have seen each healthcare professional in the last 3 months for your pain condition",
+        "subFollowUpQuestionInfo": "",
+        "followUpOption": "Yes",
+        "followUpCheckBoxes": [
+            {
+                "checkBoxLabel": "GP",
+                "value": "GP"
+            },
+            {
+                "checkBoxLabel": "Nurse",
+                "value": "Nurse"
+            },
+            {
+                "checkBoxLabel": "Consultant, specialist, hospital doctor",
+                "value": "Consultant or specialist or hospital doctor"
+            },
+            {
+                "checkBoxLabel": "Physiotherapist",
+                "value": "Physiotherapist"
+            },
+            {
+                "checkBoxLabel": "Acupuncturist",
+                "value": "Acupuncturist"
+            },
+            {
+                "checkBoxLabel": "Osteopath/Chiropractor",
+                "value": "Osteopath/Chiropractor"
+            },
+            {
+                "checkBoxLabel": "Other",
+                "value": "Other"
+            }
+        ],
+        "checkBoxesTitle": "Health professional",
+        "textFieldTitle": "Number of times you have seen the health professional",
+        "value": null
+    },
+    {
+        "question": "Have you had previous physiotherapy treatment for this  problem?",
+        "subQuestionInfo": "",
+        "answerType": "RadioButtons",
+        "options": [
+            {
+                "radioLabel": "Yes",
+                "value": "Yes[$£.;.£$]1"
+            },
+            {
+                "radioLabel": "No",
+                "value": "No[$£.;.£$]0"
+            }
+        ],
+        "name": "previousPhysiotherapy",
+        "value": null
+    },
+    {
+        "question": "During the last 3 months have you attended an NHS or private hospital for any investigations or treatments (e.g. xray, MRI scan, surgery, epidural injection) related to your condition?",
+        "subQuestionInfo": "Please do not include any initial appointments reported in the above question.",
+        "answerType": "RadioWithFollowUpTextFieldQuestion",
+        "options": [
+            {
+                "radioLabel": "Yes",
+                "value": "Yes[$£.;.£$]1"
+            },
+            {
+                "radioLabel": "No",
+                "value": "No[$£.;.£$]0"
+            }
+        ],
+        "name": "investigationsAndTreatments",
+        "followUpQuestion": "Please tell us which investigations or treatments, and the number of times you have had these investigations in the last 3 months for your pain condition",
+        "subFollowUpQuestionInfo": null,
+        "followUpOption": "Yes[$£.;.£$]1",
+        "value": null
+    }
+]

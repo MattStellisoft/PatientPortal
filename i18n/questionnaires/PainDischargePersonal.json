@@ -1,0 +1,94 @@
+[
+    {
+        "question": "Are you currently receiving any of the following benefits or tax credits?",
+        "subQuestionInfo": "(Tick all that apply)",
+        "answerType": "CheckBoxes",
+        "checkBoxes": [
+            {
+                "checkBoxLabel": "I prefer not to say",
+                "value": "I prefer not to say"
+            },
+            {
+                "checkBoxLabel": "Not claiming benefits",
+                "value": "Not claiming benefits"
+            },
+            {
+                "checkBoxLabel": "Employment and Support allowance (support group)",
+                "value": "Employment and Support allowance (support group)"
+            },
+            {
+                "checkBoxLabel": "Employment and Support Allowance (Work Related Activity Group)",
+                "value": "Employment and Support Allowance (Work Related Activity Group)"
+            },
+            {
+                "checkBoxLabel": "Employment and Support Allowance (Unsure which group)",
+                "value": "Employment and Support Allowance (Unsure which group)"
+            },
+            {
+                "checkBoxLabel": "Disability Living Allowance (DLA)",
+                "value": "Disability Living Allowance (DLA)"
+            },
+            {
+                "checkBoxLabel": "Personal Independence Payment (PIP)",
+                "value": "Personal Independence Payment (PIP)"
+            },
+            {
+                "checkBoxLabel": "Income Support",
+                "value": "Income Support"
+            },
+            {
+                "checkBoxLabel": "Jobseekers' Allowance (JSA)",
+                "value": "Jobseekers' Allowance (JSA)"
+            },
+            {
+                "checkBoxLabel": "Universal Credit (UC)",
+                "value": "Universal Credit (UC)"
+            },
+            {
+                "checkBoxLabel": "Working Tax Credit (WTC)",
+                "value": "Working Tax Credit (WTC)"
+            },
+            {
+                "checkBoxLabel": "Claiming benefits but not sure which",
+                "value": "Claiming benefits but not sure which"
+            }
+        ],
+        "name": "benefitStatus",
+        "value": null
+    },
+    {
+        "question":"Are you in paid employment?",
+        "subQuestionInfo": null,
+        "answerType": "painWorkStatus",
+        "name": "workStatus",
+        "questions": {
+            "zero": "Are you in paid employment?",
+            "a": "Which are you currently doing?",
+            "b": "Are you not doing your usual job because of your pain?",
+            "c": "How long have you been off work for?",
+            "d": "Which of the following best describes your current situation?"
+        },
+        "options": {
+            "zero": { "options": ["Yes", "No"] },
+            "a": {
+                "options": ["Doing my usual job", "Working few hours", "On paid sick leave", "On unpaid sick leave"]
+            },
+            "b": { "options": ["Yes, mainly due to my pain", "No, not due to my pain"] },
+            "c": { "options": ["Years", "Months"] },
+            "d": {
+                "options": [
+                    "Retired",
+                    "Looking after children/home",
+                    "Unemployed due to pain",
+                    "Student",
+                    "Voluntary worker",
+                    "Unemployed due to other health reasons",
+                    "Unemployed (not health-related)",
+                    "Other"
+                ]
+            }
+        },
+        "questionCText": { "Years": "Years", "Months": "Months" },
+        "value": null
+    }
+]

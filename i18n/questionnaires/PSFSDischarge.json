@@ -1,0 +1,77 @@
+[
+    {
+        "heading": "The activities outlined below are the activities you specified you were unable to perform or were having difficulty with at the beginning of your care.",
+        "answerType": "header",
+        "name": "unablePerformActivities"
+    },
+    {
+        "question": "Activity 1",
+        "subQuestionInfo": "Please use the slider below, 0 represents \"unable to perform\" and 10 represents \"able to perform at prior level\"",
+        "answerType": "TextfieldWithFollowUpSlider",
+        "sliderRange": ["0", "10"],
+        "name": "activity1",
+        "value": null,
+        "marks": ["0", "10"],
+        "label": "Activity 1",
+        "readOnly": {
+            "text": true,
+            "slider": false
+        }
+    },
+    {
+        "question": "Activity 2",
+        "subQuestionInfo": "Please use the slider below, 0 represents \"unable to perform\" and 10 represents \"able to perform at prior level\"",
+        "answerType": "TextfieldWithFollowUpSlider",
+        "sliderRange": ["0", "10"],
+        "name": "activity2",
+        "value": null,
+        "marks": ["0", "10"],
+        "label": "Activity 2",
+        "readOnly": {
+            "text": true,
+            "slider": false
+        }
+    },
+    {
+        "question": "Activity 3",
+        "subQuestionInfo": "Please use the slider below, 0 represents \"unable to perform\" and 10 represents \"able to perform at prior level\"",
+        "answerType": "TextfieldWithFollowUpSlider",
+        "sliderRange": ["0", "10"],
+        "name": "activity3",
+        "value": null,
+        "marks": ["0", "10"],
+        "label": "Activity 3",
+        "readOnly": {
+            "text": true,
+            "slider": false
+        }
+    },
+    {
+        "question": "Activity 4",
+        "subQuestionInfo": "Please use the slider below, 0 represents \"unable to perform\" and 10 represents \"able to perform at prior level\"",
+        "answerType": "TextfieldWithFollowUpSlider",
+        "sliderRange": ["0", "10"],
+        "name": "activity4",
+        "value": null,
+        "marks": ["0", "10"],
+        "label": "Activity 4",
+        "readOnly": {
+            "text": true,
+            "slider": false
+        }
+    },
+    {
+        "question": "Activity 5",
+        "subQuestionInfo": "Please use the slider below, 0 represents \"unable to perform\" and 10 represents \"able to perform at prior level\"",
+        "answerType": "TextfieldWithFollowUpSlider",
+        "sliderRange": ["0", "10"],
+        "name": "activity5",
+        "value": null,
+        "marks": ["0", "10"],
+        "label": "Activity 5",
+        "readOnly": {
+            "text": true,
+            "slider": false
+        }
+    }
+]

@@ -1,0 +1,117 @@
+{
+    "signin": "Sign in",
+    "navigation": [
+        {
+            "key": "pathwayPageName",
+            "description": "pathwayPageDescription",
+            "href": "/"
+        },
+        {
+            "key": "appointmentsPageName",
+            "description": "appointmentsPageDescription",
+            "href": "/appointments"
+        },
+        {
+            "key": "documentsPageName",
+            "description": "documentsPageDescription",
+            "href": "/documents"
+        },
+        {
+            "key": "questionnairesPageName",
+            "description": "questionnairesPageDescription",
+            "href": "/questionnaires"
+        },
+        {
+            "key": "exercisesPageName",
+            "description": "exercisesPageDescription",
+            "href": "/programmes"
+        },
+        {
+            "key": "profilePageName",
+            "description": "profilePageDescription",
+            "href": "/profile"
+        },
+        {
+            "key": "preferencesPageName",
+            "description": "preferencesPageDescription",
+            "href": "/preferences"
+        }
+    ],
+    "col1Heading": "Links",
+    "col1Links": [
+        { "name": "Notifications", "href": "#" },
+        { "name": "Appointments", "href": "#" },
+        { "name": "Digital Assessments", "href": "#" },
+        { "name": "PhysiTrack", "href": "#" }
+    ],
+    "col2Heading": "Support",
+    "col2Links": [
+        { "name": "Portal Help", "href": "/faqs" },
+        {
+            "name": "Patient FAQs",
+            "href": "https://www.connecthealth.co.uk/patient-faqs/"
+        },
+        {
+            "name": "Contact Us",
+            "href": "https://www.connecthealth.co.uk/contact/"
+        }
+    ],
+    "col3Heading": "Company",
+    "col3Links": [
+        { "name": "About", "href": "#" },
+        { "name": "Blog", "href": "#" },
+        { "name": "Jobs", "href": "#" },
+        { "name": "Press", "href": "#" },
+        { "name": "Partners", "href": "#" }
+    ],
+    "col4Heading": "Legal",
+    "col4Links": [
+        { "name": "Claim", "href": "#" },
+        { "name": "Privacy", "href": "#" },
+        { "name": "Terms", "href": "#" }
+    ],
+    "autoBookingDisabled": "You are unable to book an appointment via the portal at this time. If you wish to book an appointment then please contact us.",
+    "rightsReserved": "Connect Health Ltd. All rights reserved.",
+    "homepageName": "Home",
+    "helpPageName": "Help",
+    "signOut": "Sign out?",
+    "pathwayPageName": "Your Dashboard",
+    "pathwayPageDescription": "Welcome to your Connect Health Patient Portal Dashboard.",
+    "pathwayPageStatus": "Our systems indicate that you are currently ",
+    "pathwayPageExplanation": "Use the graphic below to check whether you have any outstanding actions pending.",
+    "appointmentsPageName": "Your Appointments",
+    "appointmentsPageDescription": "Manage your appointments.",
+    "appointmentsPagePara1": "",
+    "documentsPageName": "Your Documents",
+    "documentsPageDescription": "View or download your documents.",
+    "documentPageName": "Your Document",
+    "documentPageDescription": "",
+    "questionnairesPageName": "Your Questionnaires",
+    "questionnairesPageDescription": "Complete your electronic questionnaires.",
+    "exercisesPageName": "Your Exercises",
+    "exercisesPageDescription": "View your exercise programmes.",
+    "profilePageName": "Your Profile",
+    "profilePageDescription": "View and edit your profile data.",
+    "preferencesPageName": "Your Preferences",
+    "preferencesPageDescription": "View and edit your preferences.",
+    "PageName": "Your Preferences",
+    "appointmentPageName": "Your Appointment",
+    "appointmentPageDescription": "Review and action your appointment.",
+    "cancellationReasonPageName": "Cancellation Reason",
+    "requestAppointmentPageName": "Request Appointment",
+    "physioNowPageName": "PhysioNow",
+    "physioNowPageDescription": "Several of our services offer a self-referral option to access physiotherapy, without needing to visit your GP first. Find out more about PhysioNow self-referral, including checking eligibility in your area and access some helpful self-management resources by following this ",
+    "acceptCookiesHeading": "Cookies on the Connect Health Portal Website",
+    "acceptCookiesPara1": "We've put some small files called cookies on your device. These are the strictly necessary cookies needed to make the Connect Health App work.",
+    "acceptCookiesPara2": "We'd also like to use analytics cookies. These send information about how our site is used to services called Adobe Analytics, Hotjar and Google Analytics. We use this information to improve our site.",
+    "acceptCookiesPara3": "Let us know if this is OK. We'll use a cookie to save your choice. You can read more about our cookies before you choose.",
+    "acceptCookiesButton": "I'm okay with Analytics Cookies",
+    "rejectCookiesButton": "Do not use Analytics Cookies",
+    "accessibilityActivateHeading": "Accessibility",
+    "accessibilityActivatePara1": "Do you wish to activate our accessibility assistant?",
+    "accessibilityActivatePara2": "If you wish to change this setting in future then you can do so on your profile page.",
+    "accessibilityActivateAcceptButton": "Please activate accessibility controls and settings.",
+    "accessibilityActivateRejectButton": "No thanks.",
+    "noActiveReferralTitle": "No active referral",
+    "noActiveReferralMessage": "We are unable to find an active referral linked to your patient record. If you wish to access our physiotherapy services then you may be eligible for self-referral via our digital self-assessment tool, PhysioNow. Please click on the banner to access more information or alternatively please contact us directly to discuss your circumstances."
+}

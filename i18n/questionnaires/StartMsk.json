@@ -1,0 +1,177 @@
+[
+    {
+        "heading": "For the following questions, please think about just the last two weeks",
+        "answerType": "header",
+        "name": "Header1"
+    },
+    {
+        "question": "On average, how intense was your pain? ",
+        "subQuestionInfo": "Please use the slider below, where 0 is 'no pain' and 10 is 'pain as bad as it could be'",
+        "answerType": "Slider",
+        "sliderRange": ["0", "10"],
+        "name": "painIntensity",
+        "value": null
+    },
+    {
+        "question": "Do you often feel unsure about how to manage your pain condition?",
+        "subQuestionInfo": null,
+        "answerType": "RadioButtons",
+        "options": [
+            {
+                "radioLabel": "Yes",
+                "value": "Yes[$£.;.£$]1"
+            },
+            {
+                "radioLabel": "No",
+                "value": "No[$£.;.£$]0"
+            }
+        ],
+        "name": "unsureHowToManagePain",
+        "value": null,
+        "row": true
+    },
+    {
+        "question": "Over the last two weeks, have you been bothered a lot by your pain?",
+        "subQuestionInfo": null,
+        "answerType": "RadioButtons",
+        "options": [
+            {
+                "radioLabel": "Yes",
+                "value": "Yes[$£.;.£$]1"
+            },
+            {
+                "radioLabel": "No",
+                "value": "No[$£.;.£$]0"
+            }
+        ],
+        "name": "botheredALotByPain",
+        "value": null,
+        "row": true
+    },
+    {
+        "question": "Have you only been able to walk short distances because of your pain?",
+        "subQuestionInfo": null,
+        "answerType": "RadioButtons",
+        "options": [
+            {
+                "radioLabel": "Yes",
+                "value": "Yes[$£.;.£$]1"
+            },
+            {
+                "radioLabel": "No",
+                "value": "No[$£.;.£$]0"
+            }
+        ],
+        "name": "onlyAbleToWalkShort",
+        "value": null,
+        "row": true
+    },
+    {
+        "question": "Have you had troublesome joint or muscle pain in more than one part of your body?",
+        "subQuestionInfo": null,
+        "answerType": "RadioButtons",
+        "options": [
+            {
+                "radioLabel": "Yes",
+                "value": "Yes[$£.;.£$]1"
+            },
+            {
+                "radioLabel": "No",
+                "value": "No[$£.;.£$]0"
+            }
+        ],
+        "name": "troublesomeJointPain",
+        "value": null,
+        "row": true
+    },
+    {
+        "question": "Do you think your condition will last a long time?",
+        "subQuestionInfo": null,
+        "answerType": "RadioButtons",
+        "options": [
+            {
+                "radioLabel": "Yes",
+                "value": "Yes[$£.;.£$]1"
+            },
+            {
+                "radioLabel": "No",
+                "value": "No[$£.;.£$]0"
+            }
+        ],
+        "name": "thinkConditionWillLast",
+        "value": null,
+        "row": true
+    },
+    {
+        "question": "Do you have other important health problems?",
+        "subQuestionInfo": null,
+        "answerType": "RadioButtons",
+        "options": [
+            {
+                "radioLabel": "Yes",
+                "value": "Yes[$£.;.£$]1"
+            },
+            {
+                "radioLabel": "No",
+                "value": "No[$£.;.£$]0"
+            }
+        ],
+        "name": "otherImportantHealthProblems",
+        "value": null,
+        "row": true
+    },
+    {
+        "question": "Has pain made you feel down or depressed in the last two weeks?",
+        "subQuestionInfo": null,
+        "answerType": "RadioButtons",
+        "options": [
+            {
+                "radioLabel": "Yes",
+                "value": "Yes[$£.;.£$]1"
+            },
+            {
+                "radioLabel": "No",
+                "value": "No[$£.;.£$]0"
+            }
+        ],
+        "name": "feelingDepressedCauseOfPain",
+        "value": null,
+        "row": true
+    },
+    {
+        "question": "Do you feel it is unsafe for a person with a condition like yours to be physically active?",
+        "subQuestionInfo": null,
+        "answerType": "RadioButtons",
+        "options": [
+            {
+                "radioLabel": "Yes",
+                "value": "Yes[$£.;.£$]1"
+            },
+            {
+                "radioLabel": "No",
+                "value": "No[$£.;.£$]0"
+            }
+        ],
+        "name": "unsafeForPeWithCondition",
+        "value": null,
+        "row": true
+    },
+    {
+        "question": "Have you had your current pain problem for 6 months or more?",
+        "subQuestionInfo": null,
+        "answerType": "RadioButtons",
+        "options": [
+            {
+                "radioLabel": "Yes",
+                "value": "Yes[$£.;.£$]1"
+            },
+            {
+                "radioLabel": "No",
+                "value": "No[$£.;.£$]0"
+            }
+        ],
+        "name": "problemFor6MonthsOrMore",
+        "value": null,
+        "row": true
+    }
+]

@@ -1,0 +1,233 @@
+[
+    {
+        "heading": "Over the last 2 weeks how often have you been bothered by any of the following problems?",
+        "answerType": "header",
+        "name": "overLast2WeeksPHQ9"
+    },
+    {
+        "question": "Little interest or pleasure in doing things? ",
+        "subQuestionInfo": null,
+        "answerType": "RadioButtons",
+        "options": [
+            {
+                "radioLabel": "Not at all",
+                "value": "Not at all[$£.;.£$]0"
+            },
+            {
+                "radioLabel": "Several days",
+                "value": "Several days[$£.;.£$]1"
+            },
+            {
+                "radioLabel": "More than half the days",
+                "value": "More than half the days[$£.;.£$]2"
+            },
+            {
+                "radioLabel": "Nearly every day",
+                "value": "Nearly every day[$£.;.£$]3"
+            }
+        ],
+        "name": "botheredByInterests",
+        "value": null
+    },
+    {
+        "question": "Feeling down, depressed, or hopeless?",
+        "subQuestionInfo": null,
+        "answerType": "RadioButtons",
+        "options": [
+            {
+                "radioLabel": "Not at all",
+                "value": "Not at all[$£.;.£$]0"
+            },
+            {
+                "radioLabel": "Several days",
+                "value": "Several days[$£.;.£$]1"
+            },
+            {
+                "radioLabel": "More than half the days",
+                "value": "More than half the days[$£.;.£$]2"
+            },
+            {
+                "radioLabel": "Nearly every day",
+                "value": "Nearly every day[$£.;.£$]3"
+            }
+        ],
+        "name": "feelingDown",
+        "value": null
+    },
+    {
+        "question": "Trouble falling or staying asleep, or sleeping too much?",
+        "subQuestionInfo": null,
+        "answerType": "RadioButtons",
+        "options": [
+            {
+                "radioLabel": "Not at all",
+                "value": "Not at all[$£.;.£$]0"
+            },
+            {
+                "radioLabel": "Several days",
+                "value": "Several days[$£.;.£$]1"
+            },
+            {
+                "radioLabel": "More than half the days",
+                "value": "More than half the days[$£.;.£$]2"
+            },
+            {
+                "radioLabel": "Nearly every day",
+                "value": "Nearly every day[$£.;.£$]3"
+            }
+        ],
+        "name": "troubleSleeping",
+        "value": null
+    },
+    {
+        "question": "Feeling tired or having little energy? ",
+        "subQuestionInfo": null,
+        "answerType": "RadioButtons",
+        "options": [
+            {
+                "radioLabel": "Not at all",
+                "value": "Not at all[$£.;.£$]0"
+            },
+            {
+                "radioLabel": "Several days",
+                "value": "Several days[$£.;.£$]1"
+            },
+            {
+                "radioLabel": "More than half the days",
+                "value": "More than half the days[$£.;.£$]2"
+            },
+            {
+                "radioLabel": "Nearly every day",
+                "value": "Nearly every day[$£.;.£$]3"
+            }
+        ],
+        "name": "littleEnergy",
+        "value": null
+    },
+    {
+        "question": "Poor appetite or overeating?",
+        "subQuestionInfo": null,
+        "answerType": "RadioButtons",
+        "options": [
+            {
+                "radioLabel": "Not at all",
+                "value": "Not at all[$£.;.£$]0"
+            },
+            {
+                "radioLabel": "Several days",
+                "value": "Several days[$£.;.£$]1"
+            },
+            {
+                "radioLabel": "More than half the days",
+                "value": "More than half the days[$£.;.£$]2"
+            },
+            {
+                "radioLabel": "Nearly every day",
+                "value": "Nearly every day[$£.;.£$]3"
+            }
+        ],
+        "name": "offAppetite",
+        "value": null
+    },
+    {
+        "question": "Feeling bad about yourself - or that you are a failure or have let yourself or your family down?",
+        "subQuestionInfo": null,
+        "answerType": "RadioButtons",
+        "options": [
+            {
+                "radioLabel": "Not at all",
+                "value": "Not at all[$£.;.£$]0"
+            },
+            {
+                "radioLabel": "Several days",
+                "value": "Several days[$£.;.£$]1"
+            },
+            {
+                "radioLabel": "More than half the days",
+                "value": "More than half the days[$£.;.£$]2"
+            },
+            {
+                "radioLabel": "Nearly every day",
+                "value": "Nearly every day[$£.;.£$]3"
+            }
+        ],
+        "name": "feelingBad",
+        "value": null
+    },
+    {
+        "question": "Trouble concentrating on things, such as reading the newspaper or watching television?",
+        "subQuestionInfo": null,
+        "answerType": "RadioButtons",
+        "options": [
+            {
+                "radioLabel": "Not at all",
+                "value": "Not at all[$£.;.£$]0"
+            },
+            {
+                "radioLabel": "Several days",
+                "value": "Several days[$£.;.£$]1"
+            },
+            {
+                "radioLabel": "More than half the days",
+                "value": "More than half the days[$£.;.£$]2"
+            },
+            {
+                "radioLabel": "Nearly every day",
+                "value": "Nearly every day[$£.;.£$]3"
+            }
+        ],
+        "name": "struggleConcentrating",
+        "value": null
+    },
+    {
+        "question": "Moving or speaking so slowly that other people could have noticed? Or the opposite - being so fidgety or restless that you have been moving around a lot more than usual?",
+        "subQuestionInfo": null,
+        "answerType": "RadioButtons",
+        "options": [
+            {
+                "radioLabel": "Not at all",
+                "value": "Not at all[$£.;.£$]0"
+            },
+            {
+                "radioLabel": "Several days",
+                "value": "Several days[$£.;.£$]1"
+            },
+            {
+                "radioLabel": "More than half the days",
+                "value": "More than half the days[$£.;.£$]2"
+            },
+            {
+                "radioLabel": "Nearly every day",
+                "value": "Nearly every day[$£.;.£$]3"
+            }
+        ],
+        "name": "changeInSpeech",
+        "value": null
+    },
+    {
+        "question": "Thoughts that you would be better off dead, or of hurting yourself in some way?",
+        "subQuestionInfo": null,
+        "answerType": "RadioButtonsSuicidalThoughts",
+        "options": [
+            {
+                "radioLabel": "Not at all",
+                "value": "Not at all[$£.;.£$]0"
+            },
+            {
+                "radioLabel": "Several days",
+                "value": "Several days[$£.;.£$]1"
+            },
+            {
+                "radioLabel": "More than half the days",
+                "value": "More than half the days[$£.;.£$]2"
+            },
+            {
+                "radioLabel": "Nearly every day",
+                "value": "Nearly every day[$£.;.£$]3"
+            }
+        ],
+        "triggerAnswers": ["Several days[$£.;.£$]1", "More than half the days[$£.;.£$]2", "Nearly every day[$£.;.£$]3"],
+        "name": "suicidalThoughts",
+        "value": null
+    }
+]

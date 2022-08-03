@@ -1,0 +1,262 @@
+{
+    "meta": {
+        "name": "Manchester PROMs Initial",
+        "UUID": "",
+        "initialDisclaimer": "",
+        "finalDisclaimer": ""
+    },
+    "questions": [
+        {
+            "question": "Please give your name?",
+            "subQuestionInfo": null,
+            "answerType": "ShortTextField",
+            "name": "name",
+            "value": null
+        },
+        {
+            "question": "Please give your Date of Birth",
+            "subQuestionInfo": null,
+            "answerType": "DatePicker",
+            "name": "dob",
+            "value": null
+        },
+        {
+            "question": "Which of the following options best describes how you think of yourself?",
+            "subQuestionInfo": "Why are we capturing this information? You can read more about the NHS information standard here: https://www.england.nhs.uk/about/equality/equality-hub/sexual-orientation-monitoring-information-standard/",
+            "answerType": "RadioButtons",
+            "options": [
+                {
+                    "radioLabel": "Heterosexual or Straight",
+                    "value": "Heterosexual or Straight"
+                },
+                {
+                    "radioLabel": "Gay or Lesbian",
+                    "value": "Gay or Lesbian"
+                },
+                {
+                    "radioLabel": "Bisexual",
+                    "value": "Bisexual"
+                },
+                {
+                    "radioLabel": "Other (please say)",
+                    "value": "Other"
+                },
+                {
+                    "radioLabel": "Do not know or not sure",
+                    "value": "Do not know or not sure"
+                },
+                {
+                    "radioLabel": "Undecided",
+                    "value": "Undecided"
+                },
+                {
+                    "radioLabel": "Prefer not to say",
+                    "value": "Prefer not to say"
+                },
+                {
+                    "radioLabel": "Prefer to self-describe (please say)",
+                    "value": "Other"
+                }
+            ],
+            "customChoiceOption": "Other",
+            "name": "sexualOrientation",
+            "value": null
+        },
+        {
+            "question": "What is your ethnic group?",
+            "subQuestionInfo": "",
+            "answerType": "RadioButtons",
+            "options": [
+                {
+                    "radioLabel": "English / Welsh / Scottish / Northern Irish / British",
+                    "value": "English / Welsh / Scottish / Northern Irish / British"
+                },
+                {
+                    "radioLabel": "Irish",
+                    "value": "Irish"
+                },
+                {
+                    "radioLabel": "Gypsy or Irish Traveller",
+                    "value": "Gypsy or Irish Traveller"
+                },
+                {
+                    "radioLabel": "Roma",
+                    "value": "Roma"
+                },
+                {
+                    "radioLabel": "Any other White background",
+                    "value": "Any other White background"
+                },
+                {
+                    "radioLabel": "White and Black Caribbean",
+                    "value": "White and Black Caribbean"
+                },
+                {
+                    "radioLabel": "White and Black African",
+                    "value": "White and Black African"
+                },
+                {
+                    "radioLabel": "White and Asian",
+                    "value": "White and Asian"
+                },
+                {
+                    "radioLabel": "Any other Mixed / Multiple ethnic background",
+                    "value": "Any other Mixed / Multiple ethnic background"
+                },
+                {
+                    "radioLabel": "Indian",
+                    "value": "Indian"
+                },
+                {
+                    "radioLabel": "Pakistani",
+                    "value": "Pakistani"
+                },
+                {
+                    "radioLabel": "Bangladeshi",
+                    "value": "Bangladeshi"
+                },
+                {
+                    "radioLabel": "Chinese",
+                    "value": "Chinese"
+                },
+                {
+                    "radioLabel": "Any other Asian background",
+                    "value": "Any other Asian background"
+                },
+                {
+                    "radioLabel": "African",
+                    "value": "African"
+                },
+                {
+                    "radioLabel": "Caribbean",
+                    "value": "Caribbean"
+                },
+                {
+                    "radioLabel": "Any other Black / African / Caribbean background",
+                    "value": "Any other Black / African / Caribbean background"
+                },
+                {
+                    "radioLabel": "Arab",
+                    "value": "Arab"
+                },
+                {
+                    "radioLabel": "Any other ethnic group",
+                    "value": "Any other ethnic group"
+                },
+                {
+                    "radioLabel": "Prefer not to say",
+                    "value": "Prefer not to say"
+                }
+            ],
+            "name": "ethnicGroup",
+            "value": null
+        },
+        {
+            "question": "Like any other NHS service we want to check you are happy with our service. Are you happy for us to contact you during your care with us to ask you for feedback?",
+            "subQuestionInfo": "(In the NHS this is often called Friends and Family feedback).",
+            "answerType": "RadioButtons",
+            "options": [
+                {
+                    "radioLabel": "Yes",
+                    "value": "Yes[$£.;.£$]1"
+                },
+                {
+                    "radioLabel": "No",
+                    "value": "No[$£.;.£$]0"
+                }
+            ],
+            "name": "happyWithService",
+            "value": null
+        },
+        {
+            "question": "What medications do you take?",
+            "subQuestionInfo": "(This includes medications both that are from your doctor or elsewhere. This can be medication for pain and for any other health condition).",
+            "answerType": "MultilineTextField",
+            "name": "whyAnswer",
+            "value": null
+        },
+        {
+            "question": "What medications have you tried in the past for your pain and why did you stop using them?",
+            "subQuestionInfo": null,
+            "answerType": "MultilineTextField",
+            "name": "triedMedication",
+            "value": null
+        },
+        {
+            "question": "Do you have any other problems with your health?",
+            "subQuestionInfo": "(This can include major injuries or surgeries in the past as well as long-term problems like heart disease, diabetes or asthma).",
+            "answerType": "MultilineTextField",
+            "name": "problemsWithHealth",
+            "value": null
+        },
+        {
+            "page": 1,
+            "question": "Do you have any allergies?",
+            "subQuestionInfo": null,
+            "answerType": "MultilineTextField",
+            "name": "allergies",
+            "value": null
+        },
+        {
+            "question": "Do you have reading difficulties?",
+            "subQuestionInfo": "(For instance do you need large text or for letters printed on certain colours).",
+            "answerType": "RadioWithFollowUpTextFieldQuestion",
+            "options": [
+                {
+                    "radioLabel": "Yes",
+                    "value": "Yes[$£.;.£$]1"
+                },
+                {
+                    "radioLabel": "No",
+                    "value": "No[$£.;.£$]0"
+                }
+            ],
+            "name": "readingDifficulties",
+            "followUpQuestion": "Please explain further",
+            "subFollowUpQuestionInfo": null,
+            "followUpOption": "Yes[$£.;.£$]1",
+            "value": null
+        },
+        {
+            "question": "Do you have difficulties hearing or speaking over telephone?",
+            "subQuestionInfo": null,
+            "answerType": "RadioWithFollowUpTextFieldQuestion",
+            "options": [
+                {
+                    "radioLabel": "Yes",
+                    "value": "Yes[$£.;.£$]1"
+                },
+                {
+                    "radioLabel": "No",
+                    "value": "No[$£.;.£$]0"
+                }
+            ],
+            "name": "hearingOrSpeakingDifficulties",
+            "followUpQuestion": "Please explain further",
+            "subFollowUpQuestionInfo": null,
+            "followUpOption": "Yes[$£.;.£$]1",
+            "value": null
+        },
+        {
+            "question": "What are your expectations of an appointment with the Pain Clinic? What kind of care are you hoping to receive?",
+            "subQuestionInfo": null,
+            "answerType": "MultilineTextField",
+            "name": "expectations",
+            "value": null
+        }
+    ],
+    "initialValues": {
+        "name": "",
+        "dob": "",
+        "happyWithService": "",
+        "whyAnswer": "",
+        "triedMedication": "",
+        "problemsWithHealth": "",
+        "allergies": "",
+        "readingDifficulties": "",
+        "hearingOrSpeakingDifficulties": "",
+        "expectations": "",
+        "sexualOrientation": "",
+        "ethnicGroup": ""
+    }
+}

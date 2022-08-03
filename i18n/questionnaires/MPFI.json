@@ -1,0 +1,775 @@
+[
+    {
+        "heading": "IN THE LAST TWO WEEKS…",
+        "answerType": "header",
+        "name": "MPFIHeader"
+    },
+    {
+        "question": "I was receptive to observing unpleasant thoughts and feelings without interfering with them.",
+        "answerType": "RadioButtons",
+        "options": [
+            {
+                "radioLabel": "Never TRUE",
+                "value": "Never true[$£.;.£$]6"
+            },
+            {
+                "radioLabel": "Rarely TRUE",
+                "value": "Rarely true[$£.;.£$]5"
+            },
+            {
+                "radioLabel": "Occasionally TRUE",
+                "value": "Occasionally true[$£.;.£$]4"
+            },
+            {
+                "radioLabel": "Often TRUE",
+                "value": "Often true[$£.;.£$]3"
+            },
+            {
+                "radioLabel": "Very Often TRUE",
+                "value": "Very Often true[$£.;.£$]2"
+            },
+            {
+                "radioLabel": "Always TRUE",
+                "value": "Always true[$£.;.£$]1"
+            }
+        ],
+        "name": "Acceptance1",
+        "value": null
+    },
+    {
+        "question": "I tried to make peace with my negative thoughts and feelings rather than resisting them.",
+        "answerType": "RadioButtons",
+        "options": [
+            {
+                "radioLabel": "Never TRUE",
+                "value": "Never true[$£.;.£$]6"
+            },
+            {
+                "radioLabel": "Rarely TRUE",
+                "value": "Rarely true[$£.;.£$]5"
+            },
+            {
+                "radioLabel": "Occasionally TRUE",
+                "value": "Occasionally true[$£.;.£$]4"
+            },
+            {
+                "radioLabel": "Often TRUE",
+                "value": "Often true[$£.;.£$]3"
+            },
+            {
+                "radioLabel": "Very Often TRUE",
+                "value": "Very Often true[$£.;.£$]2"
+            },
+            {
+                "radioLabel": "Always TRUE",
+                "value": "Always true[$£.;.£$]1"
+            }
+        ],
+        "name": "Acceptance2",
+        "value": null
+    },
+    {
+        "question": "I was attentive and aware of my emotions.",
+        "answerType": "RadioButtons",
+        "options": [
+            {
+                "radioLabel": "Never TRUE",
+                "value": "Never true[$£.;.£$]6"
+            },
+            {
+                "radioLabel": "Rarely TRUE",
+                "value": "Rarely true[$£.;.£$]5"
+            },
+            {
+                "radioLabel": "Occasionally TRUE",
+                "value": "Occasionally true[$£.;.£$]4"
+            },
+            {
+                "radioLabel": "Often TRUE",
+                "value": "Often true[$£.;.£$]3"
+            },
+            {
+                "radioLabel": "Very Often TRUE",
+                "value": "Very Often true[$£.;.£$]2"
+            },
+            {
+                "radioLabel": "Always TRUE",
+                "value": "Always true[$£.;.£$]1"
+            }
+        ],
+        "name": "PresentMomentAwareness1",
+        "value": null
+    },
+    {
+        "question": "I was in tune with my thoughts and feelings from moment to moment.",
+        "answerType": "RadioButtons",
+        "options": [
+            {
+                "radioLabel": "Never TRUE",
+                "value": "Never true[$£.;.£$]6"
+            },
+            {
+                "radioLabel": "Rarely TRUE",
+                "value": "Rarely true[$£.;.£$]5"
+            },
+            {
+                "radioLabel": "Occasionally TRUE",
+                "value": "Occasionally true[$£.;.£$]4"
+            },
+            {
+                "radioLabel": "Often TRUE",
+                "value": "Often true[$£.;.£$]3"
+            },
+            {
+                "radioLabel": "Very Often TRUE",
+                "value": "Very Often true[$£.;.£$]2"
+            },
+            {
+                "radioLabel": "Always TRUE",
+                "value": "Always true[$£.;.£$]1"
+            }
+        ],
+        "name": "PresentMomentAwareness2",
+        "value": null
+    },
+    {
+        "question": "Even when I felt hurt or upset, I tried to maintain a broader perspective.",
+        "answerType": "RadioButtons",
+        "options": [
+            {
+                "radioLabel": "Never TRUE",
+                "value": "Never true[$£.;.£$]6"
+            },
+            {
+                "radioLabel": "Rarely TRUE",
+                "value": "Rarely true[$£.;.£$]5"
+            },
+            {
+                "radioLabel": "Occasionally TRUE",
+                "value": "Occasionally true[$£.;.£$]4"
+            },
+            {
+                "radioLabel": "Often TRUE",
+                "value": "Often true[$£.;.£$]3"
+            },
+            {
+                "radioLabel": "Very Often TRUE",
+                "value": "Very Often true[$£.;.£$]2"
+            },
+            {
+                "radioLabel": "Always TRUE",
+                "value": "Always true[$£.;.£$]1"
+            }
+        ],
+        "name": "SelfAsContext1",
+        "value": null
+    },
+    {
+        "question": "I carried myself through tough moments by seeing my life from a larger viewpoint",
+        "answerType": "RadioButtons",
+        "options": [
+            {
+                "radioLabel": "Never TRUE",
+                "value": "Never true[$£.;.£$]6"
+            },
+            {
+                "radioLabel": "Rarely TRUE",
+                "value": "Rarely true[$£.;.£$]5"
+            },
+            {
+                "radioLabel": "Occasionally TRUE",
+                "value": "Occasionally true[$£.;.£$]4"
+            },
+            {
+                "radioLabel": "Often TRUE",
+                "value": "Often true[$£.;.£$]3"
+            },
+            {
+                "radioLabel": "Very Often TRUE",
+                "value": "Very Often true[$£.;.£$]2"
+            },
+            {
+                "radioLabel": "Always TRUE",
+                "value": "Always true[$£.;.£$]1"
+            }
+        ],
+        "name": "SelfAsContext2",
+        "value": null
+    },
+    {
+        "question": "I was able to let negative feelings come and go without getting caught up in them ",
+        "answerType": "RadioButtons",
+        "options": [
+            {
+                "radioLabel": "Never TRUE",
+                "value": "Never true[$£.;.£$]6"
+            },
+            {
+                "radioLabel": "Rarely TRUE",
+                "value": "Rarely true[$£.;.£$]5"
+            },
+            {
+                "radioLabel": "Occasionally TRUE",
+                "value": "Occasionally true[$£.;.£$]4"
+            },
+            {
+                "radioLabel": "Often TRUE",
+                "value": "Often true[$£.;.£$]3"
+            },
+            {
+                "radioLabel": "Very Often TRUE",
+                "value": "Very Often true[$£.;.£$]2"
+            },
+            {
+                "radioLabel": "Always TRUE",
+                "value": "Always true[$£.;.£$]1"
+            }
+        ],
+        "name": "Defusion1",
+        "value": null
+    },
+    {
+        "question": "When I was upset, I was able to let those negative feelings pass through me without clinging to them.",
+        "answerType": "RadioButtons",
+        "options": [
+            {
+                "radioLabel": "Never TRUE",
+                "value": "Never true[$£.;.£$]6"
+            },
+            {
+                "radioLabel": "Rarely TRUE",
+                "value": "Rarely true[$£.;.£$]5"
+            },
+            {
+                "radioLabel": "Occasionally TRUE",
+                "value": "Occasionally true[$£.;.£$]4"
+            },
+            {
+                "radioLabel": "Often TRUE",
+                "value": "Often true[$£.;.£$]3"
+            },
+            {
+                "radioLabel": "Very Often TRUE",
+                "value": "Very Often true[$£.;.£$]2"
+            },
+            {
+                "radioLabel": "Always TRUE",
+                "value": "Always true[$£.;.£$]1"
+            }
+        ],
+        "name": "Defusion2",
+        "value": null
+    },
+    {
+        "question": "I was very in-touch with what is important to me and my life.",
+        "answerType": "RadioButtons",
+        "options": [
+            {
+                "radioLabel": "Never TRUE",
+                "value": "Never true[$£.;.£$]6"
+            },
+            {
+                "radioLabel": "Rarely TRUE",
+                "value": "Rarely true[$£.;.£$]5"
+            },
+            {
+                "radioLabel": "Occasionally TRUE",
+                "value": "Occasionally true[$£.;.£$]4"
+            },
+            {
+                "radioLabel": "Often TRUE",
+                "value": "Often true[$£.;.£$]3"
+            },
+            {
+                "radioLabel": "Very Often TRUE",
+                "value": "Very Often true[$£.;.£$]2"
+            },
+            {
+                "radioLabel": "Always TRUE",
+                "value": "Always true[$£.;.£$]1"
+            }
+        ],
+        "name": "Values1",
+        "value": null
+    },
+    {
+        "question": "I stuck to my deeper priorities in life .",
+        "answerType": "RadioButtons",
+        "options": [
+            {
+                "radioLabel": "Never TRUE",
+                "value": "Never true[$£.;.£$]6"
+            },
+            {
+                "radioLabel": "Rarely TRUE",
+                "value": "Rarely true[$£.;.£$]5"
+            },
+            {
+                "radioLabel": "Occasionally TRUE",
+                "value": "Occasionally true[$£.;.£$]4"
+            },
+            {
+                "radioLabel": "Often TRUE",
+                "value": "Often true[$£.;.£$]3"
+            },
+            {
+                "radioLabel": "Very Often TRUE",
+                "value": "Very Often true[$£.;.£$]2"
+            },
+            {
+                "radioLabel": "Always TRUE",
+                "value": "Always true[$£.;.£$]1"
+            }
+        ],
+        "name": "Values2",
+        "value": null
+    },
+    {
+        "question": "Even when I stumbled in my efforts, I didn't quit working toward what is important.",
+        "answerType": "RadioButtons",
+        "options": [
+            {
+                "radioLabel": "Never TRUE",
+                "value": "Never true[$£.;.£$]6"
+            },
+            {
+                "radioLabel": "Rarely TRUE",
+                "value": "Rarely true[$£.;.£$]5"
+            },
+            {
+                "radioLabel": "Occasionally TRUE",
+                "value": "Occasionally true[$£.;.£$]4"
+            },
+            {
+                "radioLabel": "Often TRUE",
+                "value": "Often true[$£.;.£$]3"
+            },
+            {
+                "radioLabel": "Very Often TRUE",
+                "value": "Very Often true[$£.;.£$]2"
+            },
+            {
+                "radioLabel": "Always TRUE",
+                "value": "Always true[$£.;.£$]1"
+            }
+        ],
+        "name": "CommittedAction1",
+        "value": null
+    },
+    {
+        "question": "Even when times got tough, I was still able to take steps toward what I value in life.",
+        "answerType": "RadioButtons",
+        "options": [
+            {
+                "radioLabel": "Never TRUE",
+                "value": "Never true[$£.;.£$]6"
+            },
+            {
+                "radioLabel": "Rarely TRUE",
+                "value": "Rarely true[$£.;.£$]5"
+            },
+            {
+                "radioLabel": "Occasionally TRUE",
+                "value": "Occasionally true[$£.;.£$]4"
+            },
+            {
+                "radioLabel": "Often TRUE",
+                "value": "Often true[$£.;.£$]3"
+            },
+            {
+                "radioLabel": "Very Often TRUE",
+                "value": "Very Often true[$£.;.£$]2"
+            },
+            {
+                "radioLabel": "Always TRUE",
+                "value": "Always true[$£.;.£$]1"
+            }
+        ],
+        "name": "CommittedAction2",
+        "value": null
+    },
+    {
+        "question": "When I had a bad memory, I tried to distract myself to make it go away.",
+        "answerType": "RadioButtons",
+        "options": [
+            {
+                "radioLabel": "Never TRUE",
+                "value": "Never true[$£.;.£$]6"
+            },
+            {
+                "radioLabel": "Rarely TRUE",
+                "value": "Rarely true[$£.;.£$]5"
+            },
+            {
+                "radioLabel": "Occasionally TRUE",
+                "value": "Occasionally true[$£.;.£$]4"
+            },
+            {
+                "radioLabel": "Often TRUE",
+                "value": "Often true[$£.;.£$]3"
+            },
+            {
+                "radioLabel": "Very Often TRUE",
+                "value": "Very Often true[$£.;.£$]2"
+            },
+            {
+                "radioLabel": "Always TRUE",
+                "value": "Always true[$£.;.£$]1"
+            }
+        ],
+        "name": "ExperientialAvoidance1",
+        "value": null
+    },
+    {
+        "question": "I tried to distract myself when I felt unpleasant emotions.",
+        "answerType": "RadioButtons",
+        "options": [
+            {
+                "radioLabel": "Never TRUE",
+                "value": "Never true[$£.;.£$]6"
+            },
+            {
+                "radioLabel": "Rarely TRUE",
+                "value": "Rarely true[$£.;.£$]5"
+            },
+            {
+                "radioLabel": "Occasionally TRUE",
+                "value": "Occasionally true[$£.;.£$]4"
+            },
+            {
+                "radioLabel": "Often TRUE",
+                "value": "Often true[$£.;.£$]3"
+            },
+            {
+                "radioLabel": "Very Often TRUE",
+                "value": "Very Often true[$£.;.£$]2"
+            },
+            {
+                "radioLabel": "Always TRUE",
+                "value": "Always true[$£.;.£$]1"
+            }
+        ],
+        "name": "ExperientialAvoidance2",
+        "value": null
+    },
+    {
+        "question": "I did most things on 'automatic' with little awareness of what I was doing.",
+        "answerType": "RadioButtons",
+        "options": [
+            {
+                "radioLabel": "Never TRUE",
+                "value": "Never true[$£.;.£$]6"
+            },
+            {
+                "radioLabel": "Rarely TRUE",
+                "value": "Rarely true[$£.;.£$]5"
+            },
+            {
+                "radioLabel": "Occasionally TRUE",
+                "value": "Occasionally true[$£.;.£$]4"
+            },
+            {
+                "radioLabel": "Often TRUE",
+                "value": "Often true[$£.;.£$]3"
+            },
+            {
+                "radioLabel": "Very Often TRUE",
+                "value": "Very Often true[$£.;.£$]2"
+            },
+            {
+                "radioLabel": "Always TRUE",
+                "value": "Always true[$£.;.£$]1"
+            }
+        ],
+        "name": "LastOfContact1",
+        "value": null
+    },
+    {
+        "question": "I did most things mindlessly without paying much attention.",
+        "answerType": "RadioButtons",
+        "options": [
+            {
+                "radioLabel": "Never TRUE",
+                "value": "Never true[$£.;.£$]6"
+            },
+            {
+                "radioLabel": "Rarely TRUE",
+                "value": "Rarely true[$£.;.£$]5"
+            },
+            {
+                "radioLabel": "Occasionally TRUE",
+                "value": "Occasionally true[$£.;.£$]4"
+            },
+            {
+                "radioLabel": "Often TRUE",
+                "value": "Often true[$£.;.£$]3"
+            },
+            {
+                "radioLabel": "Very Often TRUE",
+                "value": "Very Often true[$£.;.£$]2"
+            },
+            {
+                "radioLabel": "Always TRUE",
+                "value": "Always true[$£.;.£$]1"
+            }
+        ],
+        "name": "LastOfContact2",
+        "value": null
+    },
+    {
+        "question": "I thought some of my emotions were bad or inappropriate and I shouldn't feel them.",
+        "answerType": "RadioButtons",
+        "options": [
+            {
+                "radioLabel": "Never TRUE",
+                "value": "Never true[$£.;.£$]6"
+            },
+            {
+                "radioLabel": "Rarely TRUE",
+                "value": "Rarely true[$£.;.£$]5"
+            },
+            {
+                "radioLabel": "Occasionally TRUE",
+                "value": "Occasionally true[$£.;.£$]4"
+            },
+            {
+                "radioLabel": "Often TRUE",
+                "value": "Often true[$£.;.£$]3"
+            },
+            {
+                "radioLabel": "Very Often TRUE",
+                "value": "Very Often true[$£.;.£$]2"
+            },
+            {
+                "radioLabel": "Always TRUE",
+                "value": "Always true[$£.;.£$]1"
+            }
+        ],
+        "name": "SelfAsContent1",
+        "value": null
+    },
+    {
+        "question": "I criticised myself for having irrational or inappropriate emotions.",
+        "answerType": "RadioButtons",
+        "options": [
+            {
+                "radioLabel": "Never TRUE",
+                "value": "Never true[$£.;.£$]6"
+            },
+            {
+                "radioLabel": "Rarely TRUE",
+                "value": "Rarely true[$£.;.£$]5"
+            },
+            {
+                "radioLabel": "Occasionally TRUE",
+                "value": "Occasionally true[$£.;.£$]4"
+            },
+            {
+                "radioLabel": "Often TRUE",
+                "value": "Often true[$£.;.£$]3"
+            },
+            {
+                "radioLabel": "Very Often TRUE",
+                "value": "Very Often true[$£.;.£$]2"
+            },
+            {
+                "radioLabel": "Always TRUE",
+                "value": "Always true[$£.;.£$]1"
+            }
+        ],
+        "name": "SelfAsContent2",
+        "value": null
+    },
+    {
+        "question": "Negative thoughts and feelings tended to stick with me for a long time.",
+        "answerType": "RadioButtons",
+        "options": [
+            {
+                "radioLabel": "Never TRUE",
+                "value": "Never true[$£.;.£$]6"
+            },
+            {
+                "radioLabel": "Rarely TRUE",
+                "value": "Rarely true[$£.;.£$]5"
+            },
+            {
+                "radioLabel": "Occasionally TRUE",
+                "value": "Occasionally true[$£.;.£$]4"
+            },
+            {
+                "radioLabel": "Often TRUE",
+                "value": "Often true[$£.;.£$]3"
+            },
+            {
+                "radioLabel": "Very Often TRUE",
+                "value": "Very Often true[$£.;.£$]2"
+            },
+            {
+                "radioLabel": "Always TRUE",
+                "value": "Always true[$£.;.£$]1"
+            }
+        ],
+        "name": "Fusion1",
+        "value": null
+    },
+    {
+        "question": "Distressing thoughts tended to spin around in my mind like a broken record.",
+        "answerType": "RadioButtons",
+        "options": [
+            {
+                "radioLabel": "Never TRUE",
+                "value": "Never true[$£.;.£$]6"
+            },
+            {
+                "radioLabel": "Rarely TRUE",
+                "value": "Rarely true[$£.;.£$]5"
+            },
+            {
+                "radioLabel": "Occasionally TRUE",
+                "value": "Occasionally true[$£.;.£$]4"
+            },
+            {
+                "radioLabel": "Often TRUE",
+                "value": "Often true[$£.;.£$]3"
+            },
+            {
+                "radioLabel": "Very Often TRUE",
+                "value": "Very Often true[$£.;.£$]2"
+            },
+            {
+                "radioLabel": "Always TRUE",
+                "value": "Always true[$£.;.£$]1"
+            }
+        ],
+        "name": "Fusion2",
+        "value": null
+    },
+    {
+        "question": "My priorities and values often fell by the wayside in my day to day life.",
+        "answerType": "RadioButtons",
+        "options": [
+            {
+                "radioLabel": "Never TRUE",
+                "value": "Never true[$£.;.£$]6"
+            },
+            {
+                "radioLabel": "Rarely TRUE",
+                "value": "Rarely true[$£.;.£$]5"
+            },
+            {
+                "radioLabel": "Occasionally TRUE",
+                "value": "Occasionally true[$£.;.£$]4"
+            },
+            {
+                "radioLabel": "Often TRUE",
+                "value": "Often true[$£.;.£$]3"
+            },
+            {
+                "radioLabel": "Very Often TRUE",
+                "value": "Very Often true[$£.;.£$]2"
+            },
+            {
+                "radioLabel": "Always TRUE",
+                "value": "Always true[$£.;.£$]1"
+            }
+        ],
+        "name": "lackOfContactWithValues1",
+        "value": null
+    },
+    {
+        "question": "When life got hectic, I often lost touch with the things I value.",
+        "answerType": "RadioButtons",
+        "options": [
+            {
+                "radioLabel": "Never TRUE",
+                "value": "Never true[$£.;.£$]6"
+            },
+            {
+                "radioLabel": "Rarely TRUE",
+                "value": "Rarely true[$£.;.£$]5"
+            },
+            {
+                "radioLabel": "Occasionally TRUE",
+                "value": "Occasionally true[$£.;.£$]4"
+            },
+            {
+                "radioLabel": "Often TRUE",
+                "value": "Often true[$£.;.£$]3"
+            },
+            {
+                "radioLabel": "Very Often TRUE",
+                "value": "Very Often true[$£.;.£$]2"
+            },
+            {
+                "radioLabel": "Always TRUE",
+                "value": "Always true[$£.;.£$]1"
+            }
+        ],
+        "name": "lackOfContactWithValues2",
+        "value": null
+    },
+    {
+        "question": "Negative feelings often trapped me in inaction.",
+        "answerType": "RadioButtons",
+        "options": [
+            {
+                "radioLabel": "Never TRUE",
+                "value": "Never true[$£.;.£$]6"
+            },
+            {
+                "radioLabel": "Rarely TRUE",
+                "value": "Rarely true[$£.;.£$]5"
+            },
+            {
+                "radioLabel": "Occasionally TRUE",
+                "value": "Occasionally true[$£.;.£$]4"
+            },
+            {
+                "radioLabel": "Often TRUE",
+                "value": "Often true[$£.;.£$]3"
+            },
+            {
+                "radioLabel": "Very Often TRUE",
+                "value": "Very Often true[$£.;.£$]2"
+            },
+            {
+                "radioLabel": "Always TRUE",
+                "value": "Always true[$£.;.£$]1"
+            }
+        ],
+        "name": "Inaction1",
+        "value": null
+    },
+    {
+        "question": "Negative feelings easily stalled out my plans.",
+        "answerType": "RadioButtons",
+        "options": [
+            {
+                "radioLabel": "Never TRUE",
+                "value": "Never true[$£.;.£$]6"
+            },
+            {
+                "radioLabel": "Rarely TRUE",
+                "value": "Rarely true[$£.;.£$]5"
+            },
+            {
+                "radioLabel": "Occasionally TRUE",
+                "value": "Occasionally true[$£.;.£$]4"
+            },
+            {
+                "radioLabel": "Often TRUE",
+                "value": "Often true[$£.;.£$]3"
+            },
+            {
+                "radioLabel": "Very Often TRUE",
+                "value": "Very Often true[$£.;.£$]2"
+            },
+            {
+                "radioLabel": "Always TRUE",
+                "value": "Always true[$£.;.£$]1"
+            }
+        ],
+        "name": "Inaction2",
+        "value": null
+    }
+]

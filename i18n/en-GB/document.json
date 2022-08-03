@@ -1,0 +1,22 @@
+{
+    "verifyHeading": "Please verify your details or ",
+    "emailAddressInputLabel": "Email address",
+    "phoneNumberInputLabel": "UK telephone number",
+    "dobInputLabel": "Date of birth",
+    "postcodeAddressInputLabel": "Postcode",
+    "submitDocumentVerificationForm": "Verify",
+    "Postcode is incorrect": "The postcode you have entered is invalid.",
+    "email must be a valid email": "Please enter a valid email address.",
+    "Please enter a valid date": "Please enter a valid date.",
+    "INVALID_PHONE": "Please enter a valid UK telephone number.",
+    "NOT_A_NUMBER": "You have entered non-numeric characters.",
+    "TOO_SHORT": "The number you have entered is too short.",
+    "INVALID_LENGTH": "Please check the number of digits you have entered.",
+    "TOO_LONG": "The number you have entered is too long.",
+    "invalid-input-secret": "Please complete the reCaptcha before submitting the form.",
+    "missing-input-secret": "Please complete the reCaptcha before submitting the form.",
+    "missing-input-response": "Please complete the reCaptcha before submitting the form.",
+    "invalid-input-response": "Please complete the reCaptcha before submitting the form.",
+    "bad-request": "Please complete the reCaptcha before submitting the form.",
+    "timeout-or-duplicate": "Please complete the reCaptcha before submitting the form."
+}

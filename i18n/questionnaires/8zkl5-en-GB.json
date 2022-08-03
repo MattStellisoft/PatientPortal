@@ -1,0 +1,100 @@
+{
+    "meta": {
+        "name": "Pain Baseline Health",
+        "description": "Mattis amet hendrerit dolor, quisque lorem pharetra. Pellentesque lacus nisi urna, arcu sociis eu. Orcivel lectus nisl eget eget ut consectetur. Sit justo viverra non adipisicing elit distinctio.",
+        "UUID": "",
+        "initialDisclaimer": "",
+        "finalDisclaimer": ""
+    },
+    "questions": [
+        {
+            "question": "How many times have you seen your GP in the past three months for your pain problem? ",
+            "subQuestionInfo": "",
+            "answerType": "ShortTextField",
+            "name": "timesSeenGp",
+            "inputMode": "numeric",
+            "pattern": "[0-9]*",
+            "hint": "For example, if you have visited your GP 3 times then type 3",
+            "value": null,
+            "validation": [
+                ["yup.object"],
+                ["yup.required"],
+                [
+                    "yup.shape",
+                    {
+                        "timesSeenGp": [
+                            ["yup.string"],
+                            ["yup.required", "is_required"]
+                        ]
+                    }
+                ]
+            ]
+        },
+        {
+            "question": "How many times have you seen other doctors, such as specialists, in the past three months for your pain problem?",
+            "subQuestionInfo": "",
+            "answerType": "ShortTextField",
+            "name": "timesSeenDoctor",
+            "inputMode": "numeric",
+            "pattern": "[0-9]*",
+            "value": null,
+            "validation": [
+                ["yup.object"],
+                ["yup.required"],
+                [
+                    "yup.shape",
+                    {
+                        "timesSeenDoctor": [
+                            ["yup.string"],
+                            ["yup.required", "is_required"]
+                        ]
+                    }
+                ]
+            ]
+        },
+        {
+            "question": "How many times have you gone to the Accident and Emergency Department in the past three months because of your pain?",
+            "subQuestionInfo": "",
+            "answerType": "ShortTextField",
+            "name": "timesSeenEmergency",
+            "inputMode": "numeric",
+            "pattern": "[0-9]*",
+            "value": null,
+            "validation": [
+                ["yup.object"],
+                ["yup.required"],
+                [
+                    "yup.shape",
+                    {
+                        "timesSeenEmergency": [
+                            ["yup.string"],
+                            ["yup.required", "is_required"]
+                        ]
+                    }
+                ]
+            ]
+        },
+        {
+            "question": "How many days have you been admitted to hospital in the past three months because of your pain?",
+            "subQuestionInfo": "",
+            "answerType": "ShortTextField",
+            "inputMode": "numeric",
+            "pattern": "[0-9]*",
+            "name": "daysAdmittedHospital",
+            "value": null,
+            "validation": [
+                ["yup.object"],
+                ["yup.required"],
+                [
+                    "yup.shape",
+                    {
+                        "daysAdmittedHospital": [
+                            ["yup.string"],
+                            ["yup.required", "is_required"]
+                        ]
+                    }
+                ]
+            ]
+        }
+    ]
+}

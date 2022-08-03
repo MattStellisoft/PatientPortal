@@ -1,0 +1,76 @@
+[
+  {
+    "question": "I can still accomplish most of my goals in life, despite the pain",
+    "subQuestionInfo": null,
+    "answerType": "RadioButtons",
+    "options": [
+      {
+        "radioLabel": "0 Not at all confident",
+        "value": "0"
+      },
+      {
+        "radioLabel": "1",
+        "value": "1"
+      },
+      {
+        "radioLabel": "2",
+        "value": "2"
+      },
+      {
+        "radioLabel": "3",
+        "value": "3"
+      },
+      {
+        "radioLabel": "4",
+        "value": "4"
+      },
+      {
+        "radioLabel": "5",
+        "value": "5"
+      },
+      {
+        "radioLabel": "6 Completely confident",
+        "value": "6"
+      }
+    ],
+    "name": "confidentlyAccomplishGoals",
+    "value": null
+  },
+  {
+    "question": "I can live a normal lifestyle despite the pain",
+    "subQuestionInfo": null,
+    "answerType": "RadioButtons",
+    "options": [
+      {
+        "radioLabel": "0 Not at all confident",
+        "value": "0"
+      },
+      {
+        "radioLabel": "1",
+        "value": "1"
+      },
+      {
+        "radioLabel": "2",
+        "value": "2"
+      },
+      {
+        "radioLabel": "3",
+        "value": "3"
+      },
+      {
+        "radioLabel": "4",
+        "value": "4"
+      },
+      {
+        "radioLabel": "5",
+        "value": "5"
+      },
+      {
+        "radioLabel": "6 Completely confident",
+        "value": "6"
+      }
+    ],
+    "name": "confidentlyLiveNormalLifestyle",
+    "value": null
+  }
+]

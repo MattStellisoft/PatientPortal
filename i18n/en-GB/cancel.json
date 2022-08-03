@@ -1,0 +1,10 @@
+{
+    "cancellationReasonQuestion": "Please select a reason you are unable to attend your appointment?",
+    "requestReschedule": "I need to re-schedule my appointment to a different date/time.",
+    "bookedInError": "This appointment was booked in error.",
+    "selfDischarge": "I no longer require treatment/ care.",
+    "undisclosed": "I prefer not to say.",
+    "noneOfAbove": "None of the above.",
+    "explainReason": "(optional) Please explain why you are cancelling this appointment",
+    "submit": "Submit your answers"
+}

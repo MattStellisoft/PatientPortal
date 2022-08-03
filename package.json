@@ -1,0 +1,48 @@
+{
+    "private": true,
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "type-check": "tsc",
+        "run": "npx cypress run --record --key fc6cbbf4-9c32-4a6f-903d-fc4bf317bbf3",
+        "ci": "npx cypress open",
+        "test": "start-server-and-test start http-get://localhost:3000 run"
+    },
+    "dependencies": {
+        "@demvsystems/yup-ast": "^1.2.2",
+        "@headlessui/react": "^1.5.0",
+        "@heroicons/react": "^1.0.6",
+        "body-parser": "^1.20.0",
+        "cookie": "^0.5.0",
+        "cookies": "^0.8.0",
+        "jsonwebtoken": "^8.5.1",
+        "libphonenumber-js": "^1.10.7",
+        "lodash.throttle": "^4.1.1",
+        "nanoid": "^3.3.4",
+        "next": "latest",
+        "openid-client": "^5.1.5",
+        "react": "^17.0.2",
+        "react-cookie": "^4.1.1",
+        "react-dom": "^17.0.2",
+        "react-google-recaptcha-v3": "^1.9.7",
+        "react-pdf": "^5.7.2",
+        "wait-on": "^6.0.1",
+        "yup": "^0.32.11"
+    },
+    "devDependencies": {
+        "@tailwindcss/forms": "^0.5.0",
+        "@types/node": "^17.0.21",
+        "@types/react": "^17.0.40",
+        "@types/react-dom": "^17.0.13",
+        "autoprefixer": "^10.4.4",
+        "axe-core": "^4.4.2",
+        "cypress": "^10.3.0",
+        "cypress-axe": "^1.0.0",
+        "postcss": "^8.4.12",
+        "prettier": "2.6.2",
+        "start-server-and-test": "^1.14.0",
+        "tailwindcss": "^3.0.23",
+        "typescript": "^4.6.2"
+    }
+}

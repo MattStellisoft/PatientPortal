@@ -1,0 +1,182 @@
+[
+    {
+        "heading": "Over the last 2 weeks, how often have you been bothered by any of the following problems?",
+        "answerType": "header",
+        "name": "Gad7Header"
+    },
+    {
+        "question": "Feeling nervous, anxious or on edge?",
+        "subQuestionInfo": null,
+        "answerType": "RadioButtons",
+        "options": [
+            {
+                "radioLabel": "Not at all",
+                "value": "Not at all[$£.;.£$]0"
+            },
+            {
+                "radioLabel": "Several days",
+                "value": "Several days[$£.;.£$]1"
+            },
+            {
+                "radioLabel": "More than half the days",
+                "value": "More than half the days[$£.;.£$]2"
+            },
+            {
+                "radioLabel": "Nearly every day",
+                "value": "Nearly every day[$£.;.£$]3"
+            }
+        ],
+        "name": "feelingAnxious",
+        "value": null
+    },
+    {
+        "question": "Not being able to stop or control worrying?",
+        "subQuestionInfo": null,
+        "answerType": "RadioButtons",
+        "options": [
+            {
+                "radioLabel": "Not at all",
+                "value": "Not at all[$£.;.£$]0"
+            },
+            {
+                "radioLabel": "Several days",
+                "value": "Several days[$£.;.£$]1"
+            },
+            {
+                "radioLabel": "More than half the days",
+                "value": "More than half the days[$£.;.£$]2"
+            },
+            {
+                "radioLabel": "Nearly every day",
+                "value": "Nearly every day[$£.;.£$]3"
+            }
+        ],
+        "name": "cantControlWorrying",
+        "value": null
+    },
+    {
+        "question": "Worrying too much about different things? ",
+        "subQuestionInfo": null,
+        "answerType": "RadioButtons",
+        "options": [
+            {
+                "radioLabel": "Not at all",
+                "value": "Not at all[$£.;.£$]0"
+            },
+            {
+                "radioLabel": "Several days",
+                "value": "Several days[$£.;.£$]1"
+            },
+            {
+                "radioLabel": "More than half the days",
+                "value": "More than half the days[$£.;.£$]2"
+            },
+            {
+                "radioLabel": "Nearly every day",
+                "value": "Nearly every day[$£.;.£$]3"
+            }
+        ],
+        "name": "worryingTooMuch",
+        "value": null
+    },
+    {
+        "question": "Trouble relaxing?",
+        "subQuestionInfo": null,
+        "answerType": "RadioButtons",
+        "options": [
+            {
+                "radioLabel": "Not at all",
+                "value": "Not at all[$£.;.£$]0"
+            },
+            {
+                "radioLabel": "Several days",
+                "value": "Several days[$£.;.£$]1"
+            },
+            {
+                "radioLabel": "More than half the days",
+                "value": "More than half the days[$£.;.£$]2"
+            },
+            {
+                "radioLabel": "Nearly every day",
+                "value": "Nearly every day[$£.;.£$]3"
+            }
+        ],
+        "name": "troubleRelaxing",
+        "value": null
+    },
+    {
+        "question": "Being so restless that it is hard to sit still?",
+        "subQuestionInfo": null,
+        "answerType": "RadioButtons",
+        "options": [
+            {
+                "radioLabel": "Not at all",
+                "value": "Not at all[$£.;.£$]0"
+            },
+            {
+                "radioLabel": "Several days",
+                "value": "Several days[$£.;.£$]1"
+            },
+            {
+                "radioLabel": "More than half the days",
+                "value": "More than half the days[$£.;.£$]2"
+            },
+            {
+                "radioLabel": "Nearly every day",
+                "value": "Nearly every day[$£.;.£$]3"
+            }
+        ],
+        "name": "cantSitStill",
+        "value": null
+    },
+    {
+        "question": "Becoming easily annoyed or irritable?",
+        "subQuestionInfo": null,
+        "answerType": "RadioButtons",
+        "options": [
+            {
+                "radioLabel": "Not at all",
+                "value": "Not at all[$£.;.£$]0"
+            },
+            {
+                "radioLabel": "Several days",
+                "value": "Several days[$£.;.£$]1"
+            },
+            {
+                "radioLabel": "More than half the days",
+                "value": "More than half the days[$£.;.£$]2"
+            },
+            {
+                "radioLabel": "Nearly every day",
+                "value": "Nearly every day[$£.;.£$]3"
+            }
+        ],
+        "name": "easilyAnnoyed",
+        "value": null
+    },
+    {
+        "question": "Feeling afraid as if something awful might happen?",
+        "subQuestionInfo": null,
+        "answerType": "RadioButtons",
+        "options": [
+            {
+                "radioLabel": "Not at all",
+                "value": "Not at all[$£.;.£$]0"
+            },
+            {
+                "radioLabel": "Several days",
+                "value": "Several days[$£.;.£$]1"
+            },
+            {
+                "radioLabel": "More than half the days",
+                "value": "More than half the days[$£.;.£$]2"
+            },
+            {
+                "radioLabel": "Nearly every day",
+                "value": "Nearly every day[$£.;.£$]3"
+            }
+        ],
+        "name": "afraidSomethingAwfulHappens",
+        "value": null
+    }
+]

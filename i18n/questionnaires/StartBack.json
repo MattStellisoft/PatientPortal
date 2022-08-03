@@ -1,0 +1,176 @@
+[
+    {
+        "question": "My back pain has spread down my leg(s) at some time in the last 2 weeks",
+        "subQuestionInfo": null,
+        "answerType": "RadioButtons",
+        "options": [
+            {
+                "radioLabel": "Agree",
+                "value": "Agree[$£.;.£$]1"
+            },
+            {
+                "radioLabel": "Disagree",
+                "value": "Disagree[$£.;.£$]0"
+            }
+        ],
+        "name": "painSpreadDownLegs",
+        "value": null,
+        "row": true
+    },
+    {
+        "question": "I have had pain in the shoulder or neck at some time in the last 2 weeks",
+        "subQuestionInfo": null,
+        "answerType": "RadioButtons",
+        "options": [
+            {
+                "radioLabel": "Agree",
+                "value": "Agree[$£.;.£$]1"
+            },
+            {
+                "radioLabel": "Disagree",
+                "value": "Disagree[$£.;.£$]0"
+            }
+        ],
+        "name": "painShoulderNeck",
+        "value": null,
+        "row": true
+    },
+    {
+        "question": "I have only walked short distances because of my back pain",
+        "subQuestionInfo": null,
+        "answerType": "RadioButtons",
+        "options": [
+            {
+                "radioLabel": "Agree",
+                "value": "Agree[$£.;.£$]1"
+            },
+            {
+                "radioLabel": "Disagree",
+                "value": "Disagree[$£.;.£$]0"
+            }
+        ],
+        "name": "walkShortDistances",
+        "value": null,
+        "row": true
+    },
+    {
+        "question": "In the last 2 weeks, I have dressed more slowly than usual because of back pain",
+        "subQuestionInfo": null,
+        "answerType": "RadioButtons",
+        "options": [
+            {
+                "radioLabel": "Agree",
+                "value": "Agree[$£.;.£$]1"
+            },
+            {
+                "radioLabel": "Disagree",
+                "value": "Disagree[$£.;.£$]0"
+            }
+        ],
+        "name": "dressSlowly",
+        "value": null,
+        "row": true
+    },
+    {
+        "question": "It’s not really safe for a person with a condition like mine to be physically active",
+        "subQuestionInfo": null,
+        "answerType": "RadioButtons",
+        "options": [
+            {
+                "radioLabel": "Agree",
+                "value": "Agree[$£.;.£$]1"
+            },
+            {
+                "radioLabel": "Disagree",
+                "value": "Disagree[$£.;.£$]0"
+            }
+        ],
+        "name": "notSafeToBeActive",
+        "value": null,
+        "row": true
+    },
+    {
+        "question": "Worrying thoughts have been going through my mind a lot of the time",
+        "subQuestionInfo": null,
+        "answerType": "RadioButtons",
+        "options": [
+            {
+                "radioLabel": "Agree",
+                "value": "Agree[$£.;.£$]1"
+            },
+            {
+                "radioLabel": "Disagree",
+                "value": "Disagree[$£.;.£$]0"
+            }
+        ],
+        "name": "worryingThoughts",
+        "value": null,
+        "row": true
+    },
+    {
+        "question": "I feel that my back pain is terrible and it's never going to get any better",
+        "subQuestionInfo": null,
+        "answerType": "RadioButtons",
+        "options": [
+            {
+                "radioLabel": "Agree",
+                "value": "Agree[$£.;.£$]1"
+            },
+            {
+                "radioLabel": "Disagree",
+                "value": "Disagree[$£.;.£$]0"
+            }
+        ],
+        "name": "backPainTerrible",
+        "value": null,
+        "row": true
+    },
+    {
+        "question": "In general I have not enjoyed all the things I used to enjoy",
+        "subQuestionInfo": null,
+        "answerType": "RadioButtons",
+        "options": [
+            {
+                "radioLabel": "Agree",
+                "value": "Agree[$£.;.£$]1"
+            },
+            {
+                "radioLabel": "Disagree",
+                "value": "Disagree[$£.;.£$]0"
+            }
+        ],
+        "name": "notEnjoyedThings",
+        "value": null,
+        "row": true
+    },
+    {
+        "question": "Overall, how bothersome has your back pain been in the last 2 weeks?",
+        "subQuestionInfo": null,
+        "answerType": "RadioButtons",
+        "options": [
+            {
+                "radioLabel": "Not at all",
+                "value": "Not at all[$£.;.£$]0"
+            },
+            {
+                "radioLabel": "Slightly",
+                "value": "Slightly[$£.;.£$]0"
+            },
+            {
+                "radioLabel": "Moderately",
+                "value": "Moderately[$£.;.£$]0"
+            },
+            {
+                "radioLabel": "Very much",
+                "value": "Very much[$£.;.£$]1"
+            },
+            {
+                "radioLabel": "Extremely",
+                "value": "Extremely[$£.;.£$]1"
+            }
+        ],
+        "name": "overallBackPain",
+        "value": null,
+        "row": true
+    }
+]

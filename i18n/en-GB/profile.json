@@ -1,0 +1,15 @@
+{
+    "INVALID_PHONE": "Please enter a valid UK telephone number.",
+    "NOT_A_NUMBER": "You have entered non-numeric characters.",
+    "TOO_SHORT": "The number you have entered is too short.",
+    "INVALID_LENGTH": "Please check the number of digits you have entered.",
+    "TOO_LONG": "The number you have entered is too long.",
+    "email must be a valid email": "Email must be a valid email",
+    "saveButton": "Save",
+    "warningText1": "Please be aware that changing these details will update your ",
+    "warningText2": " summary care record.",
+    "emailAddressInputLabel": "Email address",
+    "phoneNumberInputLabel": "UK telephone number",
+    "updateSuccessHeading": "Success",
+    "updateSuccessMessage": "We have successfully updated your details."
+}

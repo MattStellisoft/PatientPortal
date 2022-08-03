@@ -1,0 +1,75 @@
+[
+    {
+        "question": "How likely are you to recommend this service to friends and family if they need similar care or treatment?",
+        "subQuestionInfo": "",
+        "answerType": "RadioButtons",
+        "options": [
+            {
+                "radioLabel": "Extremely likely",
+                "value": "Extremely likely"
+            },
+            {
+                "radioLabel": "Likely",
+                "value": "Likely"
+            },
+            {
+                "radioLabel": "Neither likely or unlikely",
+                "value": "Neither likely or unlikely"
+            },
+            {
+                "radioLabel": "Unlikely",
+                "value": "Unlikely"
+            },
+            {
+                "radioLabel": "Extremely unlikely",
+                "value": "Extremely unlikely"
+            },
+            {
+                "radioLabel": "Don't know",
+                "value": "Don't know"
+            }
+        ],
+        "name": "fft",
+        "value": null
+    },
+    {
+        "question": "Thinking about your response to the question above, what is the main reason why you feel this way?",
+        "subQuestionInfo": null,
+        "answerType": "MultilineTextField",
+        "name": "fftFollowUp",
+        "value": null
+    },
+    {
+        "question": "With respect to your joint and muscle symptoms, how would you describe yourself now compared to when you first saw your clinician? ",
+        "subQuestionInfo": null,
+        "answerType": "RadioButtons",
+        "options": [
+            {
+                "radioLabel": "Prefer not to say",
+                "value": "Prefer not to say"
+            },
+            {
+                "radioLabel": "Much worse",
+                "value": "Much worse"
+            },
+            {
+                "radioLabel": "Worse",
+                "value": "Worse"
+            },
+            {
+                "radioLabel": "Same",
+                "value": "Same"
+            },
+            {
+                "radioLabel": "Better",
+                "value": "Better"
+            },
+            {
+                "radioLabel": "Much Better",
+                "value": "Much Better"
+            }
+        ],
+        "name": "globalImprovement",
+        "value": null
+    }
+]

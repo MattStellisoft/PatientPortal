@@ -1,0 +1,8 @@
+{
+    "appointmentDetail": "Your [ServiceType] appointment is taking place on [AppointmentDateTime] with [Clinician]",
+    "cancelConfirmedButton": "Cancel",
+    "confirmProvisionalButton": "Confirm",
+    "cancelProvisionalButton": "Cancel",
+    "addToGoogleCalendar": "Add to Google Calendar",
+    "addToOutlookCalendar": "Add to Microsoft Outlook"
+}
