@@ -5,6 +5,7 @@
     "Confirmed": "Confirmed",
     "DocumentAvailable": "Document available",
     "Booked": "Booked",
+    "Attended": "Attended",
     "Unconfirmed": "Unconfirmed",
     "Booking": "Requested",
     "NoResponse": "No response",

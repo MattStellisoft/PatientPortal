@@ -1,6 +1,6 @@
 import Layout from "../../components/Layout";
 import { verifyAuth } from "../../models/auth";
-import { getAppointment } from "../../models/appointments";
+import { getAppointment, confirmAppointment } from "../../models/appointments";
 import {
     AppointmentInterface,
     Breadcrumb,
@@ -253,18 +253,14 @@ export async function getServerSideProps(context) {
         const endpoint: string =
             process.env.NEXT_URL +
             process.env.NEXT_API_PATH +
-            `${authorisedUser.nhs_number}/appointment/${context.query?.appointment}`;
+            `/appointment/${context.query?.appointment}`;
         var { appointment } = await getAppointment(endpoint);
     }
     if (context.req.method === "POST") {
         await getBody(context.req, context.res);
     }
     if (typeof context.req.body != "undefined" && context.req.body.Confirm) {
-        // const endpoint: string =
-        //     process.env.NEXT_URL +
-        //     `/api/patient/${authorisedUser.nhs_number}/accept`;
-        // appointment = await acceptAppointment(endpoint);
-        appointment["AutoBookedStatus"] = "Confirmed";
+        await confirmAppointment(appointment);
     }
     const breadCrumbs: Breadcrumb[] = [
         { key: "appointmentsPageName", href: "/appointments", current: true },

@@ -1,3 +1,17 @@
+export const mockSession = {
+    'Uakgb_J5m9g-0JDMbcJqL': {
+        session_id: 'Uakgb_J5m9g-0JDMbcJqL',
+        nhs_number: 968636876973,
+        last_access: 1659713157,
+        ip_address: '82.3.194.210'
+    },
+    "yU3mxswm6Fo8cFggV63F2": {
+        session_id: 'yU3mxswm6Fo8cFggV63F2',
+        nhs_number: 9686368973,
+        last_access: 1659713157,
+        ip_address: '82.3.194.210'
+    }
+}
 export const testUsers = {
     4482444383: {
         nhs_number: 4482444383, //CHER: Patient with documents
@@ -111,6 +125,24 @@ export const testUsers = {
     9658218989: {
         nhs_number: 9658218989, //Nayana Patient Status Indicator
     },
+    9990565406: {
+        nhs_number: 9990565406, //Synthetic NHS Test User
+    },
+    9990564981: {
+        nhs_number: 9990564981, //Synthetic NHS Test User
+    },
+    9990564833: {
+        nhs_number: 9990564833, //Synthetic NHS Test User
+    },
+    9990530807: {
+        nhs_number: 9990530807, //Synthetic NHS Test User
+    },
+    9990530777: {
+        nhs_number: 9990530777, //Synthetic NHS Test User
+    },
+    9990530742: {
+        nhs_number: 9990530742, //Synthetic NHS Test User
+    }
 };
 export const patientData = {
     9686368973: {
@@ -182,7 +214,7 @@ export const patientSteps = {
         StatusCode: 200,
         statusMessage: {
             cancellationCount: "0",
-            autoBookingflag: "0",
+            autoBookingflag: "1",
             referralsType: "CHPS",
             stages: [
                 {
@@ -204,15 +236,7 @@ export const patientSteps = {
             autoBookingflag: "0",
             referralsType: "CHPS",
             stages: [
-                {
-                    NHSNumber: '9686368973',
-                    IDReferral: 't12341',
-                    Status: 'KCI1',
-                    Appointment: false,
-                    Physionow: false,
-                    Document: false,
-                    Questionnaire: false
-                }
+                
             ]
         },
     },

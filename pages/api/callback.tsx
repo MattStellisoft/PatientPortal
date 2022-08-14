@@ -3,6 +3,7 @@ import { Issuer } from "openid-client";
 import { serialize } from "cookie";
 import Cookies from "cookies";
 import GenerateAssertionJwt from "../../helpers/token_helper";
+import { testUsers } from "../../testing/data/testData";
 
 export default async function handler(
     req: NextApiRequest,
@@ -35,13 +36,13 @@ export default async function handler(
         };
         fetch(process.env.NEXT_NHSLOGIN_TOKEN_URI, configObj)
             .then((response) => response.json())
-            .then((response) => {
+            .then(async (response) => {
+                console.log('response', response, req.query)
                 if (
                     response &&
                     response.access_token &&
                     response.refresh_token
                 ) {
-                    //Redirect to sign in if dob indicates user is < 18
 
                     // WHEN GOING LIVE SET COOKIES WITH SECURITY PARAMS
                     // res.setHeader(
@@ -57,15 +58,57 @@ export default async function handler(
                     // res.status(200).json({
                     //     refresh: response.refresh_token,
                     // });
-                    // Set a cookie
-                    const cookies = new Cookies(req, res);
-                    cookies.set("access_token", response.access_token, {
-                        httpOnly: true, // true by default
-                    });
-                    cookies.set("refresh_token", response.refresh_token, {
-                        httpOnly: true, // true by default
-                    });
-                    res.redirect(307, "/");
+
+                    if (false) {
+                        const userInfoConfig: RequestInit = {
+                            method: "GET",
+                            headers: {
+                                Authorization: `Bearer ${response.access_token}`,
+                            },
+                        };
+                        const userData = await fetch(
+                            process.env.NEXT_NHSLOGIN_USER_INFO_URI,
+                            userInfoConfig
+                        );
+                        const jsonUserInfo = await userData.json().then((data) => {
+                            if (data.message && data.message == "Unauthorized") {
+                                return false;
+                            } else {
+                                return data;
+                            }
+                        });
+                        const verificationConfigObj: RequestInit = {
+                            method: "POST",
+                            headers: new Headers({
+                                "Content-Type": "application/json",
+                            }),
+                            body: JSON.stringify({nhs_number: jsonUserInfo.nhs_number, dob: jsonUserInfo.birthdate})
+                        };
+                        const verificationEndpoint =
+                            process.env.NEXT_CHAPI_URL +
+                            `/api/verifyIdentity/${jsonUserInfo.nhs_number}`;
+                        fetch(verificationEndpoint, verificationConfigObj)
+                            .then((response) => response.json())
+                            .then((response) => {
+                                const cookies = new Cookies(req, res);
+                                cookies.set("session_id", response.sessionId, {
+                                    httpOnly: true, // true by default
+                                });
+                                res.redirect(307, '/');
+                            });
+                    } else {
+                        // Set a cookie
+                        const cookies = new Cookies(req, res);
+                        cookies.set("access_token", response.access_token, {
+                            httpOnly: true, // true by default
+                        });
+                        cookies.set("refresh_token", response.refresh_token, {
+                            httpOnly: true, // true by default
+                        });
+                        res.redirect(307, "/");
+                    }
+                } else if (response.error) {
+                    res.redirect(307, '/signin');
                 }
             })
             .catch((error) => {

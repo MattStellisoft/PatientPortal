@@ -1,4 +1,5 @@
 import { AppointmentInterface } from "../interfaces/interfaces";
+import { contactApi } from "../models/chad";
 export async function getAppointments(endpoint: string, params: object) {
     console.log('endpoint', endpoint)
     var url = new URL(endpoint);
@@ -55,33 +56,31 @@ export async function getAppointment(endpoint: string) {
         return Promise.reject(error);
     }
 }
-export async function acceptAppointment(endpoint: string) {
-    var url = new URL(endpoint);
-    const response = await fetch(url.href);
-    type JSONResponse = {
-        appointment: object;
-        StatusCode: number;
-        errors?: Array<{ message: string }>;
-    };
-    const { appointment, StatusCode, errors }: JSONResponse =
-        await response.json();
-
-    if (response.ok) {
-        if (appointment) {
-            return appointment;
-        } else {
-            return Promise.reject(
-                new Error(
-                    `We encountered an error when confirming your appointment at this time. If the error persists then please contact us.`
-                )
-            );
-        }
-    } else {
-        const error = new Error(
-            errors?.map((e) => e.message).join("\n") ?? "unknown"
-        );
-        return Promise.reject(error);
-    }
+export async function confirmAppointment(appointment: AppointmentInterface) {
+    const response = await fetch('/api/patient/appointment/cancel');
+    // type JSONResponse = {
+    //     appointment: object;
+    //     StatusCode: number;
+    //     errors?: Array<{ message: string }>;
+    // };
+    // const { appointmentStatus, StatusCode, errors }: JSONResponse =
+    //     await response.json();
+    // if (response.ok) {
+    //     if (appointment) {
+    //         return appointment;
+    //     } else {
+    //         return Promise.reject(
+    //             new Error(
+    //                 `We encountered an error when confirming your appointment at this time. If the error persists then please contact us.`
+    //             )
+    //         );
+    //     }
+    // } else {
+    //     const error = new Error(
+    //         errors?.map((e) => e.message).join("\n") ?? "unknown"
+    //     );
+    //     return Promise.reject(error);
+    // }
 }
 export async function rejectAppointment(endpoint: string) {
     var url = new URL(endpoint);
@@ -139,3 +138,23 @@ export async function rejectReason(endpoint: string, reason: object) {
         return Promise.reject(error);
     }
 }
+export async function appointmentBookingRequestCher(context: any, authorisedUser, patientOverview) {
+    const request = {
+        Resource: "AppointmentBooking",
+        Endpoint: "AppointmentBooking",
+        Method: "AppointmentBookingRequest",
+        Body: {
+            requestJson: {
+                NHSNumber: context.query.testuser
+                    ? context.query.testuser
+                    : authorisedUser.nhs_number,
+                ReferralId: patientOverview.stages[0].IDReferral
+            },
+        },
+    };
+    const { statusMessage, statusCode } = await contactApi(request);
+    return statusMessage;
+}
+export async function appointmentBookingRequest() {
+}
+

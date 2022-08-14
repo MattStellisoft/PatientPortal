@@ -6,6 +6,7 @@ import { getLanguage } from "../../models/languages";
 import { contactApi } from "../../models/chad";
 import { Errors, Breadcrumb } from "../../interfaces/interfaces";
 import { getPatientOverview } from "../../models/patients";
+import { appointmentBookingRequestCher, appointmentBookingRequest } from "../../models/appointments";
 import { ExclamationCircleIcon } from "@heroicons/react/solid";
 export default function request({
     breadCrumbs,
@@ -42,7 +43,7 @@ export default function request({
                                 </div>
                             </div>
                         ) : (
-                            <form className="space-y-8">
+                            <form method="POST" action={process.env.NEXT_URL + process.env.NEXT_API_PATH + "/appointment/request"} className="space-y-8">
                                 <div className="my-4 lg:my-0 px-4 py-5 sm:py-0 space-y-6 sm:p-6">
                                     <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start">
                                         <div className="sm:col-span-3">
@@ -160,14 +161,14 @@ export default function request({
                                             </div>
                                         </div>
                                     </div>
-                                    <Link href="/appointments">
-                                        <button
-                                            type="submit"
-                                            className=" bg-blue-750 py-2 px-4 border-b-4 border-blue-950 text-lg font-bold text-white hover:bg-blue-950 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
-                                        >
-                                            {languageStrings["submit"]}
-                                        </button>
-                                    </Link>
+                                    <button
+                                        type="submit"
+                                        name="submit"
+                                        value="submit"
+                                        className=" bg-blue-750 py-2 px-4 border-b-4 border-blue-950 text-lg font-bold text-white hover:bg-blue-950 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                                    >
+                                        {languageStrings["submit"]}
+                                    </button>
                                 </div>
                             </form>
                         )}
@@ -177,13 +178,12 @@ export default function request({
         </Layout>
     );
 }
-export async function getServerSideProps(context) {
+export async function getServerSideProps(context: any) {
     const debug: boolean = context.query?.debug ? context.query?.debug : false;
     const authorisedUser = await verifyAuth(
         context,
         process.env.NEXT_PRODUCTION
     );
-    console.log('authorisedUser', authorisedUser)
     if (authorisedUser == false) {
         return {
             redirect: {
@@ -230,38 +230,50 @@ export async function getServerSideProps(context) {
                 },
             },
         };
-        const { statusMessage, statusCode } = await contactApi(request);
+        var { statusMessage, statusCode } = await contactApi(request);
         var results = {};
-        //re-map "stages" array as dictionary for ease of lookup.
-        statusMessage.stages.map((stage) => {
-            results[stage.stage] = stage.Status;
-        });
-        if (statusMessage.autoBookingflag == "0") {
+        if (Array.isArray(statusMessage.stages)) {
+            //re-map "stages" array as dictionary for ease of lookup.
+            statusMessage.stages.map((stage) => {
+                results[stage.stage] = stage.Status;
+            });
+        }
+        if (typeof statusMessage.autoBookingflag != 'undefined' && statusMessage.autoBookingflag == "0") {
             errors["autoBookingDisabled"] = { name: "", description: "" };
             errors["autoBookingDisabled"]["name"] =
                 languageStrings["autoBookingDisabled"];
         }
     } else {
-        const endpoint: string =
-            process.env.NEXT_URL +
-            `/api/patient/${authorisedUser.nhs_number}/steps`;
-        var { statusMessage } = await getPatientOverview(endpoint);
-        var results = {};
-        //re-map "stages" array as dictionary for ease of lookup.
-        statusMessage.stages.map((stage) => {
-            results[stage.stage] = stage.Status;
-        });
-        if (statusMessage.autoBookingflag == "0") {
-            errors["autoBookingDisabled"] = { name: "", description: "" };
-            errors["autoBookingDisabled"]["name"] =
-                languageStrings["autoBookingDisabled"];
-        }
+        var url = new URL(process.env.NEXT_URL + process.env.NEXT_API_PATH + 'overview');
+        var options: RequestInit = {
+            method: 'GET',
+            headers: new Headers({
+                "Content-Type": "application/json",
+                "sessionId": req.cookies.session_id
+            })
+        };
+        const response = await fetch(
+            url,
+            options
+        );
+        const { statusMessage, statusCode } = await response.json();
+        // if (statusMessage.autoBookingflag == "0") {
+        //     errors["autoBookingDisabled"] = { name: "", description: "" };
+        //     errors["autoBookingDisabled"]["name"] =
+        //         languageStrings["autoBookingDisabled"];
+        // }
     }
-    const endpoint: string =
-        process.env.NEXT_URL +
-        `/api/patient/${authorisedUser.nhs_number}/accept`;
-    //const appointment: object = await acceptAppointment(endpoint);
-    //Either a prov appointment existed and has been confirmed or there is an error to display
+    // if (typeof statusMessage.autoBookingflag != 'undefined' && statusMessage.autoBookingflag == "1" && typeof context.req.body != "undefined" && context.req.body.request && typeof statusMessage.stages[0] != 'undefined') {
+    //     if (
+    //         typeof process.env.usecher != "undefined" ||
+    //         (typeof context.query.usecher != "undefined" &&
+    //             typeof context.query.testuser != "undefined")
+    //     ) {
+    //         const booking = await appointmentBookingRequestCher(context, authorisedUser, statusMessage);
+    //     } else {
+    //         const booking = await appointmentBookingRequest();
+    //     }
+    // }
     const breadCrumbs: Breadcrumb[] = [
         {
             key: "appointmentsPageName",

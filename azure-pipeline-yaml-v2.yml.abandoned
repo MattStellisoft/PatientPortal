@@ -34,6 +34,11 @@ stages:
                 - script: |
                       npm install
                   displayName: "npm install"
+                - task: Cache@2
+                  displayName: 'Cache .next/cache'
+                  inputs:
+                    key: next | $(Agent.OS) | yarn.lock
+                    path: '$(System.DefaultWorkingDirectory)/.next/cache'
                 - script: |
                       npm run build
                   displayName: "npm build"

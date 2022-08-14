@@ -1,0 +1,13 @@
+import { NextResponse } from "next/server";
+import type { NextRequest } from "next/server";
+
+// This function can be marked `async` if using `await` inside
+export function middleware(request: NextRequest) {
+    const existingSessionId = request.cookies.get('session_id');
+    if (!existingSessionId) {
+        return NextResponse.rewrite(new URL('/signin', request.url))
+    } else {
+        //make a call to our server here to check the session remains active
+    }
+    return NextResponse.next();
+}

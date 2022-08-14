@@ -131,7 +131,7 @@ export async function getServerSideProps(context) {
             },
         };
         const patientDocuments = await contactApi(request);
-        if (typeof patientDocuments.Documents != "undefined") {
+        if (typeof patientDocuments.Documents != "undefined" && patientDocuments.Documents != null) {
             var totalResults: number = patientDocuments.Documents.length;
             const start = (offset - 1) * perPage;
             const end = start + perPage;

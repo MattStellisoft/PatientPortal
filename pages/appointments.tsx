@@ -11,6 +11,8 @@ import { getAppointments } from "../models/appointments";
 import { parseCookies } from "../helpers/parseCookies";
 import { getLanguage } from "../models/languages";
 import { contactApi } from "../models/chad";
+import { contactChApi } from "../models/chapi";
+
 type Props = {
     appointments?: AppointmentInterface[];
     languageStrings: string[];
@@ -83,19 +85,24 @@ export default function Appointments({
     );
 }
 export async function getServerSideProps(context) {
+    const { locale, req } = context;
     const debug: boolean = context.query?.debug ? context.query?.debug : false;
-    const authorisedUser = await verifyAuth(
-        context,
-        process.env.NEXT_PRODUCTION
-    );
-    if (authorisedUser == false) {
-        return {
-            redirect: {
-                destination: "/signin",
-                permanent: false,
-            },
-            props: {},
-        };
+    if (typeof req.cookies.session_id != 'undefined') {
+
+    } else {
+        var authorisedUser = await verifyAuth(
+            context,
+            process.env.NEXT_PRODUCTION
+        );
+        if (authorisedUser == false) {
+            return {
+                redirect: {
+                    destination: "/signin",
+                    permanent: false,
+                },
+                props: {},
+            };
+        }
     }
     const offset: number = context.query?.page || 1;
     const perPage: number = context.query?.perPage || 5;
@@ -110,9 +117,7 @@ export async function getServerSideProps(context) {
             query += "&debug=true";
         }
     }
-    const { locale, req } = context;
-    const data = parseCookies(req);
-    let currentLocale: string = data.NEXT_LOCALE || locale;
+    let currentLocale: string = req.cookies.NEXT_LOCALE || locale;
     const localLanguageStrings = getLanguage("appointments", currentLocale);
     const globalLanguageStrings = getLanguage("global", currentLocale);
     const languageStrings = {
@@ -155,17 +160,16 @@ export async function getServerSideProps(context) {
             appointments = [];
         }
     } else {
-        const endpoint: string =
-            process.env.NEXT_URL +
-            process.env.NEXT_API_PATH +
-            `${authorisedUser.nhs_number}/appointments`;
         const params = {
             offset: offset,
             perPage: perPage,
         };
-        var { appointments, totalResults } = await getAppointments(
-            endpoint,
-            params
+        var { appointments, totalResults } = await contactChApi(
+            'GET',
+            'appointments',
+            null,
+            params,
+            req.cookies.session_id
         );
     }
     const breadCrumbs: Breadcrumb[] = [

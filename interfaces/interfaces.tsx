@@ -18,7 +18,7 @@ export interface StatusMessageInterface {
     cancellationCount: string;
     autoBookingflag: string;
     referralsType: string;
-    stages: StageInterface[];
+    stages?: StageInterface[] | string;
 }
 
 export interface StageInterface {
@@ -94,10 +94,19 @@ export interface AppointmentInterface {
     Duration: number;
     ServiceType: string;
     Clinician: string;
-    Location: string;
+    BranchName: string;
+    County: string;
+    Town: string;
+    Locality: string;
+    RoadName: string;
+    HouseName: string;
+    HouseNumber: string;
+    PostCode: string;
     Status: string;
+    Seq: number;
     AutoBooked: boolean;
     AutoBookedStatus: string | null;
+    AppointmentUID: string;
     CancellationCode: number;
     CancellationReason: string | null;
 }

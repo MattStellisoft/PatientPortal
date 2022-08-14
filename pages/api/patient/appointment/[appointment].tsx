@@ -1,4 +1,4 @@
-import { appointments } from "../../../../../testing/data/testData";
+import { appointments } from "../../../../testing/data/testData";
 
 export default function handler(req, res) {
     if (typeof appointments[req.query?.appointment] != "undefined") {

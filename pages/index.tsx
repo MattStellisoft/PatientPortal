@@ -1,12 +1,14 @@
+import { GetServerSideProps } from 'next'
 import Layout from "../components/Layout";
 import { verifyAuth } from "../models/auth";
 import { getPatientOverview } from "../models/patients";
 import Tag from "../components/Tag";
 import Notification from "../components/Notification";
-import { StageInterface, Errors, Breadcrumb } from "../interfaces/interfaces";
+import { StatusMessageInterface, Errors, Breadcrumb } from "../interfaces/interfaces";
 import { contactApi } from "../models/chad";
 import { parseCookies } from "../helpers/parseCookies";
 import { getLanguage } from "../models/languages";
+import { contactChApi } from "../models/chapi";
 import { ExclamationCircleIcon } from "@heroicons/react/solid";
 import {
     AcademicCapIcon,
@@ -29,7 +31,7 @@ const actions = [
     {
       title: 'Edit your profile',
       description: 'Ensure your contact details are up-to-date across NHS services',
-      href: '/profile',
+      href: 'https://settings.sandpit.signin.nhs.uk',
       icon: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCIgZmlsbD0iY3VycmVudENvbG9yIj4KICA8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xMCA5YTMgMyAwIDEwMC02IDMgMyAwIDAwMCA2em0tNyA5YTcgNyAwIDExMTQgMEgzeiIgY2xpcC1ydWxlPSJldmVub2RkIiAvPgo8L3N2Zz4=',
       iconForeground: 'text-purple-700',
       iconBackground: 'bg-purple-50',
@@ -66,7 +68,7 @@ function classNames(...classes) {
 }
   
 type Props = {
-    patientSteps?: StageInterface[];
+    patientSteps?: StatusMessageInterface;
     errors: Errors;
     debug: boolean;
     url: string;
@@ -109,6 +111,17 @@ const IndexPage = ({
                         title={languageStrings["noActiveReferralTitle"]}
                         message={
                             languageStrings["noActiveReferralMessage"]
+                        }
+                    ></Notification>
+                    ) : ''}
+
+                    {patientSteps.stages == 'NHS number not found' ? (
+                        <Notification
+                        link={"/physionow"}
+                        query={query}
+                        title={languageStrings["nhsNumberNotFound"]}
+                        message={
+                            languageStrings["nhsNumberNotFoundMessage"]
                         }
                     ></Notification>
                     ) : ''}
@@ -166,7 +179,7 @@ const IndexPage = ({
                             <a href={"/appointments" + query}>
                                 <div className="mt-3 sm:pr-8">
                                     <h3 className="text-lg font-semibold text-gray-900">Your Appointments</h3>
-                                    {typeof patientSteps.stages[0] != 'undefined' && patientSteps.stages[0].Appointment == true ? (<Tag text="Action required" bgColour="bg-yellow-500" textColour="text-blue-950" uppercase="true">Test</Tag>) : (<p className="text-base font-normal">No action required.</p>)}
+                                    {typeof patientSteps.stages[0] != 'undefined' && patientSteps.stages[0].Appointment == true ? (<Tag text="Action required" bgColour="bg-yellow-500" textColour="text-blue-950" uppercase="true"></Tag>) : (<p className="text-base font-normal">No action required.</p>)}
                                 </div>
                             </a>
                         </li>
@@ -174,7 +187,7 @@ const IndexPage = ({
                             <a href={"/documents" + query}>
                                 <div className="mt-3 sm:pr-8">
                                     <h3 className="text-lg font-semibold text-gray-900">Your Documents</h3>
-                                    {typeof patientSteps.stages[0] != 'undefined' && patientSteps.stages[0].Document == true ? (<Tag text="Action required" bgColour="bg-yellow-500" textColour="text-blue-950" uppercase="true">Test</Tag>) : (<p className="text-base font-normal">No action required.</p>)}
+                                    {typeof patientSteps.stages[0] != 'undefined' && patientSteps.stages[0].Document == true ? (<Tag text="Action required" bgColour="bg-yellow-500" textColour="text-blue-950" uppercase="true"></Tag>) : (<p className="text-base font-normal">No action required.</p>)}
                                 </div>
                             </a>
                         </li>
@@ -182,7 +195,7 @@ const IndexPage = ({
                             <a href={"/questionnaires" + query}>
                                 <div className="mt-3 sm:pr-8">
                                     <h3 className="text-lg font-semibold text-gray-900">Your Questionnaires</h3>
-                                    {typeof patientSteps.stages[0] != 'undefined' && patientSteps.stages[0].Questionnaire == true ? (<Tag text="Action required" bgColour="bg-yellow-500" textColour="text-blue-950" uppercase="true">Test</Tag>) : (<p className="text-base font-normal">No action required.</p>)}
+                                    {typeof patientSteps.stages[0] != 'undefined' && patientSteps.stages[0].Questionnaire == true ? (<Tag text="Action required" bgColour="bg-yellow-500" textColour="text-blue-950" uppercase="true"></Tag>) : (<p className="text-base font-normal">No action required.</p>)}
                                 </div>
                             </a>
                         </li>
@@ -190,7 +203,7 @@ const IndexPage = ({
                             <a href={"/exercises" + query}>
                                 <div className="mt-3 sm:pr-8">
                                     <h3 className="text-lg font-semibold text-gray-900">Your Exercises</h3>
-                                    {typeof patientSteps.stages[0] != 'undefined' && patientSteps.stages[0].Physionow == true ? (<Tag text="Action required" bgColour="bg-yellow-500" textColour="text-blue-950" uppercase="true">Test</Tag>) : (<p className="text-base font-normal">No action required.</p>)}
+                                    {typeof patientSteps.stages[0] != 'undefined' && patientSteps.stages[0].Physionow == true ? (<Tag text="Action required" bgColour="bg-yellow-500" textColour="text-blue-950" uppercase="true"></Tag>) : (<p className="text-base font-normal">No action required.</p>)}
                                 </div>
                             </a>
                         </li>
@@ -241,62 +254,32 @@ const IndexPage = ({
         </main>
     </Layout>
 );
-export async function getServerSideProps(context) {
-    const debug: boolean = context.query?.debug ? context.query?.debug : false;
-    //Fetch user data upon succesful verification (unable to do this using Middleware unfortunately).
-    const authorisedUser = await verifyAuth(
-        context,
-        process.env.NEXT_PRODUCTION
-    );
-    //Redirect if verification failed (can only do this in getServerSideProps... unfortunately).
-    if (authorisedUser == false) {
-        return {
-            redirect: {
-                destination: "/signin",
-                permanent: false,
-            },
-            props: {},
-        };
-    }
-    //Collect errors
+export const getServerSideProps: GetServerSideProps = async ({req, locale, query}) => {
+    const debug: boolean = query?.debug ? Boolean(query?.debug) : false;
     let errors: Errors = {};
-    //Append querystring that will persist the test user param across the application (when applicable).
-    let query: string = "";
-    if (context.query.testuser) {
-        query = "?testuser=" + context.query.testuser;
-        if (context.query.usecher) {
-            query += "&usecher=true";
+    //Build a querystring that will persist the test user params across the application (when applicable).
+    let queryString: string = "";
+    if (query.testuser) {
+        queryString = "?testuser=" + query.testuser;
+        if (query.usecher) {
+            queryString += "&usecher=true";
         }
-        if (context.query.debug) {
-            query += "&debug=true";
+        if (query.debug) {
+            queryString += "&debug=true";
         }
     }
-    //Parse and extract values stored in cookies.
-    const { locale, req } = context;
-    const data = parseCookies(req);
-    let currentLocale: string = data.NEXT_LOCALE || locale;
     //Fetch language strings using current locale.
+    let currentLocale: string = req.cookies.NEXT_LOCALE || locale;
     const localLanguageStrings = getLanguage("index", currentLocale);
     const globalLanguageStrings = getLanguage("global", currentLocale);
     const languageStrings = {
         ...localLanguageStrings,
         ...globalLanguageStrings,
     };
-    //Redirect patient to sign in page with error message if they are under the age of 18.
-    if (authorisedUser.age < 18) {
-        return {
-            redirect: {
-                destination: "/signin?error=age_restriction_error",
-                permanent: false,
-            },
-            props: {},
-        };
-    }
-    //Fetch the page data from local test API calls, CHER or CHAPI depending upon env settings/ query params.
     if (
         typeof process.env.usecher != "undefined" ||
-        (typeof context.query.usecher != "undefined" &&
-            typeof context.query.testuser != "undefined")
+        (typeof query.usecher != "undefined" &&
+            typeof query.testuser != "undefined")
     ) {
         const request = {
             Resource: "Overview",
@@ -304,39 +287,31 @@ export async function getServerSideProps(context) {
             Method: "Overview",
             Body: {
                 requestJson: {
-                    NHSNumber: context.query.testuser
-                        ? context.query.testuser
-                        : authorisedUser.nhs_number,
+                    NHSNumber: query.testuser,
                 },
             },
         };
-        const { statusMessage, statusCode } = await contactApi(request);
-        if (statusMessage.autoBookingflag == "0") {
-            errors["autoBookingDisabled"] = { name: "", description: "" };
-            errors["autoBookingDisabled"]["name"] =
-                languageStrings["autoBookingDisabled"];
-        }
+        var { statusMessage, statusCode } = await contactApi(request);
     } else {
-        const endpoint: string =
-            process.env.NEXT_URL +
-            `/api/patient/${authorisedUser.nhs_number}/steps`;
-        var { statusMessage } = await getPatientOverview(endpoint);
-        if (statusMessage.autoBookingflag == "0") {
-            errors["autoBookingDisabled"] = { name: "", description: "" };
-            errors["autoBookingDisabled"]["name"] =
-                languageStrings["autoBookingDisabled"];
-        }
-    }
-    if (typeof statusMessage.stages != 'undefined' && statusMessage.stages.length > 1) {
-        return {
-            redirect: {
-                destination: "/signin?error=multi_referral",
-                permanent: false,
-            },
-            props: {},
+        let url = new URL(process.env.NEXT_URL + process.env.NEXT_API_PATH + 'overview');
+        const options: RequestInit = {
+            method: 'GET',
+            headers: new Headers({
+                "Content-Type": "application/json",
+                "sessionId": req.cookies.session_id
+            })
         };
+        const response = await fetch(
+            url,
+            options
+        );
+        var { statusMessage, statusCode } = await response.json();
     }
-    //Construct breadcrumb data.
+    if (typeof statusMessage != 'undefined' && statusMessage.autoBookingflag == "0") {
+        errors["autoBookingDisabled"] = { name: "", description: "" };
+        errors["autoBookingDisabled"]["name"] =
+            languageStrings["autoBookingDisabled"];
+    }
     const breadCrumbs: Breadcrumb[] = [];
     return {
         props: {
@@ -344,7 +319,7 @@ export async function getServerSideProps(context) {
             debug: debug,
             patientSteps: statusMessage,
             errors: errors,
-            query: query,
+            query: queryString,
             breadCrumbs: breadCrumbs,
             languageStrings: languageStrings,
         },

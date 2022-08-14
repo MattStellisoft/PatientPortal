@@ -29,7 +29,6 @@ export async function getAccessToken() {
         return Promise.reject(error);
     }
 }
-
 export async function contactApi({ Resource, Endpoint, Method, Body }) {
     const token = await getAccessToken();
     const post_data = Body;

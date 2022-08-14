@@ -18,5 +18,6 @@
     "questionnaires_outstanding_2": "questionnaire",
     "questionnaires_outstanding_3": "to complete",
     "requestAppointmentTitle": "Request an appointment",
-    "requestAppointmentMessage": "You can request your next appointment with us by clicking on this banner."
+    "requestAppointmentMessage": "You can request your next appointment with us by clicking on this banner.",
+    "nhsNumberNotFound": "We can't find your NHS number on our system"
 }
