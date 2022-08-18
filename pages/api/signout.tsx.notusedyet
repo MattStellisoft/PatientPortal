@@ -1,0 +1,21 @@
+// export default function handler(req, res) {
+//     if (typeof req.body != 'undefined' && req.body.Signout) {
+//         const parsedCookies = cookie.parse(context.req.headers.cookie);
+//         if (typeof parsedCookies?.access_token != 'undefined') {
+//             res.setHeader(
+//                 'Set-Cookie',
+//                 cookie.serialize('access_token', '', {
+//                     maxAge: 0,
+//                 }),
+//             );
+//         }
+//         if (typeof parsedCookies?.refresh_token != 'undefined') {
+//             res.setHeader(
+//                 'Set-Cookie',
+//                 cookie.serialize('refresh_token', '', {
+//                     maxAge: 0,
+//                 }),
+//             );
+//         }
+// }
+// }

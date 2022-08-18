@@ -8,31 +8,14 @@ export default async function handler(
     req: NextApiRequest,
     res: NextApiResponse<ResponseData>,
 ) {
-    const body = req.body;
-    console.log(body);
-    if (
-        !body.RequestAppointmentDay ||
-        !body.RequestAppointmentMonth ||
-        !body.RequestAppointmentYear
-    ) {
-        return res
-            .status(400)
-            .json({ statusMessage: 'Invalid date entered', StatusCode: 500 });
-    } else {
+    if (typeof req.body.appointmentID != 'undefined') {
         const request = {
             Resource: 'AppointmentBooking',
             Endpoint: 'AppointmentBooking',
-            Method: 'AppointmentBookingRequest',
+            Method: 'ConfirmAppointment',
             Body: {
                 requestJson: {
-                    ReferralId: req.body.IDReferral,
-                    NHSNumber: req.body.NHSNumber,
-                    RequestDate:
-                        body.RequestAppointmentDay +
-                        '/' +
-                        body.RequestAppointmentMonth +
-                        '/' +
-                        body.RequestAppointmentYear,
+                    AppointmentUID: req.body.appointmentID,
                 },
             },
         };
@@ -45,5 +28,7 @@ export default async function handler(
         } else {
             res.redirect(307, '/?error=generic_contact_us');
         }
+    } else {
+        res.redirect(307, '/?error=invalid_appointment_id');
     }
 }

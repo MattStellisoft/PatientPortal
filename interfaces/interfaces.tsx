@@ -18,17 +18,17 @@ export interface StatusMessageInterface {
     cancellationCount: string;
     autoBookingflag: string;
     referralsType: string;
-    stages?: StageInterface[] | string;
+    stages?: StageInterface[];
 }
 
 export interface StageInterface {
-    NHSNumber: string,
-    IDReferral: string,
-    Status: string,
-    Appointment: boolean,
-    Physionow: boolean,
-    Document: boolean,
-    Questionnaire: boolean
+    NHSNumber: string;
+    IDReferral: string;
+    Status: string;
+    Appointment: boolean;
+    Physionow: boolean;
+    Document: boolean;
+    Questionnaire: boolean;
 }
 
 export interface OverviewInterface {
@@ -94,6 +94,7 @@ export interface AppointmentInterface {
     Duration: number;
     ServiceType: string;
     Clinician: string;
+    Location?: string;
     BranchName: string;
     County: string;
     Town: string;
@@ -146,9 +147,9 @@ export interface ExercisesInterface {
                 {
                     date: Date;
                     exercises: ExerciseInterface[];
-                }
+                },
             ];
-        }
+        },
     ];
 }
 
@@ -189,6 +190,7 @@ export interface Breadcrumb {
 export interface Error {
     name: string;
     description: string;
+    contact: boolean;
 }
 
 export interface Errors {

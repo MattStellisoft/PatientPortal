@@ -1,12 +1,12 @@
-import Layout from "../components/Layout";
-import { getDocuments } from "../models/documents";
-import { verifyAuth } from "../models/auth";
-import { DocumentInterface, Breadcrumb } from "../interfaces/interfaces";
-import DocumentsList from "../components/DocumentsList";
-import Pagination from "../components/Pagination";
-import { contactApi } from "../models/chad";
-import { parseCookies } from "../helpers/parseCookies";
-import { getLanguage } from "../models/languages";
+import Layout from '../components/Layout';
+import { getDocuments } from '../models/documents';
+import { verifyAuth } from '../models/auth';
+import { DocumentInterface, Breadcrumb } from '../interfaces/interfaces';
+import DocumentsList from '../components/DocumentsList';
+import Pagination from '../components/Pagination';
+import { contactApi } from '../models/chad';
+import { parseCookies } from '../helpers/parseCookies';
+import { getLanguage } from '../models/languages';
 type Props = {
     documents?: DocumentInterface[];
     offset?: number;
@@ -44,19 +44,19 @@ export default function Documents({
                 <div className="overflow-hidden">
                     <div className="lg:my-0 my-4 lg:pb-4 lg:px-0 px-6">
                         <h2 className="mb-4 text-2xl font-extrabold sm:tracking-tight lg:text-4xl">
-                            {languageStrings["documentsPageName"]}
+                            {languageStrings['documentsPageName']}
                         </h2>
                         <p className="mb-4 text-xl">
-                            {languageStrings["documentsPageDescription"]}
+                            {languageStrings['documentsPageDescription']}
                         </p>
                         <p className="mb-4 text-base">
-                            {languageStrings["documentsPagePara1"]}
+                            {languageStrings['documentsPagePara1']}
                         </p>
                     </div>
                     <p className="lg:my-0 my-4 lg:pb-4 lg:px-0 px-6 text-lg font-bold">
-                        {languageStrings["documentResults"].replace(
-                            "[totalResults]",
-                            totalResults
+                        {languageStrings['documentResults'].replace(
+                            '[totalResults]',
+                            totalResults,
                         )}
                     </p>
                     <DocumentsList
@@ -76,87 +76,102 @@ export default function Documents({
         </Layout>
     );
 }
-export async function getServerSideProps(context) {
-    const debug: boolean = context.query?.debug ? context.query?.debug : false;
+export async function getServerSideProps({ req, query }) {
+    const debug: boolean = query?.debug ? query?.debug : false;
     const authorisedUser = await verifyAuth(
-        context,
-        process.env.NEXT_PRODUCTION
+        req,
+        query,
+        process.env.NEXT_PRODUCTION,
     );
     if (authorisedUser == false) {
         return {
             redirect: {
-                destination: "/signin",
+                destination: '/signin',
                 permanent: false,
             },
             props: {},
         };
     }
-    const offset: number = context.query?.page || 1;
-    const perPage: number = context.query?.perPage || 5;
-    let query: string = "";
+    const offset: number = query?.page || 1;
+    const perPage: number = query?.perPage || 5;
+    let queryString: string = '';
     let errors: object = {};
-    const { locale, req } = context;
     const data = parseCookies(req);
-    let currentLocale: string = data.NEXT_LOCALE || locale;
+    let currentLocale: string = data.NEXT_LOCALE || query.locale;
     //Fetch language strings using current locale.
-    const localLanguageStrings = getLanguage("documents", currentLocale);
-    const globalLanguageStrings = getLanguage("global", currentLocale);
+    const localLanguageStrings = getLanguage('documents', currentLocale);
+    const globalLanguageStrings = getLanguage('global', currentLocale);
     const languageStrings = {
         ...localLanguageStrings,
         ...globalLanguageStrings,
     };
-    if (context.query.testuser) {
-        query = "?testuser=" + context.query.testuser;
-        if (context.query.usecher) {
-            query += "&usecher=true";
+    if (query.testuser) {
+        queryString = '?testuser=' + query.testuser;
+        if (query.usecher) {
+            queryString += '&usecher=true';
         }
-        if (context.query.debug) {
-            query += "&debug=true";
+        if (query.debug) {
+            queryString += '&debug=true';
         }
     }
-    if (
-        process.env.usecher ||
-        (context.query.usecher && context.query.testuser)
-    ) {
+    if (process.env.usecher || (query.usecher && query.testuser)) {
         const request = {
-            Resource: "Documents",
-            Endpoint: "Document",
-            Method: "GetDocuments",
+            Resource: 'Documents',
+            Endpoint: 'Document',
+            Method: 'GetDocuments',
             Body: {
                 requestJson: {
-                    NHSNumber: context.query.testuser
-                        ? context.query.testuser
+                    NHSNumber: query.testuser
+                        ? query.testuser
                         : authorisedUser.nhs_number,
                 },
             },
         };
         const patientDocuments = await contactApi(request);
-        if (typeof patientDocuments.Documents != "undefined" && patientDocuments.Documents != null) {
+        if (
+            typeof patientDocuments.Documents != 'undefined' &&
+            patientDocuments.Documents != null
+        ) {
             var totalResults: number = patientDocuments.Documents.length;
             const start = (offset - 1) * perPage;
             const end = start + perPage;
             var results: DocumentInterface[] = patientDocuments.Documents.slice(
                 start,
-                end
+                end,
             );
         } else {
             var totalResults: number = 0;
             var results: DocumentInterface[] = [];
         }
     } else {
-        const endpoint =
-            process.env.NEXT_CHAPI_URL +
-            `/api/patient/${authorisedUser.nhs_number}/documents`;
         const params = {
             offset: offset,
             perPage: perPage,
         };
-        var { results, totalResults } = await getDocuments(endpoint, params);
+        let url = new URL(
+            process.env.NEXT_URL + process.env.NEXT_API_PATH + 'documents',
+        );
+        for (let param in params) {
+            url.searchParams.append(param, params[param]);
+        }
+        const options: RequestInit = {
+            method: 'GET',
+            headers: new Headers({
+                'Content-Type': 'application/json',
+                sessionId: req.cookies.session_id,
+            }),
+        };
+        const response = await fetch(url, options);
+        var {
+            results,
+            totalResults,
+        }: { results: DocumentInterface[]; totalResults: number } =
+            await response.json();
     }
     const breadCrumbs: Breadcrumb[] = [
         {
-            key: "documentsPageName",
-            href: "/documents",
+            key: 'documentsPageName',
+            href: '/documents',
             current: true,
         },
     ];
@@ -169,7 +184,7 @@ export async function getServerSideProps(context) {
             offset: offset,
             languageStrings: languageStrings,
             perPage: perPage,
-            query: query,
+            query: queryString,
             breadCrumbs: breadCrumbs,
         },
     };

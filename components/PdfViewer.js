@@ -1,15 +1,16 @@
-import useWindowDimensions from "../hooks/useWindowDimensions";
-import { useEffect, useState } from "react";
-import Link from "next/link";
+import useWindowDimensions from '../hooks/useWindowDimensions';
+import { useEffect, useState } from 'react';
+import Link from 'next/link';
 // import default react-pdf entry
-import { Document, Page, pdfjs } from "react-pdf";
+import { Document, Page, pdfjs } from 'react-pdf';
 // import pdf worker as a url, see `next.config.js` and `pdf-worker.js`
-import workerSrc from "../pdf-worker";
+import workerSrc from '../pdf-worker';
 
 pdfjs.GlobalWorkerOptions.workerSrc = workerSrc;
 
 export default function PdfViewer(props) {
     const { width } = useWindowDimensions();
+    console.log('width', width);
     const [numPages, setNumPages] = useState(null);
     function onDocumentLoadSuccess({ numPages: nextNumPages }) {
         setNumPages(nextNumPages);
@@ -26,18 +27,18 @@ export default function PdfViewer(props) {
     }
     function base64toPDF() {
         var bufferArray = base64ToArrayBuffer(props.file);
-        var blobStore = new Blob([bufferArray], { type: "application/pdf" });
+        var blobStore = new Blob([bufferArray], { type: 'application/pdf' });
         if (window.navigator && window.navigator.msSaveOrOpenBlob) {
             window.navigator.msSaveOrOpenBlob(blobStore);
             return;
         }
         var data = window.URL.createObjectURL(blobStore);
-        var link = document.createElement("a");
+        var link = document.createElement('a');
         document.body.appendChild(link);
 
         //download PDF
         link.href = data;
-        link.download = "CarePlan.pdf";
+        link.download = 'CarePlan.pdf';
         link.click();
         window.URL.revokeObjectURL(data);
         link.remove();
@@ -55,7 +56,7 @@ export default function PdfViewer(props) {
                     Download
                 </button>
                 <Link
-                    href={"/documents/" + props.query}
+                    href={'/documents/' + props.query}
                     className="font-bold text-black hover:underline"
                 >
                     Back
@@ -69,7 +70,7 @@ export default function PdfViewer(props) {
                     <Page
                         key={`page_${index + 1}`}
                         pageNumber={index + 1}
-                        width={width > 1023 ? width - 475 : width}
+                        width={width > 1023 ? 815 : width}
                         renderAnnotationLayer={false}
                         renderTextLayer={false}
                     />

@@ -11,5 +11,6 @@
     "emailAddressInputLabel": "Email address",
     "phoneNumberInputLabel": "UK telephone number",
     "updateSuccessHeading": "Success",
-    "updateSuccessMessage": "We have successfully updated your details."
+    "updateSuccessMessage": "We have successfully updated your details.",
+    "profilePagePara1": "You can update your phone number, email address and other details using the NHS Login settings page."
 }

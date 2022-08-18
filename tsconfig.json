@@ -21,6 +21,6 @@
         "**/*.tsx",
         "components/PdfViewer.js",
         "pages/middleware.tsx.notused"
-    ],
+, "middleware.tsxold"    ],
     "exclude": ["node_modules"]
 }

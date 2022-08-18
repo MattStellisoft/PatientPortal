@@ -1,49 +1,48 @@
-import type { NextApiRequest, NextApiResponse } from "next";
-import { Issuer } from "openid-client";
-import { serialize } from "cookie";
-import Cookies from "cookies";
-import GenerateAssertionJwt from "../../helpers/token_helper";
-import { testUsers } from "../../testing/data/testData";
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { Issuer } from 'openid-client';
+import { serialize } from 'cookie';
+import Cookies from 'cookies';
+import GenerateAssertionJwt from '../../helpers/token_helper';
+import { testUsers } from '../../testing/data/testData';
 
 export default async function handler(
     req: NextApiRequest,
-    res: NextApiResponse
+    res: NextApiResponse,
 ) {
     await Issuer.discover(process.env.NEXT_NHSLOGIN_URI).then(function (
-        nhsLoginIssuer
+        nhsLoginIssuer,
     ) {
         const client = new nhsLoginIssuer.Client({
             client_id: process.env.NEXT_NHSLOGIN_CLIENT_ID,
             redirect_uris: [process.env.NEXT_NHSLOGIN_CALLBACK_URI],
-            response_types: ["code"],
-            token_endpoint_auth_method: "private_key_jwt",
+            response_types: ['code'],
+            token_endpoint_auth_method: 'private_key_jwt',
         });
         const post_data = new URLSearchParams({
-            grant_type: "authorization_code",
+            grant_type: 'authorization_code',
             code: client.callbackParams(req).code,
             redirect_uri: process.env.NEXT_NHSLOGIN_CALLBACK_URI,
             client_assertion_type:
-                "urn:ietf:params:oauth:client-assertion-type:jwt-bearer",
+                'urn:ietf:params:oauth:client-assertion-type:jwt-bearer',
             client_assertion: GenerateAssertionJwt(),
         }).toString();
         const configObj: RequestInit = {
-            method: "POST",
+            method: 'POST',
             headers: {
-                "Content-Length": post_data.length.toString(),
-                "Content-Type": "application/x-www-form-urlencoded",
+                'Content-Length': post_data.length.toString(),
+                'Content-Type': 'application/x-www-form-urlencoded',
             },
             body: post_data,
         };
         fetch(process.env.NEXT_NHSLOGIN_TOKEN_URI, configObj)
             .then((response) => response.json())
             .then(async (response) => {
-                console.log('response', response, req.query)
+                //console.log('response', response, req.query);
                 if (
                     response &&
                     response.access_token &&
                     response.refresh_token
                 ) {
-
                     // WHEN GOING LIVE SET COOKIES WITH SECURITY PARAMS
                     // res.setHeader(
                     //     "Set-Cookie",
@@ -61,28 +60,36 @@ export default async function handler(
 
                     if (false) {
                         const userInfoConfig: RequestInit = {
-                            method: "GET",
+                            method: 'GET',
                             headers: {
                                 Authorization: `Bearer ${response.access_token}`,
                             },
                         };
                         const userData = await fetch(
                             process.env.NEXT_NHSLOGIN_USER_INFO_URI,
-                            userInfoConfig
+                            userInfoConfig,
                         );
-                        const jsonUserInfo = await userData.json().then((data) => {
-                            if (data.message && data.message == "Unauthorized") {
-                                return false;
-                            } else {
-                                return data;
-                            }
-                        });
+                        const jsonUserInfo = await userData
+                            .json()
+                            .then((data) => {
+                                if (
+                                    data.message &&
+                                    data.message == 'Unauthorized'
+                                ) {
+                                    return false;
+                                } else {
+                                    return data;
+                                }
+                            });
                         const verificationConfigObj: RequestInit = {
-                            method: "POST",
+                            method: 'POST',
                             headers: new Headers({
-                                "Content-Type": "application/json",
+                                'Content-Type': 'application/json',
                             }),
-                            body: JSON.stringify({nhs_number: jsonUserInfo.nhs_number, dob: jsonUserInfo.birthdate})
+                            body: JSON.stringify({
+                                nhs_number: jsonUserInfo.nhs_number,
+                                dob: jsonUserInfo.birthdate,
+                            }),
                         };
                         const verificationEndpoint =
                             process.env.NEXT_CHAPI_URL +
@@ -91,24 +98,57 @@ export default async function handler(
                             .then((response) => response.json())
                             .then((response) => {
                                 const cookies = new Cookies(req, res);
-                                cookies.set("session_id", response.sessionId, {
+                                cookies.set('session_id', response.sessionId, {
                                     httpOnly: true, // true by default
                                 });
                                 res.redirect(307, '/');
                             });
                     } else {
+                        const userInfoConfig: RequestInit = {
+                            method: 'GET',
+                            headers: {
+                                Authorization: `Bearer ${response.access_token}`,
+                            },
+                        };
+                        const userData = await fetch(
+                            process.env.NEXT_NHSLOGIN_USER_INFO_URI,
+                            userInfoConfig,
+                        );
+                        await userData.json().then((data) => {
+                            if (
+                                data.message &&
+                                data.message == 'Unauthorized'
+                            ) {
+                                return false;
+                            } else {
+                                var dob = new Date(data.birthdate);
+                                var month_diff = Date.now() - dob.getTime();
+                                var age_dt = new Date(month_diff);
+                                var year = age_dt.getUTCFullYear();
+                                var age = Math.abs(year - 1970);
+                                if (age < 18) {
+                                    res.redirect(
+                                        307,
+                                        '/signin?error=age_restriction_error',
+                                    );
+                                }
+                            }
+                        });
                         // Set a cookie
                         const cookies = new Cookies(req, res);
-                        cookies.set("access_token", response.access_token, {
+                        cookies.set('access_token', response.access_token, {
                             httpOnly: true, // true by default
                         });
-                        cookies.set("refresh_token", response.refresh_token, {
+                        cookies.set('refresh_token', response.refresh_token, {
                             httpOnly: true, // true by default
                         });
-                        res.redirect(307, "/");
+                        res.redirect(307, '/');
                     }
-                } else if (response.error) {
-                    res.redirect(307, '/signin');
+                } else if (response.error_description) {
+                    res.redirect(
+                        307,
+                        '/signin?error=' + response.error_description,
+                    );
                 }
             })
             .catch((error) => {

@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from 'next/link';
 export default function appointmentList({
     appointments,
     languageStrings,
@@ -16,36 +16,37 @@ export default function appointmentList({
                             <dt className="text-base font-bold text-blue-750">
                                 <Link
                                     href={
-                                        "/appointment/" +
+                                        '/appointment/' +
                                         appointment.IDAppointment +
                                         query
                                     }
                                 >
-                                    {languageStrings["appointmentSummary"]
+                                    {languageStrings['appointmentSummary']
                                         .replace(
-                                            "[ServiceType]",
-                                            appointment.ServiceType
+                                            '[ServiceType]',
+                                            appointment.ServiceType,
                                         )
                                         .replace(
-                                            "[AppointmentDateTime]",
+                                            '[AppointmentDateTime]',
                                             new Date(
-                                                appointment.AppointmentDateTime
-                                            ).toLocaleString("en-GB")
+                                                appointment.AppointmentDateTime,
+                                            ).toLocaleString('en-GB'),
                                         )
                                         .replace(
-                                            "[Clinician]",
-                                            appointment.Clinician
+                                            '[Clinician]',
+                                            appointment.Clinician,
                                         )}
                                 </Link>
                             </dt>
                             <dd className="mt-1 text-sm text-black sm:mt-0">
                                 <span className="inline-flex items-center px-2 py-1 font-bold bg-blue-750 text-white">
-                                    {appointment.AutoBooked == 0 &&
-                                    appointment.Status != null
-                                        ? languageStrings[appointment.Status]
-                                        : languageStrings[
+                                    {appointment.AutoBookedStatus != null &&
+                                    appointment.AutoBookedStatus !=
+                                        'Unconfirmed'
+                                        ? languageStrings[
                                               appointment.AutoBookedStatus
-                                          ]}
+                                          ]
+                                        : ''}
                                 </span>
                             </dd>
                         </div>

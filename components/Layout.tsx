@@ -1,15 +1,15 @@
-import React, { ReactNode, useState, useEffect } from "react";
-import Head from "next/head";
-import Script from "next/script";
-import Navigation from "./Navigation";
-import MobileNavigation from "./MobileNavigation";
-import Sidebar from "./Sidebar";
-import Footer from "./Footer";
-import DebugBar from "./DebugBar";
-import useStorage from "../hooks/useStorage";
-import Breadcrumbs from "./Breadcrumbs";
-import { useCookies } from "react-cookie";
-import { useRouter } from "next/router";
+import React, { ReactNode, useState, useEffect } from 'react';
+import Head from 'next/head';
+import Script from 'next/script';
+import Navigation from './Navigation';
+import MobileNavigation from './MobileNavigation';
+import Sidebar from './Sidebar';
+import Footer from './Footer';
+import DebugBar from './DebugBar';
+import useStorage from '../hooks/useStorage';
+import Breadcrumbs from './Breadcrumbs';
+import { useCookies } from 'react-cookie';
+import { useRouter } from 'next/router';
 type Props = {
     children?: ReactNode;
     title?: string;
@@ -24,54 +24,26 @@ type Props = {
 };
 function acceptCookies(languageStrings) {
     const { getItem, setItem } = useStorage();
-    const hideCookie = getItem("hideCookie");
-    const hideAccessibility = getItem("hideAccessibilityAssistant");
+    const hideCookie = getItem('hideCookie');
     const [cookies, setCookies, removeCookies] = useCookies([
-        "acceptCookies",
-        "_ga",
-        "_gat",
-        "_gid",
+        'acceptCookies',
+        '_ga',
+        '_gat',
+        '_gid',
     ]);
-    const [
-        accessibilityCookie,
-        setAccessibilityCookie,
-        removeAccessibilityCookie,
-    ] = useCookies(["activateAccessibilityAssistant"]);
     function setCookiePreferences(preference) {
-        if (preference == true || preference == "true") {
-            setCookies("acceptCookies", preference, {
-                path: "/",
+        if (preference == true || preference == 'true') {
+            setCookies('acceptCookies', preference, {
+                path: '/',
                 expires: new Date(
-                    new Date().getTime() + 1000 * 60 * 60 * 24 * 365
+                    new Date().getTime() + 1000 * 60 * 60 * 24 * 365,
                 ),
             });
         } else {
-            removeCookies("acceptCookies");
-            removeCookies("_ga");
-            removeCookies("_gat");
-            removeCookies("_gid");
-        }
-    }
-    function setAccessibilityPreferences(preference) {
-        if (preference == "true") {
-            setAccessibilityCookie(
-                "activateAccessibilityAssistant",
-                preference,
-                {
-                    path: "/",
-                    expires: new Date(
-                        new Date().getTime() + 1000 * 60 * 60 * 24 * 365
-                    ),
-                }
-            );
-        } else {
-            setAccessibilityCookie(
-                "activateAccessibilityAssistant",
-                preference,
-                {
-                    maxAge: 0,
-                }
-            );
+            removeCookies('acceptCookies');
+            removeCookies('_ga');
+            removeCookies('_gat');
+            removeCookies('_gid');
         }
     }
     if (!hideCookie) {
@@ -81,122 +53,58 @@ function acceptCookies(languageStrings) {
                     <div className="flex items-center justify-between flex-wrap">
                         <div className="w-0 flex-1">
                             <h3 className="text-lg font-bold text-blue-950">
-                                {languageStrings["acceptCookiesHeading"]}
+                                {languageStrings['acceptCookiesHeading']}
                             </h3>
                             <p className="mt-4 font-bold text-blue-750">
                                 <span>
-                                    {languageStrings["acceptCookiesPara1"]}
+                                    {languageStrings['acceptCookiesPara1']}
                                 </span>
                             </p>
                             <p className="mt-4 font-bold text-blue-750">
                                 <span>
-                                    {languageStrings["acceptCookiesPara2"]}
+                                    {languageStrings['acceptCookiesPara2']}
                                 </span>
                             </p>
                             <p className="mt-4 font-bold text-blue-750">
                                 <span>
-                                    {languageStrings["acceptCookiesPara3"]}
+                                    {languageStrings['acceptCookiesPara3']}
                                 </span>
+                            </p>
+                            <p className="mt-4 font-bold text-blue-750">
+                                <a
+                                    className="underline"
+                                    href="https://www.connecthealth.co.uk/cookie-policy/"
+                                    target="_blank"
+                                >
+                                    {languageStrings['viewCookiePolicy']}
+                                </a>
                             </p>
                             <div className="mt-4 flex">
                                 <button
                                     onClick={() => {
                                         setItem(
-                                            "hideCookie",
-                                            "true",
-                                            "session"
+                                            'hideCookie',
+                                            'true',
+                                            'session',
                                         );
-                                        setCookiePreferences("true");
+                                        setCookiePreferences('true');
                                     }}
                                     className="bg-blue-750 py-2 px-4 border-b-4 border-blue-950 text-lg font-bold text-white hover:bg-blue-950 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
                                 >
-                                    {languageStrings["acceptCookiesButton"]}
+                                    {languageStrings['acceptCookiesButton']}
                                 </button>
                                 <button
                                     onClick={() => {
                                         setItem(
-                                            "hideCookie",
-                                            "true",
-                                            "session"
+                                            'hideCookie',
+                                            'true',
+                                            'session',
                                         );
-                                        setCookiePreferences("false");
+                                        setCookiePreferences('false');
                                     }}
                                     className="ml-3 bg-blue-750 py-2 px-4 border-b-4 border-blue-950 text-lg font-bold text-white hover:bg-blue-950 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
                                 >
-                                    {languageStrings["rejectCookiesButton"]}
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        );
-    }
-    if (!hideAccessibility) {
-        return (
-            <div className="bg-gray-50">
-                <div className="max-w-6xl m-auto px-4 py-8 sm:px-6 lg:px-8">
-                    <div className="flex items-center justify-between flex-wrap">
-                        <div className="w-0 flex-1">
-                            <h3 className="text-lg font-bold text-blue-950">
-                                {
-                                    languageStrings[
-                                        "accessibilityActivateHeading"
-                                    ]
-                                }
-                            </h3>
-                            <p className="mt-3 font-bold text-black">
-                                <span>
-                                    {
-                                        languageStrings[
-                                            "accessibilityActivatePara1"
-                                        ]
-                                    }
-                                </span>
-                            </p>
-                            <p className="mt-3 font-bold text-black">
-                                <span>
-                                    {
-                                        languageStrings[
-                                            "accessibilityActivatePara2"
-                                        ]
-                                    }
-                                </span>
-                            </p>
-                            <div className="mt-3 flex">
-                                <button
-                                    onClick={() => {
-                                        setItem(
-                                            "hideAccessibilityAssistant",
-                                            "true",
-                                            "session"
-                                        );
-                                        setAccessibilityPreferences("true");
-                                    }}
-                                    className="bg-blue-750 py-2 px-4 border-b-4 border-blue-950 text-lg font-bold text-white hover:bg-blue-950 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
-                                >
-                                    {
-                                        languageStrings[
-                                            "accessibilityActivateAcceptButton"
-                                        ]
-                                    }
-                                </button>
-                                <button
-                                    onClick={() => {
-                                        setItem(
-                                            "hideAccessibilityAssistant",
-                                            "true",
-                                            "session"
-                                        );
-                                        setAccessibilityPreferences("false");
-                                    }}
-                                    className="ml-3 bg-blue-750 py-2 px-4 border-b-4 border-blue-950 text-lg font-bold text-white hover:bg-blue-950 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
-                                >
-                                    {
-                                        languageStrings[
-                                            "accessibilityActivateRejectButton"
-                                        ]
-                                    }
+                                    {languageStrings['rejectCookiesButton']}
                                 </button>
                             </div>
                         </div>
@@ -208,20 +116,17 @@ function acceptCookies(languageStrings) {
 }
 const Layout = ({
     debug = false,
-    page = "Connect Health Patient Portal",
+    page = 'Connect Health Patient Portal',
     query,
     url,
     data,
     errors,
     children,
-    title = "Connect Health Patient Portal | Musculoskeletal Services - NHS - Occupational Health",
+    title = 'Connect Health Patient Portal | Musculoskeletal Services - NHS - Occupational Health',
     breadCrumbs = [],
     languageStrings,
 }: Props) => {
-    const [cookies, updateCookie, setCookie] = useCookies([
-        "acceptCookies",
-        "activateAccessibilityAssistant",
-    ]);
+    const [cookies, updateCookie, setCookie] = useCookies(['acceptCookies']);
     const router = useRouter();
     return (
         <div>
@@ -234,8 +139,8 @@ const Layout = ({
                     content="initial-scale=1.0, width=device-width"
                 />
                 <link rel="preload" href="/fonts/Gotham-Book.woff" as="font" />
-                {typeof cookies.activateAccessibilityAssistant != "undefined" &&
-                    cookies.activateAccessibilityAssistant == "true" && (
+                {/* {typeof cookies.activateAccessibilityAssistant != 'undefined' &&
+                    cookies.activateAccessibilityAssistant == 'true' && (
                         <script
                             dangerouslySetInnerHTML={{
                                 __html: `
@@ -248,8 +153,7 @@ const Layout = ({
 `,
                             }}
                         />
-                    )
-                }
+                    )} */}
             </Head>
             <div className="bg-gray-50">
                 <header>
@@ -262,24 +166,24 @@ const Layout = ({
                         languageStrings={languageStrings}
                         query={query}
                         breadCrumbs={breadCrumbs}
-                    ></Breadcrumbs> 
+                    ></Breadcrumbs>
                 </header>
                 <div className="lg:py-10">
-                {page != 'Homepage' ? (
-                    <div className="mx-auto lg:max-w-6xl lg:px-8 lg:grid lg:grid-cols-12 lg:gap-8">
-                        <div className="hidden lg:block lg:col-span-3">
-                            <Sidebar
-                                languageStrings={languageStrings}
-                                query={query}
-                            />
+                    {page != 'Homepage' ? (
+                        <div className="mx-auto lg:max-w-6xl lg:px-8 lg:grid lg:grid-cols-12 lg:gap-8">
+                            <div className="hidden lg:block lg:col-span-3">
+                                <Sidebar
+                                    languageStrings={languageStrings}
+                                    query={query}
+                                />
+                            </div>
+                            {children}
                         </div>
-                        {children}
-                    </div>
-                ) : (
-                    <div className="mx-auto lg:max-w-6xl lg:px-8 lg:grid lg:grid-cols-12 lg:gap-8">
-                        {children}
-                    </div>
-                )}
+                    ) : (
+                        <div className="mx-auto lg:max-w-6xl lg:px-8 lg:grid lg:grid-cols-12 lg:gap-8">
+                            {children}
+                        </div>
+                    )}
                 </div>
                 <Footer languageStrings={languageStrings} />
                 <MobileNavigation languageStrings={languageStrings} />
@@ -292,13 +196,13 @@ const Layout = ({
                     ></DebugBar>
                 )}
             </div>
-            {router.pathname == "/document/[document]" && (
+            {router.pathname == '/document/[document]' && (
                 <Script
                     src="https://www.google.com/recaptcha/api.js"
                     strategy="lazyOnload"
                 ></Script>
             )}
-            {cookies.acceptCookies == "true" ? (
+            {cookies.acceptCookies == 'true' ? (
                 <>
                     <Script
                         strategy="lazyOnload"
@@ -316,7 +220,7 @@ const Layout = ({
                     ></Script>
                 </>
             ) : (
-                ""
+                ''
             )}
         </div>
     );

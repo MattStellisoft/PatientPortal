@@ -1,15 +1,15 @@
-import Layout from "../components/Layout";
-import { parseCookies } from "../helpers/parseCookies";
-import { getLanguage } from "../models/languages";
+import Layout from '../components/Layout';
+import { parseCookies } from '../helpers/parseCookies';
+import { getLanguage } from '../models/languages';
 import {
     getQuestionnairesUid,
     getQuestionnairesNhsNumber,
     getQuestionnaires,
-} from "../models/questionnaires";
-import { verifyAuth } from "../models/auth";
-import { QuestionnaireInterface, Errors } from "../interfaces/interfaces";
-import QuestionnaireList from "../components/QuestionnaireList";
-import Pagination from "../components/Pagination";
+} from '../models/questionnaires';
+import { verifyAuth } from '../models/auth';
+import { QuestionnaireInterface, Errors } from '../interfaces/interfaces';
+import QuestionnaireList from '../components/QuestionnaireList';
+import Pagination from '../components/Pagination';
 type Props = {
     questionnaires?: QuestionnaireInterface[];
     languageStrings: string[];
@@ -48,20 +48,20 @@ export default function Questionnaires({
             <main id="main" role="main" className="lg:col-span-9">
                 <div className="lg:my-0 my-4 lg:pb-4 lg:px-0 px-6">
                     <h2 className="mb-4 text-2xl font-extrabold sm:tracking-tight lg:text-4xl">
-                        {languageStrings["questionnairesPageName"]}
+                        {languageStrings['questionnairesPageName']}
                     </h2>
                     <p className="mb-4 text-xl">
-                        {languageStrings["questionnairesPageDescription"]}
+                        {languageStrings['questionnairesPageDescription']}
                     </p>
                     <p className="mb-4 text-base">
-                        {languageStrings["questionnairesPagePara1"]}
+                        {languageStrings['questionnairesPagePara1']}
                     </p>
                 </div>
                 <div className="overflow-hidden">
                     <p className="lg:my-0 my-4 lg:pb-4 lg:px-0 px-4 text-lg font-bold">
-                        {languageStrings["questionnaireResults"]
-                            .replace("[totalRemaining]", totalRemaining)
-                            .replace("[totalResults]", totalResults)}
+                        {languageStrings['questionnaireResults']
+                            .replace('[totalRemaining]', totalRemaining)
+                            .replace('[totalResults]', totalResults)}
                     </p>
                     <QuestionnaireList
                         questionnaires={questionnaires}
@@ -80,92 +80,99 @@ export default function Questionnaires({
         </Layout>
     );
 }
-export async function getServerSideProps(context) {
-    const debug: boolean = context.query?.debug ? context.query?.debug : false;
+export async function getServerSideProps({ query, locale, req }) {
+    const debug: boolean = query?.debug ? query?.debug : false;
     let errors: Errors = {};
-    const { locale, req } = context;
-    const data = parseCookies(req);
-    let currentLocale: string = data.NEXT_LOCALE || locale;
-    const localLanguageStrings = getLanguage("questionnaires", currentLocale);
-    const globalLanguageStrings = getLanguage("global", currentLocale);
+    let currentLocale: string = req.cookies.NEXT_LOCALE || locale;
+    const localLanguageStrings = getLanguage('questionnaires', currentLocale);
+    const globalLanguageStrings = getLanguage('global', currentLocale);
     const languageStrings = {
         ...localLanguageStrings,
         ...globalLanguageStrings,
     };
-    const offset: number = context.query?.page || 1;
-    const perPage: number = context.query?.perPage || 5;
-    let query: string = "";
-    if (context.query.testuser) {
-        query = "?testuser=" + context.query.testuser;
-        if (context.query.usecher) {
-            query += "&usecher=true";
+    const offset: number = query?.page || 1;
+    const perPage: number = query?.perPage || 5;
+    let queryString: string = '';
+    if (query.testuser) {
+        queryString = '?testuser=' + query.testuser;
+        if (query.usecher) {
+            queryString += '&usecher=true';
         }
-        if (context.query.debug) {
-            query += "&debug=true";
+        if (query.debug) {
+            queryString += '&debug=true';
         }
     }
-    if (typeof context.query.UUID !== "undefined") {
+    if (typeof query.UUID !== 'undefined') {
         var { results, totalResults, statusCode } = await getQuestionnairesUid(
-            context.query.UUID as string,
+            query.UUID as string,
             currentLocale,
             offset,
-            perPage
+            perPage,
         );
-        query = "?UUID=" + context.query.UUID;
+        query = '?UUID=' + query.UUID;
     } else {
         const authorisedUser = await verifyAuth(
-            context,
-            process.env.NEXT_PRODUCTION
+            req,
+            query,
+            process.env.NEXT_PRODUCTION,
         );
         if (authorisedUser == false) {
             return {
                 redirect: {
-                    destination: "/signin",
+                    destination: '/signin',
                     permanent: false,
                 },
                 props: {},
             };
         }
-        if (
-            process.env.usecher ||
-            (context.query.usecher && context.query.testuser)
-        ) {
+        if (process.env.usecher || (query.usecher && query.testuser)) {
             var { results, totalResults, statusCode } =
                 await getQuestionnairesNhsNumber(
-                    context.query.testuser
-                        ? context.query.testuser
-                        : authorisedUser.nhs_number,
+                    query.testuser ? query.testuser : authorisedUser.nhs_number,
                     offset,
-                    perPage
+                    perPage,
                 );
         } else {
-            const endpoint: string =
-                process.env.NEXT_URL +
-                `/api/patient/${authorisedUser.nhs_number}/questionnaires`;
             const params = {
-                currentLocale: currentLocale,
                 offset: offset,
                 perPage: perPage,
             };
-            var { results, totalResults, statusCode } = await getQuestionnaires(
-                endpoint,
-                params
+            let url = new URL(
+                process.env.NEXT_URL +
+                    process.env.NEXT_API_PATH +
+                    'questionnaires',
             );
+            for (let param in params) {
+                url.searchParams.append(param, params[param]);
+            }
+            const options: RequestInit = {
+                method: 'GET',
+                headers: new Headers({
+                    'Content-Type': 'application/json',
+                    sessionId: req.cookies.session_id,
+                }),
+            };
+            const response = await fetch(url, options);
+            var {
+                results,
+                totalResults,
+            }: { results: QuestionnaireInterface[]; totalResults: number } =
+                await response.json();
         }
     }
     const breadCrumbs: object[] = [
         {
-            key: "questionnairesPageName",
-            href: "/questionnaires",
+            key: 'questionnairesPageName',
+            href: '/questionnaires',
             current: true,
         },
     ];
     let totalRemaining: number = 0;
-    if (typeof results != "undefined" && Array.isArray(results)) {
+    if (typeof results != 'undefined' && Array.isArray(results)) {
         const incompleteResults = results.filter(
             (questionnaire) =>
-                questionnaire.DateTimeAnswersReceived == "undefined" ||
-                questionnaire.completed == false
+                questionnaire.DateTimeAnswersReceived == 'undefined' ||
+                questionnaire.completed == false,
         );
         totalRemaining = incompleteResults.length;
     }
@@ -178,7 +185,7 @@ export async function getServerSideProps(context) {
             languageStrings: languageStrings,
             offset: offset,
             errors: errors,
-            query: query,
+            query: queryString,
             perPage: perPage,
             breadCrumbs: breadCrumbs,
         },

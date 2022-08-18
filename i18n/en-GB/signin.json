@@ -1,4 +1,12 @@
 {
+    "signInCriteria": ["registeredGP", "registeredCH", "registeredEighteen"],
+    "registeredGP": "registered with a GP surgery in one of our commissioned areas.",
+    "registeredCH": "registered as a patient with Connect Health.",
+    "registeredEighteen": "over the age of 18.",
     "age_restriction_error": "Patients below the age of 18 are prohibited from using this application. Please contact us directly to access our services.",
-    "multi_referral": "The Patient Portal doesn't support patients with multiple referrals at this time. We apologise and ask that you contact us directly for assistance."
+    "multi_referral": "The Patient Portal doesn't support patients with multiple referrals at this time. We apologise and ask that you contact us directly for assistance.",
+    "signInPageHeading": "Sign in",
+    "ConsentNotGiven": "You must agree to share your information before we grant you access to the portal.",
+    "signInPageCriteriaHeading": "To access services using our Patient Portal you must be:",
+    "signInPageNhsLoginAboutLink": " Find out more about getting started with your NHS Login account."
 }

@@ -10,5 +10,9 @@
     "Booking": "Requested",
     "NoResponse": "No response",
     "Rejected": "Rejected",
-    "CancelledByPcc": "Cancelled by Connect Health"
+    "CancelledByPcc": "Cancelled by Connect Health",
+    "confirmProvisionalButton": "Confirm",
+    "cancelProvisionalButton": "Cancel",
+    "appointmentsConfirmOrCancelPrompt": "Please review the details of your provisional appointment before confirming or cancelling the slot.",
+    "appointmentsCancelPrompt": "If you wish to cancel your appointment then please do so at the earliest opportunity."
 }

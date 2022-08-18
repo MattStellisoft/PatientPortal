@@ -1,7 +1,7 @@
-import { patientSteps, mockSession } from "../../../testing/data/testData";
+import { patientSteps, mockSession } from '../../../testing/data/testData';
 
 export default function handler(req, res) {
-    if (req.headers && req.headers.sessionid){
+    if (req.headers && req.headers.sessionid) {
         let patient = mockSession[req.headers.sessionid];
         if (patient.nhs_number && patientSteps[patient.nhs_number]) {
             const results = patientSteps[patient.nhs_number];
@@ -9,12 +9,6 @@ export default function handler(req, res) {
                 statusCode: results.StatusCode,
                 statusMessage: results.statusMessage,
             });
-        } 
-    } else {
-        res.status(200).json({
-            statusMessage: [],
-            statusCode: 204,
-            errors: [],
-        });
+        }
     }
 }

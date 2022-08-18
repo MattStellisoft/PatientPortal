@@ -70,6 +70,9 @@
         { "name": "Privacy", "href": "#" },
         { "name": "Terms", "href": "#" }
     ],
+    "viewCookiePolicy": "Click this link to open our Cookie Policy in a new tab.",
+    "contactServiceLinkText": "Click this link to open our contact page and locate our service provider in your area.",
+    "generic_contact_us": "We have encountered a problem.",
     "autoBookingDisabled": "You are unable to book an appointment via the portal at this time. If you wish to book an appointment then please contact us.",
     "rightsReserved": "Connect Health Ltd. All rights reserved.",
     "homepageName": "Home",
@@ -89,7 +92,9 @@
     "questionnairesPageName": "Your Questionnaires",
     "questionnairesPageDescription": "Complete your electronic questionnaires.",
     "exercisesPageName": "Your Exercises",
-    "exercisesPageDescription": "View your exercise programmes.",
+    "exercisesPageDescription": "View your exercises.",
+    "programmesPageName": "Your Exercise Programmes",
+    "programmesPageDescription": "View your exercise programmes",
     "profilePageName": "Your Profile",
     "profilePageDescription": "View and edit your profile data.",
     "preferencesPageName": "Your Preferences",
@@ -102,8 +107,8 @@
     "physioNowPageName": "PhysioNow",
     "physioNowPageDescription": "Several of our services offer a self-referral option to access physiotherapy, without needing to visit your GP first. Find out more about PhysioNow self-referral, including checking eligibility in your area and access some helpful self-management resources by following this ",
     "acceptCookiesHeading": "Cookies on the Connect Health Portal Website",
-    "acceptCookiesPara1": "We've put some small files called cookies on your device. These are the strictly necessary cookies needed to make the Connect Health App work.",
-    "acceptCookiesPara2": "We'd also like to use analytics cookies. These send information about how our site is used to services called Adobe Analytics, Hotjar and Google Analytics. We use this information to improve our site.",
+    "acceptCookiesPara1": "Cookies collect information about how you use our Patient Portal to help us make our site work as well as possible.",
+    "acceptCookiesPara2": "We would also like to use analytics cookies to improve our service.",
     "acceptCookiesPara3": "Let us know if this is OK. We'll use a cookie to save your choice. You can read more about our cookies before you choose.",
     "acceptCookiesButton": "I'm okay with Analytics Cookies",
     "rejectCookiesButton": "Do not use Analytics Cookies",
@@ -113,5 +118,7 @@
     "accessibilityActivateAcceptButton": "Please activate accessibility controls and settings.",
     "accessibilityActivateRejectButton": "No thanks.",
     "noActiveReferralTitle": "No active referral",
-    "noActiveReferralMessage": "We are unable to find an active referral linked to your patient record. If you wish to access our physiotherapy services then you may be eligible for self-referral via our digital self-assessment tool, PhysioNow. Please click on the banner to access more information or alternatively please contact us directly to discuss your circumstances."
+    "noActiveReferralMessage": "We are unable to find an active referral linked to your patient record. If you wish to access our physiotherapy services then you may be eligible for self-referral via our digital self-assessment tool, PhysioNow. Please click on the banner to access more information or alternatively please contact us directly to discuss your circumstances.",
+    "requestAppointmentAvailable": "Book your next appointment",
+    "requestAppointmentAvailableMessage": "Click this banner to book your next appointment with one of our clinicians using the Patient Portal."
 }
